@@ -9,6 +9,91 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet" />
     
     <style>
+
+/* ================= البار الفوقانية (Navbar) ================= */
+      .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: var(--color-white);
+        z-index: 1000;
+        transition: var(--transition);
+        border-bottom: 1px solid var(--color-border);
+      }
+
+      .navbar.scrolled {
+        box-shadow: var(--shadow-md);
+        border-bottom: transparent;
+      }
+
+      .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 70px;
+        /* هادي كتخلي اللوغو فاليسار والزر فاليمين */
+        flex-direction: row-reverse; 
+      }
+
+      /* إعدادات اللوغو (التصويرة) */
+      .nav-logo {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+      }
+
+      .nav-logo img {
+        max-height: 40px; /* هاد الرقم كيتحكم فكُبر اللوغو، تقدر تزيد ولا تنقص فيه */
+        width: auto;
+        object-fit: contain;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 25px;
+        /* حيدنا row-reverse باش المتصفح يقراهم طبيعي بالعربية (من اليمين لليسار) */
+        flex-direction: row; 
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: var(--blue-medium);
+        font-weight: 700;
+        font-size: 1rem;
+        transition: var(--transition);
+        cursor: pointer;
+      }
+
+      .nav-links a:hover {
+        color: var(--blue-vibrant);
+      }
+
+      .nav-cta {
+        background-color: var(--blue-vibrant);
+        color: var(--color-white);
+        padding: 8px 20px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 700;
+        transition: var(--transition);
+        cursor: pointer;
+      }
+
+      .nav-cta:hover {
+        background-color: var(--blue-standard);
+        transform: translateY(-2px);
+      }
+
+      @media (max-width: 768px) {
+        .nav-links {
+          display: none;
+        }
+        .nav-logo img {
+          max-height: 35px; /* اللوغو كيصغار شوية فالتليفون */
+        }
+      }
+
       /* ================= ألوان الهوية البصرية (Charte Graphique) ================= */
       :root {
         /* تدرجات الأزرق */
@@ -386,6 +471,32 @@
         color: var(--color-text-muted);
       }
 
+/* تنسيق الجزء الخاص بصاحب التقييم (التصويرة + المعلومات) */
+      .proof-card__author {
+        display: flex;
+        align-items: center; /* باش يجيو مقادين فسطر واحد */
+        gap: 15px; /* المسافة بين التصويرة والكتيبة */
+        margin-top: 20px;
+        padding-top: 15px;
+        border-top: 1px dashed var(--color-border); /* خط خفيف كيفصل القولة على الشخص */
+      }
+
+      /* تنسيق التصويرة الدائرية */
+      .proof-card__avatar {
+        width: 55px;
+        height: 55px;
+        border-radius: 50%; /* باش تولي ضايرة */
+        object-fit: cover; /* باش التصويرة ماتعواجش */
+        border: 2px solid var(--lime-primary); /* إطار بلون اللوغو الأخضر باش يعطي جمالية */
+        box-shadow: var(--shadow-sm);
+      }
+
+      .proof-card__meta {
+        display: flex;
+        flex-direction: column;
+      }
+
+
       /* ================= قسم الأسئلة الشائعة (FAQ) ================= */
       .faq-list {
         max-width: 800px;
@@ -461,14 +572,185 @@
         .hero-stats { gap: 15px; }
         .stat-card { min-width: 140px; padding: 15px; }
       }
+
+/* ================= الأزرار في الهيرو ================= */
+      .hero-buttons-wrapper {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap; /* باش فالتليفون يهبطو تحت بعضياتهم */
+      }
+
+      .hero-cta-secondary {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        background-color: var(--color-white);
+        color: var(--blue-dark);
+        border: 2px solid var(--blue-dark);
+        text-decoration: none;
+        padding: 14px 30px;
+        font-size: 1.1rem;
+        font-weight: 800;
+        border-radius: 8px;
+        transition: var(--transition);
+      }
+
+      .hero-cta-secondary:hover {
+        background-color: var(--blue-dark);
+        color: var(--color-white);
+        transform: translateY(-3px);
+      }
+
+      /* ================= قسم الفيديو ================= */
+      .video-thumbnail-container {
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto;
+        aspect-ratio: 16 / 9; /* باش يبقى ديما بحال شاشة التلفزة */
+        background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue-medium) 100%);
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        box-shadow: var(--shadow-md);
+        transition: var(--transition);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .video-thumbnail-container:hover {
+        transform: scale(1.02);
+        box-shadow: 0 15px 35px rgba(11, 63, 89, 0.2);
+      }
+
+      .play-btn-circle {
+        width: 80px;
+        height: 80px;
+        background-color: var(--color-white);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--blue-dark);
+        transition: var(--transition);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+        animation: pulse-play 2s infinite;
+      }
+
+      .play-btn-circle svg {
+        width: 35px;
+        height: 35px;
+        fill: currentColor;
+        margin-left: 5px; /* باش يجي المثلث فالوسط نيشان */
+      }
+
+      .video-thumbnail-container:hover .play-btn-circle {
+        transform: scale(1.1);
+        color: var(--blue-vibrant);
+        animation: none;
+      }
+
+      @keyframes pulse-play {
+        0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.6); }
+        70% { box-shadow: 0 0 0 20px rgba(255, 255, 255, 0); }
+        100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
+      }
+
+      /* ================= النافذة المنبثقة (Modal) ================= */
+      .modal-overlay {
+        position: fixed;
+        top: 0; left: 0; width: 100%; height: 100%;
+        background-color: rgba(11, 63, 89, 0.9); /* خلفية ضبابية زرقاء غامقة */
+        backdrop-filter: blur(5px);
+        z-index: 9999;
+        display: none; /* مخفي فالبداية */
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      .modal-overlay.active {
+        display: flex;
+        opacity: 1;
+      }
+
+      .modal-content {
+        width: 90%;
+        max-width: 1000px;
+        position: relative;
+        background: #000;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+        transform: translateY(20px);
+        transition: transform 0.3s ease;
+      }
+
+      .modal-overlay.active .modal-content {
+        transform: translateY(0);
+      }
+
+      .close-modal-btn {
+        position: absolute;
+        top: -40px; right: 0;
+        background: none; border: none;
+        color: var(--color-white);
+        font-size: 2.5rem;
+        cursor: pointer;
+        transition: color 0.3s;
+      }
+
+      .close-modal-btn:hover {
+        color: var(--lime-primary);
+      }
+
+      .iframe-wrapper {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 ratio */
+        height: 0;
+      }
+
+      .iframe-wrapper iframe {
+        position: absolute;
+        top: 0; left: 0; width: 100%; height: 100%;
+      }
     </style>
   </head>
   <body>
+
+<!-- البار الفوقانية (Navbar) -->
+    <header class="navbar">
+      <div class="shell nav-container">
+        
+        <!-- اللوغو (تصويرة) -->
+        <!-- ملي كيكليكي عليه كيرجعو للفوق -->
+        <a href="#hero" class="nav-logo">
+          <img src="https://i.postimg.cc/hP92qWGT/Logo-Officiel.png" alt="CoinCarrière Logo">
+        </a>
+        
+        <!-- الروابط -->
+        <nav class="nav-links">
+          <a href="#hero">الرئيسية</a>
+          <a href="#features">المميزات</a>
+          <a href="#proof">آراء العملاء</a>
+          <a href="#faq">الأسئلة الشائعة</a>
+        </nav>
+        
+        <!-- زر التسجيل -->
+        <a href="https://coincarriere.com/register?type=company" class="nav-cta" target="_blank">سجل شركتك</a>
+        
+      </div>
+    </header>
+
     <main class="page">
       <div class="shell">
         
         <!-- قسم الهيرو -->
-        <section class="hero fade-in" aria-labelledby="coincarriere-hero-title">
+        <section id="hero" class="hero fade-in" aria-labelledby="coincarriere-hero-title">
           <div class="hero-copy">
             <div class="badge">
               <span class="badge__dot" aria-hidden="true"></span>
@@ -484,10 +766,18 @@
               عربية واضحة، سريعة، ومصممة لفِرق التوظيف في الضيافة.
             </p>
 
-            <div class="hero-actions">
-              <a class="hero-cta" href="https://coincarriere.com/register?type=company" target="_blank" rel="noopener noreferrer">
-                ابدأ التوظيف الآن — مجاناً
-              </a>
+
+             <div class="hero-actions">
+              <div class="hero-buttons-wrapper">
+                <a class="hero-cta" href="https://coincarriere.com/register?type=company" target="_blank" rel="noopener noreferrer">
+                  ابدأ التوظيف الآن — مجاناً
+                </a>
+                <!-- الزر الجديد لي كيدي للفيديو -->
+                <a class="hero-cta-secondary" href="#how-it-works">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                  كيف تعمل المنصة؟
+                </a>
+              </div>
 
               <div class="hero-microcopy">
                 <svg class="hero-microcopy__icon" viewBox="0 0 20 20" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
@@ -497,7 +787,6 @@
                 <span>بدون رسوم خفية، وببدء سريع خلال دقائق قليلة</span>
               </div>
             </div>
-
             <div class="hero-divider" aria-hidden="true"></div>
 
             <div class="hero-stats" aria-label="إحصاءات المنصة">
@@ -522,7 +811,7 @@
         </section>
 
         <!-- قسم المميزات -->
-        <section class="section fade-in" aria-labelledby="features-title">
+        <section id="features" class="section fade-in" aria-labelledby="features-title">
           <header class="section__header">
             <p class="section__eyebrow">المميزات الأساسية</p>
             <h2 id="features-title" class="section__title">
@@ -577,7 +866,7 @@
         </section>
 
         <!-- قسم الإثبات الاجتماعي -->
-        <section class="section fade-in" aria-labelledby="proof-title">
+        <section id="proof" class="section fade-in" aria-labelledby="proof-title">
           <header class="section__header">
             <p class="section__eyebrow">إثبات اجتماعي</p>
             <h2 id="proof-title" class="section__title">
@@ -600,32 +889,73 @@
               </article>
             </div>
 
-            <div class="proof-testimonials">
+         <div class="proof-testimonials">
+              
+              <!-- البطاقة الأولى -->
               <article class="proof-card">
                 <p class="proof-card__quote">
                   "أصبحنا نصل إلى المرشحين المناسبين خلال وقت أقصر، مع تنظيم أوضح لكل مرحلة من مراحل التوظيف."
                 </p>
-                <div class="proof-card__meta">
-                  <p class="proof-card__name">مديرة الموارد البشرية</p>
-                  <p class="proof-card__role">سلسلة فنادق 4 نجوم</p>
+                <div class="proof-card__author">
+                  <!-- رابط التصويرة هنا -->
+                  <img src="https://i.postimg.cc/hP92qWGT/Logo-Officiel.png" alt="صورة العميل" class="proof-card__avatar">
+                  <div class="proof-card__meta">
+                    <p class="proof-card__name">مديرة الموارد البشرية</p>
+                    <p class="proof-card__role">سلسلة فنادق 4 نجوم</p>
+                  </div>
                 </div>
               </article>
 
+              <!-- البطاقة الثانية -->
               <article class="proof-card">
                 <p class="proof-card__quote">
                   "التجربة بسيطة ومباشرة، وهذا ما احتجناه فعلًا لفريق يتعامل مع طلبات توظيف متعددة يوميًا."
                 </p>
-                <div class="proof-card__meta">
-                  <p class="proof-card__name">مسؤول التوظيف</p>
-                  <p class="proof-card__role">فندق أعمال في منطقة حضرية</p>
+                <div class="proof-card__author">
+                  <!-- رابط التصويرة هنا -->
+                  <img src="https://i.postimg.cc/hP92qWGT/Logo-Officiel.png" alt="صورة العميل" class="proof-card__avatar">
+                  <div class="proof-card__meta">
+                    <p class="proof-card__name">مسؤول التوظيف</p>
+                    <p class="proof-card__role">فندق أعمال في منطقة حضرية</p>
+                  </div>
                 </div>
               </article>
+            </div>
+        </section>
+
+
+<!-- قسم الفيديو التعريفي -->
+        <section id="how-it-works" class="section fade-in" aria-labelledby="video-title">
+          <header class="section__header">
+            <h2 id="video-title" class="section__title">شوف كيفاش كتخدم المنصة ف 90 ثانية</h2>
+            <p class="section__subtitle" style="max-width: 800px; margin: 0 auto;">
+              فيديو قصير كيوريك المسار الكامل: من تسجيل الفندق، تحديد المنصب، استقبال البروفيلات، حتى توقيع العقد مع الموظف الجديد.
+            </p>
+          </header>
+
+          <div class="video-thumbnail-container" id="openVideoModal">
+            <!-- أيقونة التشغيل (Play Button) -->
+            <div class="play-btn-circle">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
             </div>
           </div>
         </section>
 
+        <!-- نافذة عرض الفيديو (Popup) -->
+        <div id="videoModal" class="modal-overlay">
+          <div class="modal-content">
+            <button class="close-modal-btn" id="closeVideoModal">&times;</button>
+            <div class="iframe-wrapper">
+              <!-- بدل الرابط لي لتحت بالرابط ديال الفيديو ديالكم ف يوتيوب أو فيميو -->
+              <iframe id="videoIframe" src="https://www.youtube.com/watch?v=uK-yrqvFtvw" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+
+
+
         <!-- قسم الأسئلة الشائعة -->
-        <section class="section fade-in" aria-labelledby="faq-title">
+        <section id="faq"  class="section fade-in" aria-labelledby="faq-title">
           <header class="section__header">
             <p class="section__eyebrow">الأسئلة الشائعة</p>
             <h2 id="faq-title" class="section__title">إجابات سريعة لمساعدتك</h2>
@@ -664,7 +994,7 @@
           </div>
         </section>
       </div>
-    </main>
+    </main>                 
 
     <!-- سكربت لتشغيل تأثيرات الظهور (Animations) -->
     <script>
@@ -689,5 +1019,50 @@
         });
       });
     </script>
+<script>
+// تأثير الضل للـ Navbar ملي الزائر كيهبط بالصفحة
+      const navbar = document.querySelector('.navbar');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 10) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+      });
+</script>
+<script>
+// ================= كود تشغيل الفيديو =================
+      const openVideoBtn = document.getElementById('openVideoModal');
+      const closeVideoBtn = document.getElementById('closeVideoModal');
+      const videoModal = document.getElementById('videoModal');
+      const videoIframe = document.getElementById('videoIframe');
+      
+      // حط الرابط ديال يوتيوب هنا (تأكد يكون فيه embed وفي اللخر ?autoplay=1)
+      const youtubeLink = "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1";
+
+      // ملي نكليكيو على بلاصة الفيديو
+      openVideoBtn.addEventListener('click', () => {
+        videoModal.classList.add('active');
+        videoIframe.src = youtubeLink; // كنعطيو الرابط باش يبدا يخدم
+        document.body.style.overflow = 'hidden'; // كنحبسو السكرول ديال الصفحة
+      });
+
+      // دالة باش نسدو الفيديو
+      const closeModal = () => {
+        videoModal.classList.remove('active');
+        videoIframe.src = ""; // كنخويو الرابط باش الفيديو يحبس ميبقاش خدام فالخلفية
+        document.body.style.overflow = 'auto'; // كنرجعو السكرول
+      };
+
+      // نكليكيو على (X)
+      closeVideoBtn.addEventListener('click', closeModal);
+
+      // نكليكيو فاي بلاصة كحلة برا الفيديو
+      videoModal.addEventListener('click', (e) => {
+        if (e.target === videoModal) {
+          closeModal();
+        }
+      });
+      </script>
   </body>
 </html>
