@@ -1,0 +1,689 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CoinCarrière — منصة التوظيف</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    
+    <style>
+      /* ================= ألوان الهوية البصرية (Charte Graphique) ================= */
+      :root {
+        /* تدرجات الأزرق */
+        --blue-vibrant: #0094d9;
+        --blue-medium: #16498c;
+        --blue-standard: #1875bb;
+        --blue-dark: #0b3f59;
+
+        /* تدرجات الأخضر الليموني */
+        --lime-light: #dcfe11;
+        --lime-primary: #ccfa04;
+        --lime-dark: #b4dc02;
+
+        /* ألوان محايدة للقراءة والتنسيق */
+        --color-white: #ffffff;
+        --color-bg-light: #f4f7f9;
+        --color-border: #e2e8f0;
+        
+        /* تعيين الأدوار */
+        --color-text-main: var(--blue-dark);
+        --color-text-muted: #556b7a;
+        --shadow-sm: 0 2px 4px rgba(11, 63, 89, 0.05);
+        --shadow-md: 0 10px 25px rgba(11, 63, 89, 0.1);
+        --transition: all 0.3s ease;
+      }
+
+      /* ================= الإعدادات العامة ================= */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Cairo', sans-serif;
+        color: var(--color-text-main);
+        background-color: var(--color-white);
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+
+      .shell {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.8s ease, transform 0.8s ease;
+      }
+      .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* ================= قسم البداية (Hero) ================= */
+      .hero {
+        background: radial-gradient(circle at top center, rgba(0, 148, 217, 0.05) 0%, transparent 70%);
+        padding: 80px 0 60px;
+        text-align: center;
+        border-bottom: 1px solid var(--color-border);
+      }
+
+      .hero-copy {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background-color: rgba(204, 250, 4, 0.2); /* lime مع شفافية */
+        color: var(--blue-dark);
+        padding: 6px 16px;
+        border-radius: 50px;
+        font-size: 0.9rem;
+        font-weight: 700;
+        margin-bottom: 24px;
+        border: 1px solid var(--lime-primary);
+      }
+
+      .badge__dot {
+        width: 8px;
+        height: 8px;
+        background-color: var(--blue-vibrant);
+        border-radius: 50%;
+      }
+
+      .hero-title {
+        font-size: clamp(2rem, 5vw, 3.5rem);
+        font-weight: 800;
+        color: var(--blue-dark);
+        line-height: 1.2;
+        margin-bottom: 20px;
+      }
+
+      .hero-title__accent {
+        color: var(--blue-vibrant);
+        position: relative;
+        display: inline-block;
+      }
+      
+      /* خط سفلي تحت الكلمة المميزة */
+      .hero-title__accent::after {
+        content: "";
+        position: absolute;
+        bottom: 5px;
+        left: 0;
+        width: 100%;
+        height: 8px;
+        background-color: var(--lime-primary);
+        z-index: -1;
+        border-radius: 4px;
+      }
+
+      .hero-subtitle {
+        font-size: clamp(1rem, 2vw, 1.25rem);
+        color: var(--color-text-muted);
+        margin-bottom: 40px;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+      }
+
+      .hero-cta {
+        display: inline-block;
+        background-color: var(--lime-primary);
+        color: var(--blue-dark);
+        text-decoration: none;
+        padding: 16px 40px;
+        font-size: 1.1rem;
+        font-weight: 800;
+        border-radius: 8px;
+        transition: var(--transition);
+        box-shadow: 0 4px 15px rgba(204, 250, 4, 0.4);
+      }
+
+      .hero-cta:hover {
+        background-color: var(--lime-light);
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(204, 250, 4, 0.6);
+      }
+
+      .hero-microcopy {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.9rem;
+        color: var(--color-text-muted);
+      }
+
+      .hero-microcopy__icon {
+        width: 18px;
+        height: 18px;
+      }
+
+      .hero-divider {
+        margin: 60px 0 40px;
+        height: 1px;
+        background: linear-gradient(to right, transparent, var(--color-border), transparent);
+      }
+
+      /* الإحصائيات */
+      .hero-stats {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
+      }
+
+      .stat-card {
+        background: var(--color-white);
+        padding: 20px 30px;
+        border-radius: 12px;
+        box-shadow: var(--shadow-sm);
+        border: 1px solid var(--color-border);
+        min-width: 180px;
+        transition: var(--transition);
+        border-bottom: 3px solid transparent;
+      }
+
+      .stat-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-md);
+        border-bottom: 3px solid var(--blue-vibrant);
+      }
+
+      .stat-card__value {
+        font-size: 2rem;
+        font-weight: 800;
+        color: var(--blue-standard);
+      }
+
+      .stat-card__label {
+        font-size: 0.9rem;
+        color: var(--color-text-muted);
+        font-weight: 600;
+      }
+
+      /* ================= الأقسام العامة (Sections) ================= */
+      .section {
+        padding: 80px 0;
+      }
+
+      .section__header {
+        text-align: center;
+        margin-bottom: 50px;
+        max-width: 700px;
+        margin-inline: auto;
+      }
+
+      .section__eyebrow {
+        color: var(--blue-standard);
+        font-weight: 700;
+        margin-bottom: 10px;
+        font-size: 1rem;
+        background: rgba(24, 117, 187, 0.1);
+        display: inline-block;
+        padding: 4px 12px;
+        border-radius: 20px;
+      }
+
+      .section__title {
+        font-size: 2.2rem;
+        color: var(--blue-dark);
+        font-weight: 800;
+        margin-bottom: 15px;
+      }
+
+      .section__subtitle {
+        color: var(--color-text-muted);
+        font-size: 1.1rem;
+      }
+
+      /* ================= قسم المميزات (Features) ================= */
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+      }
+
+      .feature-card {
+        background: var(--color-bg-light);
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: var(--shadow-sm);
+        border: 1px solid var(--color-border);
+        transition: var(--transition);
+      }
+
+      .feature-card:hover {
+        box-shadow: var(--shadow-md);
+        transform: translateY(-5px);
+        background: var(--color-white);
+        border-color: var(--blue-vibrant);
+      }
+
+      .feature-card__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        background-color: var(--blue-dark);
+        color: var(--lime-primary);
+        border-radius: 10px;
+        margin-bottom: 20px;
+        transition: var(--transition);
+      }
+
+      .feature-card:hover .feature-card__icon {
+        background-color: var(--blue-vibrant);
+        color: var(--color-white);
+      }
+
+      .feature-card__icon svg {
+        width: 24px;
+        height: 24px;
+        fill: currentColor;
+      }
+
+      .feature-card__title {
+        font-size: 1.25rem;
+        color: var(--blue-medium);
+        margin-bottom: 10px;
+        font-weight: 700;
+      }
+
+      .feature-card__text {
+        color: var(--color-text-muted);
+        font-size: 0.95rem;
+      }
+
+      /* ================= قسم الإثبات الاجتماعي (Social Proof) ================= */
+      .proof-panel {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 40px;
+        align-items: center;
+      }
+
+      .proof-stats {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .proof-stat {
+        background: var(--blue-medium);
+        color: var(--color-white);
+        padding: 24px;
+        border-radius: 12px;
+        border-right: 5px solid var(--lime-primary);
+      }
+
+      .proof-stat__value {
+        font-size: 1.8rem;
+        font-weight: 800;
+        color: var(--lime-primary);
+        margin-bottom: 5px;
+      }
+
+      .proof-testimonials {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+      }
+
+      .proof-card {
+        background: var(--color-bg-light);
+        padding: 30px;
+        border-radius: 12px;
+        border: 1px solid var(--color-border);
+        position: relative;
+      }
+
+      .proof-card::before {
+        content: '"';
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        font-size: 4rem;
+        color: var(--blue-vibrant);
+        opacity: 0.2;
+        font-family: serif;
+      }
+
+      .proof-card__quote {
+        color: var(--blue-dark);
+        font-weight: 600;
+        font-style: italic;
+        margin-bottom: 20px;
+        position: relative;
+        z-index: 1;
+      }
+
+      .proof-card__name {
+        font-weight: 800;
+        color: var(--blue-medium);
+      }
+
+      .proof-card__role {
+        font-size: 0.85rem;
+        color: var(--color-text-muted);
+      }
+
+      /* ================= قسم الأسئلة الشائعة (FAQ) ================= */
+      .faq-list {
+        max-width: 800px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .faq-item {
+        background: var(--color-white);
+        border: 1px solid var(--color-border);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .faq-item summary {
+        padding: 20px;
+        font-weight: 700;
+        color: var(--blue-dark);
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+        transition: var(--transition);
+      }
+
+      .faq-item summary::-webkit-details-marker {
+        display: none;
+      }
+
+      .faq-item summary:hover {
+        background-color: var(--color-bg-light);
+        color: var(--blue-vibrant);
+      }
+
+      .faq-item__icon {
+        font-size: 1.5rem;
+        color: var(--blue-standard);
+        transition: var(--transition);
+        background: rgba(24, 117, 187, 0.1);
+        width: 30px; height: 30px;
+        display: flex; align-items: center; justify-content: center;
+        border-radius: 50%;
+      }
+
+      .faq-item[open] .faq-item__icon {
+        transform: rotate(45deg);
+        background: var(--lime-primary);
+        color: var(--blue-dark);
+      }
+
+      .faq-item__content {
+        padding: 0 20px 20px;
+        color: var(--color-text-muted);
+        border-top: 1px solid var(--color-border);
+        margin-top: 10px;
+        padding-top: 20px;
+      }
+
+      /* ================= التجاوب مع الشاشات (Responsive) ================= */
+      @media (max-width: 992px) {
+        .proof-panel { grid-template-columns: 1fr; }
+        .proof-stats { flex-direction: row; flex-wrap: wrap; }
+        .proof-stat { flex: 1; min-width: 200px; }
+      }
+
+      @media (max-width: 768px) {
+        .hero { padding: 60px 0 40px; }
+        .section { padding: 50px 0; }
+        .section__title { font-size: 1.8rem; }
+        .hero-stats { gap: 15px; }
+        .stat-card { min-width: 140px; padding: 15px; }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <div class="shell">
+        
+        <!-- قسم الهيرو -->
+        <section class="hero fade-in" aria-labelledby="coincarriere-hero-title">
+          <div class="hero-copy">
+            <div class="badge">
+              <span class="badge__dot" aria-hidden="true"></span>
+              <span>المنصة الأولى للتوظيف في قطاع الفنادق</span>
+            </div>
+
+            <h1 id="coincarriere-hero-title" class="hero-title">
+              استقطب أفضل مرشحين <span class="hero-title__accent">للفندق</span> من مكان واحد
+            </h1>
+
+            <p class="hero-subtitle">
+              CoinCarrière تساعدك على نشر الوظائف، فرز المرشحين، ومتابعة الطلبات داخل تجربة
+              عربية واضحة، سريعة، ومصممة لفِرق التوظيف في الضيافة.
+            </p>
+
+            <div class="hero-actions">
+              <a class="hero-cta" href="https://coincarriere.com/register?type=company" target="_blank" rel="noopener noreferrer">
+                ابدأ التوظيف الآن — مجاناً
+              </a>
+
+              <div class="hero-microcopy">
+                <svg class="hero-microcopy__icon" viewBox="0 0 20 20" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="10" cy="10" r="9" fill="#1875bb" />
+                  <path d="M6.5 10.2L8.7 12.4L13.6 7.4" stroke="#ffffff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <span>بدون رسوم خفية، وببدء سريع خلال دقائق قليلة</span>
+              </div>
+            </div>
+
+            <div class="hero-divider" aria-hidden="true"></div>
+
+            <div class="hero-stats" aria-label="إحصاءات المنصة">
+              <article class="stat-card">
+                <p class="stat-card__value">-70%</p>
+                <p class="stat-card__label">تقليل وقت الفرز</p>
+              </article>
+              <article class="stat-card">
+                <p class="stat-card__value">+500</p>
+                <p class="stat-card__label">مرشح مؤهل</p>
+              </article>
+              <article class="stat-card">
+                <p class="stat-card__value">48س</p>
+                <p class="stat-card__label">زمن أسرع للوصول</p>
+              </article>
+              <article class="stat-card">
+                <p class="stat-card__value">98%</p>
+                <p class="stat-card__label">رضا فرق التوظيف</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- قسم المميزات -->
+        <section class="section fade-in" aria-labelledby="features-title">
+          <header class="section__header">
+            <p class="section__eyebrow">المميزات الأساسية</p>
+            <h2 id="features-title" class="section__title">
+              كل ما تحتاجه فرق التوظيف في الفنادق داخل مساحة واحدة
+            </h2>
+            <p class="section__subtitle">
+              صممت CoinCarrière لتبسيط رحلة التوظيف من لحظة نشر الإعلان إلى اختيار المرشح المناسب.
+            </p>
+          </header>
+
+          <div class="features-grid">
+            <article class="feature-card">
+              <span class="feature-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              </span>
+              <h3 class="feature-card__title">استقبال الطلبات في مكان واحد</h3>
+              <p class="feature-card__text">
+                اجمع جميع الترشيحات في لوحة منظمة تسهّل المتابعة وتمنع ضياع السِيَر الذاتية بين القنوات المختلفة.
+              </p>
+            </article>
+
+            <article class="feature-card">
+              <span class="feature-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z"/></svg>
+              </span>
+              <h3 class="feature-card__title">فلترة أسرع حسب المتطلبات</h3>
+              <p class="feature-card__text">
+                قارن المرشحين بحسب الخبرة، الموقع، التوفر، والمهارات التي تبحث عنها فرق الفنادق بشكل يومي.
+              </p>
+            </article>
+
+            <article class="feature-card">
+              <span class="feature-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg>
+              </span>
+              <h3 class="feature-card__title">تواصل مباشر وواضح</h3>
+              <p class="feature-card__text">
+                تواصل مع المرشحين بسرعة، وابدأ خطوات المقابلة والمتابعة دون تعقيد أو تأخير غير ضروري.
+              </p>
+            </article>
+
+            <article class="feature-card">
+              <span class="feature-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg>
+              </span>
+              <h3 class="feature-card__title">متابعة دقيقة لسير العملية</h3>
+              <p class="feature-card__text">
+                راقب حالة كل طلب بسهولة، من الوصول الأولي إلى اتخاذ القرار النهائي داخل واجهة واحدة بسيطة.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <!-- قسم الإثبات الاجتماعي -->
+        <section class="section fade-in" aria-labelledby="proof-title">
+          <header class="section__header">
+            <p class="section__eyebrow">إثبات اجتماعي</p>
+            <h2 id="proof-title" class="section__title">
+              موثوق من فرق التوظيف في قطاع الضيافة
+            </h2>
+            <p class="section__subtitle">
+              تعتمد فرق الموارد البشرية على CoinCarrière لتسريع الوصول إلى المرشحين.
+            </p>
+          </header>
+
+          <div class="proof-panel">
+            <div class="proof-stats" aria-label="مؤشرات الثقة">
+              <article class="proof-stat">
+                <p class="proof-stat__value">120+ منشأة</p>
+                <p class="proof-stat__label">اعتمدت الواجهة لتسهيل التوظيف</p>
+              </article>
+              <article class="proof-stat">
+                <p class="proof-stat__value">3 أيام أسرع</p>
+                <p class="proof-stat__label">في الوصول إلى قائمة المرشحين</p>
+              </article>
+            </div>
+
+            <div class="proof-testimonials">
+              <article class="proof-card">
+                <p class="proof-card__quote">
+                  "أصبحنا نصل إلى المرشحين المناسبين خلال وقت أقصر، مع تنظيم أوضح لكل مرحلة من مراحل التوظيف."
+                </p>
+                <div class="proof-card__meta">
+                  <p class="proof-card__name">مديرة الموارد البشرية</p>
+                  <p class="proof-card__role">سلسلة فنادق 4 نجوم</p>
+                </div>
+              </article>
+
+              <article class="proof-card">
+                <p class="proof-card__quote">
+                  "التجربة بسيطة ومباشرة، وهذا ما احتجناه فعلًا لفريق يتعامل مع طلبات توظيف متعددة يوميًا."
+                </p>
+                <div class="proof-card__meta">
+                  <p class="proof-card__name">مسؤول التوظيف</p>
+                  <p class="proof-card__role">فندق أعمال في منطقة حضرية</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- قسم الأسئلة الشائعة -->
+        <section class="section fade-in" aria-labelledby="faq-title">
+          <header class="section__header">
+            <p class="section__eyebrow">الأسئلة الشائعة</p>
+            <h2 id="faq-title" class="section__title">إجابات سريعة لمساعدتك</h2>
+          </header>
+
+          <div class="faq-list">
+            <details class="faq-item">
+              <summary>
+                <span>هل يمكنني البدء مجاناً؟</span>
+                <span class="faq-item__icon" aria-hidden="true">+</span>
+              </summary>
+              <div class="faq-item__content">
+                نعم، يمكنك البدء مجاناً عبر إنشاء حساب شركة والاطلاع على تجربة التوظيف قبل اتخاذ أي خطوة إضافية.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>
+                <span>هل المنصة مناسبة للفنادق الصغيرة والكبيرة؟</span>
+                <span class="faq-item__icon" aria-hidden="true">+</span>
+              </summary>
+              <div class="faq-item__content">
+                نعم، صممت لتناسب فرق التوظيف الصغيرة وكذلك المؤسسات الأكبر التي تدير عدة وظائف وفروع في الوقت نفسه.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>
+                <span>كم يستغرق نشر أول إعلان وظيفة؟</span>
+                <span class="faq-item__icon" aria-hidden="true">+</span>
+              </summary>
+              <div class="faq-item__content">
+                عادةً لا يحتاج الأمر سوى دقائق قليلة بعد تسجيل الحساب وإدخال تفاصيل الوظيفة والمتطلبات الأساسية.
+              </div>
+            </details>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- سكربت لتشغيل تأثيرات الظهور (Animations) -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const observerOptions = {
+          root: null,
+          rootMargin: '0px',
+          threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(section => {
+          observer.observe(section);
+        });
+      });
+    </script>
+  </body>
+</html>
