@@ -178,21 +178,24 @@
         background: linear-gradient(to right, transparent, var(--color-border), transparent);
       }
 
-      /* الإحصائيات */
+/* الإحصائيات */
       .hero-stats {
         display: flex;
         justify-content: center;
-        flex-wrap: wrap;
-        gap: 30px;
+        flex-wrap: wrap; /* كنخليوها باش فالتليفون يقدرو يهبطو */
+        gap: 20px; /* نقصنا الفراغ بيناتهم شوية */
+        width: 100%;
       }
 
       .stat-card {
         background: var(--color-white);
-        padding: 20px 30px;
+        padding: 20px 15px; /* نقصنا من الحجم الداخلي باش يقدّهم السطر */
         border-radius: 12px;
         box-shadow: var(--shadow-sm);
         border: 1px solid var(--color-border);
-        min-width: 180px;
+        flex: 1; /* هاد الخاصية هي لي كتخليهم يتمددو بالتساوي فخط واحد */
+        min-width: 130px; /* صغرنا الحد الأدنى باش يقدرو يجيو بـ 4 فسطر واحد */
+        max-width: 220px; /* باش مايعراضوش بزاف فالشاشات الكبيرة */
         transition: var(--transition);
         border-bottom: 3px solid transparent;
       }
@@ -204,16 +207,17 @@
       }
 
       .stat-card__value {
-        font-size: 2rem;
+        font-size: 1.8rem; /* صغرنا الخط ديال الرقم شوية باش يجي متناسق */
         font-weight: 800;
         color: var(--blue-standard);
       }
 
       .stat-card__label {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
         color: var(--color-text-muted);
         font-weight: 600;
       }
+
 
       /* ================= الأقسام العامة (Sections) ================= */
       .section {
