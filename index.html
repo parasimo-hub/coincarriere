@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet" />
     
     <style>
+
 /* ================= البار الفوقانية (Navbar) ================= */
       .navbar {
         position: fixed;
@@ -557,6 +558,120 @@
         padding-top: 20px;
       }
 
+      /* ================= الإجراء النهائي (Final CTA) ================= */
+      .final-cta-box {
+        background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue-medium) 100%);
+        padding: 60px 40px;
+        border-radius: 24px;
+        text-align: center;
+        box-shadow: 0 20px 40px rgba(11, 63, 89, 0.15);
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 40px;
+      }
+
+      /* زخرفة خفيفة فالخلفية ديال الصندوق */
+      .final-cta-box::before {
+        content: '';
+        position: absolute;
+        top: -50px; left: -50px;
+        width: 150px; height: 150px;
+        background: radial-gradient(circle, rgba(204, 250, 4, 0.1) 0%, transparent 70%);
+        border-radius: 50%;
+      }
+
+      .final-cta__title {
+        color: var(--color-white);
+        font-size: 2.2rem;
+        font-weight: 800;
+        margin-bottom: 15px;
+        position: relative;
+        z-index: 1;
+      }
+
+      .final-cta__subtitle {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 1.1rem;
+        max-width: 600px;
+        margin: 0 auto 30px;
+        position: relative;
+        z-index: 1;
+      }
+
+      .final-cta__actions {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        position: relative;
+        z-index: 1;
+      }
+
+      .final-cta__microcopy {
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 0.85rem;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+
+      .final-cta__microcopy svg {
+        color: var(--lime-primary);
+      }
+
+      /* ================= الفوتر (Footer) ================= */
+     
+
+      /* تأكد بلي هاد السطر كاين في أول ملف CSS باش يخدم الفونت */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+
+.main-footer {
+    background-color: #ffffff; /* لون الخلفية بيضاء كيف الصورة */
+    padding: 50px 20px;
+    text-align: center;
+    direction: rtl;
+    /* هاد السطر هو المهم باش الفونت يتبدل */
+    font-family: 'Cairo', sans-serif; 
+}
+
+.footer-logo img {
+    max-width: 180px;
+    margin-bottom: 25px;
+}
+
+.footer-description {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+    /* تطبيق الفونت هنا أيضا */
+    font-family: 'Cairo', sans-serif;
+}
+
+.footer-links h3 {
+    color: #004a6e;
+    font-size: 22px;
+    font-weight: 700; /* باش يجي غليظ بحال العناوين لي لفوق */
+    margin-bottom: 15px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: #3b82f6; /* لون أزرق بحال اللي في الصورة */
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.footer-links ul li a:hover {
+    text-decoration: underline;
+}
+
       /* ================= التجاوب مع الشاشات (Responsive) ================= */
       @media (max-width: 992px) {
         .proof-panel { grid-template-columns: 1fr; }
@@ -571,6 +686,28 @@
         .hero-stats { gap: 15px; }
         .stat-card { min-width: 140px; padding: 15px; }
       }
+
+      .final-cta-box {
+          padding: 40px 20px;
+        }
+        .final-cta__title {
+          font-size: 1.6rem;
+        }
+        .footer-grid {
+          grid-template-columns: 1fr; /* الفوتر كيولي عمودي فالتليفون */
+          gap: 30px;
+          text-align: center; /* كلشي كيرجع للوسط */
+        }
+        .brand-info {
+          padding-left: 0;
+        }
+        .footer-logo {
+          justify-content: center;
+        }
+        .footer-links a:hover {
+          padding-right: 0; /* كنحيدو ديك الحركة فالتليفون */
+        }
+
 
 /* ================= الأزرار في الهيرو ================= */
       .hero-buttons-wrapper {
@@ -897,7 +1034,7 @@
                 </p>
                 <div class="proof-card__author">
                   <!-- رابط التصويرة هنا -->
-                  <img src="https://i.postimg.cc/hP92qWGT/Logo-Officiel.png" alt="صورة العميل" class="proof-card__avatar">
+                  <img src="https://i.postimg.cc/PqK9ZLvk/Coin-Carriere-RH1.png" alt="صورة العميل" class="proof-card__avatar">
                   <div class="proof-card__meta">
                     <p class="proof-card__name">مديرة الموارد البشرية</p>
                     <p class="proof-card__role">سلسلة فنادق 4 نجوم</p>
@@ -912,7 +1049,7 @@
                 </p>
                 <div class="proof-card__author">
                   <!-- رابط التصويرة هنا -->
-                  <img src="https://i.postimg.cc/hP92qWGT/Logo-Officiel.png" alt="صورة العميل" class="proof-card__avatar">
+                  <img src="https://i.postimg.cc/t4b9NxJb/Coin-Carriere-RH2.png" alt="صورة العميل" class="proof-card__avatar">
                   <div class="proof-card__meta">
                     <p class="proof-card__name">مسؤول التوظيف</p>
                     <p class="proof-card__role">فندق أعمال في منطقة حضرية</p>
@@ -945,8 +1082,16 @@
           <div class="modal-content">
             <button class="close-modal-btn" id="closeVideoModal">&times;</button>
             <div class="iframe-wrapper">
-              <!-- بدل الرابط لي لتحت بالرابط ديال الفيديو ديالكم ف يوتيوب أو فيميو -->
-              <iframe id="videoIframe" src="https://www.youtube.com/watch?v=uK-yrqvFtvw" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+            <div class="iframe-wrapper">
+              <iframe 
+                id="videoIframe" 
+                src="https://www.youtube.com/embed/uK-yrqvFtvw" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen>
+              </iframe>
+            </div>
+             
             </div>
           </div>
         </div>
@@ -992,8 +1137,62 @@
             </details>
           </div>
         </section>
-      </div>
-    </main>                 
+    
+        
+        <!-- ================= قسم الإجراء النهائي (Final CTA) ================= -->
+        <section class="section fade-in">
+          <div class="final-cta-box">
+            <h2 class="final-cta__title">مستعد لبناء فريق أحلامك الفندقي؟</h2>
+            <p class="final-cta__subtitle">
+              انضم لأكثر من 120 منشأة سياحية تعتمد على CoinCarrière لتسريع عملية التوظيف وخفض التكاليف.
+            </p>
+            
+            <div class="final-cta__actions">
+              <a class="hero-cta" href="https://coincarriere.com/register?type=company" target="_blank" rel="noopener noreferrer">
+                سجل شركتك الآن — مجاناً
+              </a>
+              <span class="final-cta__microcopy">
+                <svg viewBox="0 0 20 20" width="16" height="16" fill="currentColor"><path d="M10 2a8 8 0 100 16 8 8 0 000-16zm-1 11.41l-3.7-3.71 1.41-1.42L9 10.59l4.29-4.3 1.42 1.42L9 13.41z"/></svg>
+                لا يتطلب بطاقة ائتمان
+              </span>
+            </div>
+          </div>
+        </section>
+
+      </div> <!-- تسدات الديف ديال shell -->
+    </main>
+
+    <!-- ================= الفوتر (Footer) ================= -->
+
+<footer class="main-footer">
+    <div class="footer-container">
+        
+        <!-- بلاصت اللوجو -->
+        <div class="footer-logo">
+            <img src="https://i.postimg.cc/hP92qWGT/Logo-Officiel.png" alt="CoinCarrière Logo"> 
+            <!-- ملاحظة: بدّل images/logo.png بالمسار ديال اللوجو ديالك -->
+        </div>
+
+        <!-- الوصف -->
+        <p class="footer-description">
+            المنصة الأولى المتخصصة في ربط الفنادق والمنشآت السياحية بأفضل الكفاءات المهنية المؤهلة في أسرع وقت.
+        </p>
+
+        <!-- روابط التواصل -->
+        <div class="footer-links">
+            <h3>تواصل معنا</h3>
+            <ul>
+                <li><a href="https://coincarriere.com/fr/contact">راسلنا</a></li>
+                <li><a href="https://coincarriere.com/register?type=company">تسجيل الدخول للمنشآت</a></li>
+            </ul>
+        </div>
+    </div>
+  
+    <!-- حقوق النشر (اختياري) -->
+    <div class="footer-bottom">
+         <p>© 2024 CoinCarrière. جميع الحقوق محفوظة.</p>
+    </div>
+</footer>
 
     <!-- سكربت لتشغيل تأثيرات الظهور (Animations) -->
     <script>
