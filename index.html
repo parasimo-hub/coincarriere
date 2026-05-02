@@ -1,1281 +1,3215 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CoinCarrière — Recrutez en hôtellerie en moins de 48h</title>
-<meta name="description" content="CoinCarrière — Recrutez en hôtellerie et restauration au Maroc en 48h. Sans commission. Candidats pré-qualifiés. Gratuit pour commencer.">
-<meta property="og:title" content="CoinCarrière — Recrutez en hôtellerie en moins de 48h">
-<meta property="og:description" content="Recevez des candidats qualifiés en 48h. Sans commission. Pour hôtels &amp; restaurants au Maroc.">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800;900&family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CoinCarrière — Recrutez en hôtellerie en moins de 48h</title>
+  <meta name="description"
+    content="CoinCarrière — Recrutez en hôtellerie et restauration au Maroc en 48h. Sans commission. Candidats pré-qualifiés. Gratuit pour commencer.">
+  <meta property="og:title" content="CoinCarrière — Recrutez en hôtellerie en moins de 48h">
+  <meta property="og:description"
+    content="Recevez des candidats qualifiés en 48h. Sans commission. Pour hôtels &amp; restaurants au Maroc.">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800;900&family=Outfit:wght@400;600;700;800;900&display=swap"
+    rel="stylesheet">
 
-<!-- Meta Pixel Code -->
-<script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src='https://connect.facebook.net/en_US/fbevents.js';
-  s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script');
+  <!-- Meta Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = 'https://connect.facebook.net/en_US/fbevents.js';
+      s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script');
 
-  fbq('init', '966961399043717'); // Pixel ID ديالك
-  fbq('track', 'PageView');
-</script>
+    fbq('init', '966961399043717'); // Pixel ID ديالك
+    fbq('track', 'PageView');
+  </script>
 
-<noscript>
-  <img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=966961399043717&ev=PageView&noscript=1"/>
-</noscript>
-<!-- End Meta Pixel Code -->
+  <noscript>
+    <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=966961399043717&ev=PageView&noscript=1" />
+  </noscript>
+  <!-- End Meta Pixel Code -->
 
 
-<style>
-:root{
-  --b1:#0094d9;--b2:#16498c;--b3:#0b3f59;
-  --lime:#b4dc02;--lime2:#ccfa04;
-  --dark:#0d1117;--dark2:#111827;--dark3:#1a2535;
-  --white:#fff;--off:#f8fafc;--light:#f0f6ff;
-  --text:#0b2540;--muted:#5a7a9a;--border:#dce8f4;
-  --r:10px;--r2:16px;
-  --sh:0 4px 24px rgba(0,100,200,.10);
-  --sh2:0 12px 48px rgba(0,100,200,.16);
-}
-*{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-body{font-family:'Outfit',sans-serif;background:var(--white);color:var(--text);overflow-x:hidden;}
-body[data-lang="ar"]{font-family:'Cairo',sans-serif;direction:rtl;}
-body[data-lang="ar"] h1,body[data-lang="ar"] h2,body[data-lang="ar"] h3{font-family:'Cairo',sans-serif;letter-spacing:0;}
-.ctr{max-width:1080px;margin:0 auto;padding:0 24px;}
+  <style>
+    :root {
+      --b1: #0094d9;
+      --b2: #16498c;
+      --b3: #0b3f59;
+      --lime: #b4dc02;
+      --lime2: #ccfa04;
+      --dark: #0d1117;
+      --dark2: #111827;
+      --dark3: #1a2535;
+      --white: #fff;
+      --off: #f8fafc;
+      --light: #f0f6ff;
+      --text: #0b2540;
+      --muted: #5a7a9a;
+      --border: #dce8f4;
+      --r: 10px;
+      --r2: 16px;
+      --sh: 0 4px 24px rgba(0, 100, 200, .10);
+      --sh2: 0 12px 48px rgba(0, 100, 200, .16);
+    }
 
-/* ── MULTILANG ── */
-[data-l]{display:none!important;}
-body[data-lang="fr"] [data-l="fr"]{display:revert!important;}
-body[data-lang="ar"] [data-l="ar"]{display:revert!important;}
-body[data-lang="en"] [data-l="en"]{display:revert!important;}
-span[data-l]{display:none!important;}
-body[data-lang="fr"] span[data-l="fr"]{display:inline!important;}
-body[data-lang="ar"] span[data-l="ar"]{display:inline!important;}
-body[data-lang="en"] span[data-l="en"]{display:inline!important;}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-/* ── TOP BAR ── */
-.top-bar{background:var(--b2);padding:8px 24px;text-align:center;font-size:.78rem;font-weight:600;color:#fff;position:relative;overflow:hidden;}
-.top-bar::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.08),transparent);animation:sweep 3s linear infinite;}
-@keyframes sweep{from{transform:translateX(-100%)}to{transform:translateX(100%)}}
-.top-bar strong{color:var(--lime2);}
+    html {
+      scroll-behavior: smooth;
+    }
 
-/* ── NAV ── */
-nav{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.97);backdrop-filter:blur(16px);border-bottom:1.5px solid var(--border);padding:10px 24px;display:flex;align-items:center;justify-content:space-between;gap:12px;box-shadow:0 2px 12px rgba(0,80,160,.07);}
-.n-logo img{height:40px;width:auto;display:block;}
-.n-mid{display:flex;align-items:center;gap:5px;}
-.lb{padding:5px 11px;border-radius:6px;border:1.5px solid var(--border);background:var(--light);color:var(--muted);font-size:.71rem;font-weight:700;cursor:pointer;transition:all .15s;font-family:inherit;}
-.lb.on,.lb:hover{background:var(--b1);color:#fff;border-color:var(--b1);}
-.n-right{display:flex;align-items:center;gap:10px;}
-.n-badge{background:rgba(180,220,2,.15);border:1px solid rgba(180,220,2,.4);color:#4d6000;padding:4px 10px;border-radius:20px;font-size:.7rem;font-weight:700;}
-.btn-lime{display:inline-flex;align-items:center;gap:7px;background:var(--lime);color:var(--b3);padding:11px 22px;border-radius:var(--r);font-weight:800;font-size:.88rem;text-decoration:none;border:none;cursor:pointer;transition:background .15s,transform .15s,box-shadow .15s;box-shadow:0 4px 16px rgba(180,220,2,.3);}
-.btn-lime:hover{background:var(--lime2);transform:translateY(-1px);box-shadow:0 8px 24px rgba(180,220,2,.4);}
-.btn-lime-lg{padding:15px 32px;font-size:1rem;border-radius:12px;}
-.btn-outline-dark{display:inline-flex;align-items:center;gap:7px;background:transparent;color:rgba(255,255,255,.85);padding:13px 22px;border-radius:var(--r);font-weight:600;font-size:.9rem;text-decoration:none;border:2px solid rgba(255,255,255,.25);transition:all .15s;}
-.btn-outline-dark:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.5);}
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: var(--white);
+      color: var(--text);
+      overflow-x: hidden;
+    }
 
-/* ── HERO ── */
-.hero{position:relative;min-height:600px;display:flex;align-items:center;overflow:hidden;background:var(--dark);}
-.hero-bg{position:absolute;inset:0;background-size:cover;background-position:center center;opacity:.55;}
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(105deg,rgba(0,70,140,.82) 0%,rgba(0,100,180,.60) 50%,rgba(0,148,217,.20) 100%);}
-.hero-grid-pattern{position:absolute;inset:0;opacity:.04;background-image:radial-gradient(circle,rgba(255,255,255,.9) 1px,transparent 1px);background-size:30px 30px;pointer-events:none;}
-.hero-inner{position:relative;z-index:2;width:100%;padding:80px 0 60px;}
-.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(180,220,2,.18);border:1px solid rgba(180,220,2,.35);color:var(--lime2);padding:6px 14px;border-radius:20px;font-size:.76rem;font-weight:700;letter-spacing:.04em;margin-bottom:22px;}
-.dot{width:6px;height:6px;border-radius:50%;background:var(--lime2);animation:blink 1.6s infinite;flex-shrink:0;}
-@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
-.hero h1{font-size:clamp(2rem,5.5vw,3.4rem);font-weight:900;line-height:1.08;letter-spacing:-.03em;color:#fff;margin-bottom:16px;max-width:620px;}
-body[data-lang="ar"] .hero h1{font-family:'Cairo',sans-serif;letter-spacing:0;max-width:700px;}
-.hero h1 .hl{color:var(--lime2);}
-.hero h1 .sm{display:block;font-size:.44em;color:rgba(255,255,255,.55);font-weight:600;margin-top:10px;letter-spacing:0;}
-.hero-sub{font-size:clamp(.92rem,2vw,1.08rem);color:rgba(255,255,255,.72);line-height:1.65;margin-bottom:28px;max-width:540px;}
-.hero-cta-row{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:28px;}
-.hero-trust{display:flex;gap:8px;flex-wrap:wrap;}
-.ht{display:flex;align-items:center;gap:5px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);padding:5px 11px;border-radius:20px;font-size:.72rem;color:rgba(255,255,255,.7);font-weight:500;}
-.hero-proof{margin-top:14px;font-size:.82rem;color:rgba(255,255,255,.5);}
-.hero-proof strong{color:var(--lime2);}
+    body[data-lang="ar"] {
+      font-family: 'Cairo', sans-serif;
+      direction: rtl;
+    }
 
-/* ── TESTI STRIP (Depuis leurs hôtels) ── */
-.testi-strip{background:var(--dark2);padding:56px 24px;text-align:center;}
-.strip-tag{display:inline-block;background:rgba(180,220,2,.15);border:1px solid rgba(180,220,2,.3);color:var(--lime2);padding:4px 12px;border-radius:20px;font-size:.71rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:14px;}
-.strip-title{font-size:clamp(1.3rem,3vw,1.9rem);font-weight:800;color:#fff;letter-spacing:-.025em;margin-bottom:32px;}
-.testi-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:16px;max-width:900px;margin:0 auto 32px;}
-.tc{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:var(--r2);padding:22px;text-align:left;transition:border-color .2s,transform .2s;}
-.tc:hover{border-color:rgba(180,220,2,.3);transform:translateY(-3px);}
-.tc-av{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--b1),var(--b2));display:grid;place-items:center;font-weight:800;font-size:.88rem;color:#fff;margin-bottom:10px;}
-.tc-stars{color:#f59e0b;font-size:.82rem;letter-spacing:2px;margin-bottom:8px;}
-.tc-q{font-size:.84rem;color:rgba(255,255,255,.75);line-height:1.6;font-style:italic;margin-bottom:12px;}
-.tc-name{font-size:.78rem;font-weight:700;color:rgba(255,255,255,.9);}
-.tc-role{font-size:.7rem;color:rgba(255,255,255,.4);margin-top:2px;}
+    body[data-lang="ar"] h1,
+    body[data-lang="ar"] h2,
+    body[data-lang="ar"] h3 {
+      font-family: 'Cairo', sans-serif;
+      letter-spacing: 0;
+    }
 
-/* PROOF STATS STRIP */
-.pstats{display:flex;gap:0;justify-content:center;max-width:820px;margin:0 auto;border-top:1px solid rgba(255,255,255,.08);padding-top:28px;flex-wrap:wrap;}
-.ps{flex:1;min-width:160px;text-align:center;padding:0 20px;border-right:1px solid rgba(255,255,255,.08);}
-.ps:last-child{border-right:none;}
-.ps-num{font-size:2rem;font-weight:900;letter-spacing:-.04em;color:var(--lime2);}
-.ps-lbl{font-size:.75rem;color:rgba(255,255,255,.45);margin-top:4px;}
+    .ctr {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
 
-/* ── BEFORE / AFTER ── */
-.ba-sec{padding:72px 24px;background:var(--white);}
-.ba-head{text-align:center;margin-bottom:40px;}
-.s-tag{display:inline-block;background:rgba(0,148,217,.1);border:1px solid rgba(0,148,217,.22);color:var(--b1);padding:4px 12px;border-radius:20px;font-size:.71rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:12px;}
-.s-title{font-size:clamp(1.35rem,3.5vw,2rem);font-weight:800;letter-spacing:-.025em;color:var(--b3);line-height:1.2;margin-bottom:8px;}
-.s-title .hl{color:var(--b1);}
-.s-sub{font-size:.94rem;color:var(--muted);max-width:480px;margin:0 auto;line-height:1.6;}
-.ba-grid{display:grid;grid-template-columns:1fr 48px 1fr;gap:0;align-items:stretch;max-width:820px;margin:0 auto;}
-.ba-card{border-radius:var(--r2);padding:28px 24px;}
-.ba-before{background:#fff5f5;border:2px solid #fca5a5;}
-.ba-after{background:#f0fdf4;border:2px solid #86efac;}
-.ba-sep-col{display:flex;align-items:center;justify-content:center;font-size:1.4rem;font-weight:900;color:var(--b1);}
-.ba-lbl{font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin-bottom:14px;display:flex;align-items:center;gap:6px;}
-.ba-before .ba-lbl{color:#dc2626;}
-.ba-after .ba-lbl{color:#16a34a;}
-.ba-list{list-style:none;display:flex;flex-direction:column;gap:10px;}
-.ba-list li{font-size:.85rem;color:var(--text);line-height:1.5;display:flex;align-items:flex-start;gap:8px;}
+    /* ── MULTILANG ── */
+    [data-l] {
+      display: none !important;
+    }
 
-/* ── PROCESS ── */
-.proc-sec{background:var(--dark2);padding:72px 24px;text-align:center;}
-.proc-sec .s-tag{background:rgba(180,220,2,.15);border-color:rgba(180,220,2,.3);color:var(--lime2);}
-.proc-sec .s-title{color:#fff;}
-.proc-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:48px;position:relative;max-width:900px;margin-left:auto;margin-right:auto;}
-.proc-steps::after{content:'';position:absolute;top:38px;left:calc(12.5%);right:calc(12.5%);height:2px;background:linear-gradient(90deg,var(--b1),var(--lime),var(--b1));opacity:.35;pointer-events:none;}
-.ps-step{padding:0 18px;text-align:center;}
-.ps-badge{display:inline-block;background:rgba(180,220,2,.15);border:1px solid rgba(180,220,2,.25);color:var(--lime2);padding:3px 10px;border-radius:20px;font-size:.67rem;font-weight:700;margin-bottom:10px;}
-.ps-num{width:54px;height:54px;background:linear-gradient(135deg,var(--b1),var(--b2));border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:1.15rem;font-weight:900;color:#fff;box-shadow:0 6px 20px rgba(0,148,217,.3);}
-.ps-step h3{font-size:.9rem;font-weight:700;color:#fff;margin-bottom:6px;}
-.ps-step p{font-size:.76rem;color:rgba(255,255,255,.45);line-height:1.5;}
-.proc-cta{margin-top:40px;}
+    body[data-lang="fr"] [data-l="fr"] {
+      display: revert !important;
+    }
 
-/* ── FEATURES (alternées) ── */
-.feat-sec{padding:72px 24px;background:var(--white);}
-.feat-head{text-align:center;margin-bottom:52px;}
-.feat-row{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-bottom:56px;max-width:960px;margin-left:auto;margin-right:auto;}
-.feat-row:last-child{margin-bottom:0;}
-.feat-row.reverse{direction:rtl;}
-.feat-row.reverse>*{direction:ltr;}
-body[data-lang="ar"] .feat-row{direction:ltr;}
-body[data-lang="ar"] .feat-row.reverse{direction:rtl;}
-body[data-lang="ar"] .feat-row.reverse>*{direction:rtl;}
-.feat-img{border-radius:var(--r2);overflow:hidden;aspect-ratio:4/3;background:var(--light);display:flex;align-items:center;justify-content:center;box-shadow:var(--sh2);position:relative;}
-.feat-mockup{width:100%;height:100%;object-fit:cover;}
-.feat-mock-placeholder{width:100%;height:100%;display:flex;flex-direction:column;gap:0;overflow:hidden;}
-.mock-bar{height:32px;background:var(--dark3);display:flex;align-items:center;padding:0 12px;gap:8px;flex-shrink:0;}
-.mock-dot{width:8px;height:8px;border-radius:50%;}
-.mock-content{flex:1;padding:16px;background:var(--dark2);display:flex;flex-direction:column;gap:10px;}
-.mock-row{height:36px;border-radius:6px;background:rgba(255,255,255,.07);}
-.mock-row.slim{height:24px;}
-.mock-row.wide{width:80%;}
-.mock-row.half{width:50%;}
-.mock-row.third{width:30%;}
-.mock-row.accent{background:rgba(0,148,217,.25);}
-.mock-row.lime{background:rgba(180,220,2,.2);}
-.feat-tag{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--b1);background:rgba(0,148,217,.08);border:1px solid rgba(0,148,217,.18);padding:4px 10px;border-radius:20px;margin-bottom:10px;}
-.feat-title{font-size:clamp(1.1rem,2.8vw,1.55rem);font-weight:800;color:var(--b3);line-height:1.2;letter-spacing:-.025em;margin-bottom:10px;}
-.feat-desc{font-size:.88rem;color:var(--muted);line-height:1.65;margin-bottom:18px;}
-.feat-link{display:inline-flex;align-items:center;gap:6px;color:var(--b1);font-size:.84rem;font-weight:700;text-decoration:none;transition:gap .15s;}
-.feat-link:hover{gap:10px;}
+    body[data-lang="ar"] [data-l="ar"] {
+      display: revert !important;
+    }
 
-/* Specific mockup styles */
-.pipeline-mock{padding:14px;}
-.pipe-header{display:flex;gap:8px;margin-bottom:12px;}
-.pipe-col{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:6px;padding:8px;flex:1;display:flex;flex-direction:column;gap:6px;}
-.pipe-col-title{font-size:.6rem;font-weight:700;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px;}
-.pipe-card{background:rgba(255,255,255,.07);border-radius:4px;padding:7px 8px;font-size:.62rem;color:rgba(255,255,255,.7);display:flex;align-items:center;gap:6px;}
-.pipe-av{width:18px;height:18px;border-radius:50%;background:linear-gradient(135deg,var(--b1),var(--b2));flex-shrink:0;}
-.pipe-av.g{background:linear-gradient(135deg,#22c55e,#16a34a);}
-.pipe-av.y{background:linear-gradient(135deg,#f59e0b,#d97706);}
-.pipe-badge{margin-left:auto;background:rgba(180,220,2,.2);color:var(--lime2);padding:1px 6px;border-radius:10px;font-size:.55rem;font-weight:700;}
+    body[data-lang="en"] [data-l="en"] {
+      display: revert !important;
+    }
 
-.team-mock{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:14px;background:var(--dark2);}
-.team-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:10px;text-align:center;}
-.team-av{width:34px;height:34px;border-radius:50%;margin:0 auto 6px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.75rem;color:#fff;}
-.team-name{font-size:.62rem;color:rgba(255,255,255,.7);font-weight:600;}
-.team-role{font-size:.55rem;color:rgba(255,255,255,.35);}
-.team-badge{display:inline-block;margin-top:5px;padding:2px 6px;border-radius:10px;font-size:.55rem;font-weight:700;}
+    span[data-l] {
+      display: none !important;
+    }
 
-.cal-mock{padding:12px;background:var(--dark2);}
-.cal-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;}
-.cal-title{font-size:.72rem;font-weight:700;color:#fff;}
-.cal-nav{display:flex;gap:4px;}
-.cal-btn{width:20px;height:20px;border-radius:4px;background:rgba(255,255,255,.07);border:none;color:rgba(255,255,255,.5);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:.65rem;}
-.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:3px;}
-.cal-day{height:28px;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:.62rem;color:rgba(255,255,255,.4);}
-.cal-day.has{background:rgba(0,148,217,.2);color:var(--b1);font-weight:700;}
-.cal-day.today{background:var(--lime);color:var(--b3);font-weight:800;}
-.cal-day.busy{background:rgba(180,220,2,.15);color:var(--lime2);font-weight:600;}
+    body[data-lang="fr"] span[data-l="fr"] {
+      display: inline !important;
+    }
 
-.page-mock{padding:14px;background:var(--dark2);}
-.page-header-m{background:var(--b2);border-radius:6px;padding:12px;margin-bottom:10px;display:flex;align-items:center;gap:10px;}
-.page-logo-m{width:28px;height:28px;border-radius:6px;background:var(--b1);display:grid;place-items:center;font-size:.65rem;font-weight:900;color:#fff;}
-.page-title-m{font-size:.65rem;font-weight:700;color:#fff;}
-.page-subtitle-m{font-size:.55rem;color:rgba(255,255,255,.5);}
-.page-jobs{display:flex;flex-direction:column;gap:6px;}
-.pj{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:6px;padding:8px 10px;display:flex;align-items:center;gap:8px;}
-.pj-dot{width:6px;height:6px;border-radius:50%;background:var(--lime2);flex-shrink:0;}
-.pj-text{font-size:.62rem;color:rgba(255,255,255,.7);flex:1;}
-.pj-tag{font-size:.55rem;background:rgba(0,148,217,.2);color:var(--b1);padding:2px 6px;border-radius:8px;font-weight:600;}
+    body[data-lang="ar"] span[data-l="ar"] {
+      display: inline !important;
+    }
 
-.analytics-mock{padding:14px;background:var(--dark2);}
-.an-kpis{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px;}
-.an-kpi{background:rgba(255,255,255,.05);border-radius:6px;padding:8px;}
-.an-val{font-size:1.2rem;font-weight:900;color:var(--lime2);}
-.an-lbl{font-size:.58rem;color:rgba(255,255,255,.4);margin-top:2px;}
-.an-chart{background:rgba(255,255,255,.03);border-radius:6px;padding:8px;height:56px;display:flex;align-items:flex-end;gap:4px;}
-.an-bar{flex:1;border-radius:3px 3px 0 0;background:rgba(0,148,217,.4);min-height:8px;}
-.an-bar.hl{background:var(--lime);}
+    body[data-lang="en"] span[data-l="en"] {
+      display: inline !important;
+    }
 
-.accomp-mock{padding:14px;background:var(--dark2);display:flex;flex-direction:column;gap:8px;}
-.acc-msg{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:10px 12px;display:flex;gap:8px;align-items:flex-start;}
-.acc-av{width:28px;height:28px;border-radius:50%;flex-shrink:0;display:grid;place-items:center;font-weight:800;font-size:.65rem;color:#fff;}
-.acc-bubble{font-size:.65rem;color:rgba(255,255,255,.75);line-height:1.5;}
-.acc-msg.right{flex-direction:row-reverse;}
-.acc-msg.right .acc-bubble{text-align:right;}
+    /* ── TOP BAR ── */
+    .top-bar {
+      background: var(--b2);
+      padding: 8px 24px;
+      text-align: center;
+      font-size: .78rem;
+      font-weight: 600;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
 
-/* ── VIDEO ── */
-.vid-sec{padding:72px 24px;background:var(--light);text-align:center;}
-.vid-title{font-size:clamp(1.2rem,3vw,1.75rem);font-weight:800;color:var(--b3);margin-bottom:32px;}
-.vid-wrap{max-width:760px;margin:0 auto;aspect-ratio:16/9;border-radius:var(--r2);overflow:hidden;box-shadow:var(--sh2);border:2px solid var(--border);}
-.vid-wrap iframe{width:100%;height:100%;border:none;display:block;}
+    .top-bar::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .08), transparent);
+      animation: sweep 3s linear infinite;
+    }
 
-/* ── FAQ ── */
-.faq-sec{padding:72px 24px;background:var(--white);}
-.faq-inner{max-width:720px;margin:0 auto;}
-.faq-item{border-bottom:1.5px solid var(--border);overflow:hidden;}
-.faq-q{width:100%;background:none;border:none;text-align:left;padding:18px 4px;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;font-family:inherit;transition:color .15s;}
-body[data-lang="ar"] .faq-q{text-align:right;}
-.faq-q-text{font-size:.96rem;font-weight:600;color:var(--b3);text-align:left;}
-body[data-lang="ar"] .faq-q-text{text-align:right;}
-.faq-icon{width:28px;height:28px;border-radius:50%;background:var(--light);border:1.5px solid var(--border);display:grid;place-items:center;flex-shrink:0;transition:all .2s;font-size:.85rem;color:var(--b1);}
-.faq-item.open .faq-icon{background:var(--b1);color:#fff;transform:rotate(45deg);border-color:var(--b1);}
-.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease,padding .2s;}
-.faq-item.open .faq-a{max-height:400px;padding-bottom:16px;}
-.faq-a-text{font-size:.88rem;color:var(--muted);line-height:1.7;padding:0 4px;}
+    @keyframes sweep {
+      from {
+        transform: translateX(-100%)
+      }
 
-/* ── FINAL CTA ── */
-.final { position: relative; overflow: hidden; padding: 100px 24px; text-align: center; background-color: #0b3f597c; }
-.final h2{font-size:clamp(1.7rem,4.5vw,2.9rem);font-weight:900;color:#fff;letter-spacing:-.035em;margin-bottom:12px;position:relative;}
-body[data-lang="ar"] .final h2{font-family:'Cairo',sans-serif;letter-spacing:0;}
-.final h2 .hl{color:var(--lime2);}
-.final-sub{font-size:1rem;color:rgba(255,255,255,.65);margin-bottom:36px;max-width:440px;margin-left:auto;margin-right:auto;position:relative;}
-.final-trust{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin-top:24px;position:relative;}
-.fti{display:flex;align-items:center;gap:6px;font-size:.75rem;color:rgba(255,255,255,.45);}
+      to {
+        transform: translateX(100%)
+      }
+    }
 
-/* ── STICKY ── */
-.sticky{display:none;position:fixed;bottom:0;left:0;right:0;z-index:150;padding:12px 16px;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-top:2px solid var(--border);box-shadow:0 -4px 20px rgba(0,80,160,.1);}
-.sticky a{display:block;text-align:center;background:var(--lime);color:var(--b3);padding:13px;border-radius:10px;font-weight:800;font-size:.9rem;text-decoration:none;}
-.sticky-note{text-align:center;font-size:.69rem;color:var(--muted);margin-top:5px;}
+    .top-bar strong {
+      color: var(--lime2);
+    }
 
-footer{padding:28px 24px;border-top:1.5px solid var(--border);background:var(--white);text-align:center;color:var(--muted);font-size:.74rem;}
-footer a{color:var(--b1);text-decoration:none;}
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      background: rgba(255, 255, 255, .97);
+      backdrop-filter: blur(16px);
+      border-bottom: 1.5px solid var(--border);
+      padding: 10px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      box-shadow: 0 2px 12px rgba(0, 80, 160, .07);
+    }
 
-/* ── TICKER ── */
-.ticker{background:var(--b3);padding:9px 0;overflow:hidden;}
-.t-track{display:flex;width:max-content;animation:tick 38s linear infinite;}
-@keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-.t-item{display:flex;align-items:center;gap:8px;padding:0 36px;font-size:.75rem;color:rgba(255,255,255,.45);white-space:nowrap;}
-.t-item strong{color:rgba(255,255,255,.82);}
-.t-dot{width:6px;height:6px;border-radius:50%;background:var(--lime2);animation:blink 1.5s infinite;flex-shrink:0;}
+    .n-logo img {
+      height: 40px;
+      width: auto;
+      display: block;
+    }
 
-/* ── RESP ── */
-@media(max-width:840px){
-  .feat-row{grid-template-columns:1fr;gap:28px;}
-  .feat-row.reverse{direction:ltr;}
-  .proc-steps{grid-template-columns:1fr 1fr;gap:28px;}
-  .proc-steps::after{display:none;}
-  .ba-grid{grid-template-columns:1fr;gap:16px;}
-  .ba-sep-col{display:none;}
-  .sticky{display:block;}
-  .pstats{flex-direction:column;align-items:center;gap:20px;}
-  .ps{border-right:none;border-bottom:1px solid rgba(255,255,255,.08);padding-bottom:16px;width:100%;}
-  .ps:last-child{border-bottom:none;padding-bottom:0;}
-  .testi-cards{grid-template-columns:1fr;}
-}
-@media(max-width:480px){
-  .proc-steps{grid-template-columns:1fr;}
-  .n-badge{display:none;}
-  nav{padding:8px 14px;}
-}
+    .n-mid {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
 
-/* ── COMPARISON TABLE ── */
-.comp-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;}
-.comp-table{width:100%;border-collapse:separate;border-spacing:0;border-radius:16px;overflow:hidden;box-shadow:var(--sh2);}
-.comp-table thead tr{background:var(--b2);}
-.comp-th-criteria{padding:18px 20px;text-align:left;font-size:.78rem;font-weight:700;color:rgba(255,255,255,.7);letter-spacing:.04em;text-transform:uppercase;width:40%;border-bottom:none;}
-body[data-lang="ar"] .comp-th-criteria{text-align:right;}
-.comp-th-coin{padding:18px 20px;text-align:center;font-size:.9rem;font-weight:800;color:#fff;width:30%;background:var(--b2);}
-.comp-th-trad{padding:18px 20px;text-align:center;font-size:.8rem;font-weight:600;color:rgba(255,255,255,.65);width:30%;background:var(--b3);}
-.comp-logo-cell{display:flex;align-items:center;justify-content:center;gap:7px;}
-.comp-diamond{color:var(--lime2);font-size:1rem;}
-.comp-td-label{padding:15px 20px;font-size:.88rem;font-weight:600;color:var(--text);background:#fff;border-bottom:1.5px solid var(--border);}
-body[data-lang="ar"] .comp-td-label{text-align:right;}
-.comp-td-coin{padding:15px 20px;text-align:center;background:#fff;border-bottom:1.5px solid var(--border);}
-.comp-td-trad{padding:15px 20px;text-align:center;background:#fff;border-bottom:1.5px solid var(--border);}
-.comp-row-alt .comp-td-label,.comp-row-alt .comp-td-coin,.comp-row-alt .comp-td-trad{background:var(--light);}
-.comp-yes{font-size:1.1rem;color:#16a34a;font-weight:800;}
-.comp-yes-bold{font-size:.88rem;font-weight:800;color:#16a34a;}
-.comp-no{font-size:.88rem;font-weight:700;color:#dc2626;}
-.comp-table tbody tr:last-child td{border-bottom:none;}
-@media(max-width:560px){.comp-th-criteria,.comp-td-label{font-size:.78rem;padding:12px 12px;}.comp-th-coin,.comp-th-trad,.comp-td-coin,.comp-td-trad{padding:12px 10px;font-size:.78rem;}}
+    .lb {
+      padding: 5px 11px;
+      border-radius: 6px;
+      border: 1.5px solid var(--border);
+      background: var(--light);
+      color: var(--muted);
+      font-size: .71rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all .15s;
+      font-family: inherit;
+    }
 
-/* ── TESTIMONIAL CAROUSEL ── */
-.tcarousel-sec {
-  background: var(--dark2);
-  padding: 72px 0 60px;
-  overflow: hidden;
-}
-.tcarousel-head {
-  text-align: center;
-  padding: 0 24px;
-  margin-bottom: 40px;
-}
-.tcar-tag {
-  font-size: .78rem;
-  font-weight: 800;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  color: var(--b1);
-  margin-bottom: 12px;
-}
-.tcar-title {
-  font-size: clamp(1.5rem, 4vw, 2.2rem);
-  font-weight: 900;
-  color: #fff;
-  letter-spacing: -.025em;
-  line-height: 1.2;
-}
-body[data-lang="ar"] .tcar-title { font-family: "Cairo", sans-serif; letter-spacing: 0; }
+    .lb.on,
+    .lb:hover {
+      background: var(--b1);
+      color: #fff;
+      border-color: var(--b1);
+    }
 
-/* Viewport — shows 1 card centered + peek of neighbours */
-.tcar-viewport {
-  overflow: hidden;
-  position: relative;
-  padding: 0 12%;
-}
-.tcar-track {
-  display: flex;
-  gap: 20px;
-  transition: transform .45s cubic-bezier(.4,0,.2,1);
-  will-change: transform;
-}
+    .n-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
 
-/* Each slide */
-.tslide {
-  flex: 0 0 76%;
-  max-width: 340px;
-  transition: transform .35s ease, opacity .35s ease;
-  cursor: pointer;
-}
-.tslide-inner {
-  position: relative;
-  border-radius: 18px;
-  overflow: hidden;
-  border: 2.5px solid transparent;
-  aspect-ratio: 3/4;
-  background: #111;
-  transition: border-color .3s;
-}
-.tslide.active .tslide-inner {
-  border-color: var(--b1);
-  box-shadow: 0 0 0 3px rgba(0,148,217,.25), 0 16px 48px rgba(0,0,0,.5);
-}
-.tslide-img {
-  width: 100%; height: 100%;
-  object-fit: cover;
-  display: block;
-  filter: brightness(.85);
-}
-.tslide-overlay {
-  position: absolute; inset: 0;
-  background: linear-gradient(to top, rgba(5,15,35,.95) 0%, rgba(5,15,35,.3) 50%, transparent 70%);
-}
+    .n-badge {
+      background: rgba(180, 220, 2, .15);
+      border: 1px solid rgba(180, 220, 2, .4);
+      color: #4d6000;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: .7rem;
+      font-weight: 700;
+    }
 
-/* Speech bubble */
-.tslide-bubble {
-  position: absolute;
-  top: 14px; left: 14px; right: 14px;
-  background: #fff;
-  border-radius: 14px 14px 14px 4px;
-  padding: 13px 15px;
-  font-size: .84rem;
-  color: #111;
-  font-weight: 600;
-  line-height: 1.5;
-  box-shadow: 0 4px 16px rgba(0,0,0,.25);
-  z-index: 3;
-}
-.tslide-bubble::after {
-  content: '';
-  position: absolute;
-  bottom: -10px; left: 20px;
-  border: 10px solid transparent;
-  border-top-color: #fff;
-  border-bottom: 0;
-  border-left: 0;
-  filter: drop-shadow(0 3px 3px rgba(0,0,0,.15));
-}
-body[data-lang="ar"] .tslide-bubble { border-radius: 14px 14px 4px 14px; }
-body[data-lang="ar"] .tslide-bubble::after { left: auto; right: 20px; }
+    .btn-lime {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: var(--lime);
+      color: var(--b3);
+      padding: 11px 22px;
+      border-radius: var(--r);
+      font-weight: 800;
+      font-size: .88rem;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: background .15s, transform .15s, box-shadow .15s;
+      box-shadow: 0 4px 16px rgba(180, 220, 2, .3);
+    }
 
-/* Badge */
-.tslide-badge {
-  position: absolute;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-  color: #fff;
-  font-size: .75rem;
-  font-weight: 800;
-  padding: 7px 14px;
-  border-radius: 8px;
-  white-space: nowrap;
-  box-shadow: 0 2px 12px rgba(0,0,0,.4);
-  text-align: center;
-  z-index: 3;
-  border: 2px solid rgba(255,255,255,.3);
-  max-width: 90%;
-}
+    .btn-lime:hover {
+      background: var(--lime2);
+      transform: translateY(-1px);
+      box-shadow: 0 8px 24px rgba(180, 220, 2, .4);
+    }
 
-/* Bottom info */
-.tslide-info {
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  padding: 18px 16px 16px;
-  z-index: 3;
-}
-.tslide-stars { color: #f59e0b; font-size: .88rem; letter-spacing: 2px; margin-bottom: 6px; }
-.tslide-name { font-size: 1rem; font-weight: 800; color: #fff; margin-bottom: 2px; }
-.tslide-role { font-size: .78rem; color: rgba(255,255,255,.65); margin-bottom: 4px; }
-.tslide-hotel { font-size: .78rem; font-weight: 700; color: var(--lime2); }
+    .btn-lime-lg {
+      padding: 15px 32px;
+      font-size: 1rem;
+      border-radius: 12px;
+    }
 
-/* Controls */
-.tcar-controls {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 32px;
-  padding: 0 24px;
-}
-.tcar-btn {
-  width: 48px; height: 48px;
-  border-radius: 50%;
-  background: rgba(255,255,255,.1);
-  border: 2px solid rgba(255,255,255,.2);
-  color: #fff; font-size: 1.5rem;
-  cursor: pointer; display: flex; align-items: center; justify-content: center;
-  transition: background .2s, border-color .2s;
-  flex-shrink: 0;
-  line-height: 1;
-}
-.tcar-btn:hover { background: var(--b1); border-color: var(--b1); }
-.tcar-dots { display: flex; gap: 8px; align-items: center; }
-.tcar-dot {
-  width: 8px; height: 8px; border-radius: 50%;
-  background: rgba(255,255,255,.3);
-  cursor: pointer; transition: all .25s;
-}
-.tcar-dot-on {
-  width: 28px; height: 8px;
-  border-radius: 4px;
-  background: var(--b1);
-}
+    .btn-outline-dark {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: transparent;
+      color: rgba(255, 255, 255, .85);
+      padding: 13px 22px;
+      border-radius: var(--r);
+      font-weight: 600;
+      font-size: .9rem;
+      text-decoration: none;
+      border: 2px solid rgba(255, 255, 255, .25);
+      transition: all .15s;
+    }
 
-@media(max-width:640px) {
-  .tcar-viewport { padding: 0 8%; }
-  .tslide { flex: 0 0 82%; }
-  .tslide-bubble { font-size: .78rem; padding: 11px 12px; }
-  .tslide-badge { font-size: .68rem; max-width: 85%; }
-}
+    .btn-outline-dark:hover {
+      background: rgba(255, 255, 255, .1);
+      border-color: rgba(255, 255, 255, .5);
+    }
 
-/* ── SCROLL REVEAL ── */
-.reveal{opacity:0;transform:translateY(24px);transition:opacity .55s ease,transform .55s ease;}
-.reveal.on{opacity:1;transform:none;}
-.d1{transition-delay:.08s;} .d2{transition-delay:.16s;} .d3{transition-delay:.24s;} .d4{transition-delay:.32s;}
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      min-height: 600px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background: var(--dark);
+    }
 
-/* ── NAV SCROLLED ── */
-nav.scrolled{box-shadow:0 4px 24px rgba(0,60,140,.16);}
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center center;
+      opacity: .55;
+    }
 
-/* ── CTA PULSE ── */
-.pulse{animation:pulse-anim 2.5s ease infinite;}
-@keyframes pulse-anim{0%,100%{box-shadow:0 4px 16px rgba(180,220,2,.3);}60%{box-shadow:0 6px 32px rgba(180,220,2,.65);}}
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(105deg, rgba(0, 70, 140, .82) 0%, rgba(0, 100, 180, .60) 50%, rgba(0, 148, 217, .20) 100%);
+    }
 
-/* ── HERO MOBILE ── */
-@media(max-width:768px){
-  .hero{min-height:auto;}
-  .hero-inner{padding:52px 0 44px;}
-  .hero h1{font-size:clamp(1.75rem,7vw,2.8rem);}
-  .hero-cta-row{flex-direction:column;align-items:stretch;}
-  .hero-cta-row a{text-align:center;justify-content:center;}
-}
+    .hero-grid-pattern {
+      position: absolute;
+      inset: 0;
+      opacity: .04;
+      background-image: radial-gradient(circle, rgba(255, 255, 255, .9) 1px, transparent 1px);
+      background-size: 30px 30px;
+      pointer-events: none;
+    }
 
-/* ── TICKER PAUSE HOVER ── */
-.ticker:hover .t-track{animation-play-state:paused;}
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      padding: 80px 0 60px;
+    }
 
-/* ── FEAT IMG HOVER ── */
-.feat-img{transition:box-shadow .3s;}
-.feat-row:hover .feat-img{box-shadow:0 20px 60px rgba(0,100,200,.18);}
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(180, 220, 2, .18);
+      border: 1px solid rgba(180, 220, 2, .35);
+      color: var(--lime2);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: .76rem;
+      font-weight: 700;
+      letter-spacing: .04em;
+      margin-bottom: 22px;
+    }
 
-/* ── FAQ HOVER ── */
-.faq-q:hover .faq-q-text{color:var(--b1);}
+    .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--lime2);
+      animation: blink 1.6s infinite;
+      flex-shrink: 0;
+    }
 
-/* ── BETTER FOCUS ── */
-:focus-visible{outline:2.5px solid var(--b1);outline-offset:3px;border-radius:4px;}
+    @keyframes blink {
 
-/* ── MOBILE BODY PADDING (sticky) ── */
-@media(max-width:840px){body{padding-bottom:76px;}}
+      0%,
+      100% {
+        opacity: 1
+      }
 
-/* ── FINAL CTA BG FIX ── */
-.final{padding:96px 24px;}
+      50% {
+        opacity: .3
+      }
+    }
 
-/* ── COUNTER ANIM ── */
-.count-anim{font-variant-numeric:tabular-nums;}
+    .hero h1 {
+      font-size: clamp(2rem, 5.5vw, 3.4rem);
+      font-weight: 900;
+      line-height: 1.08;
+      letter-spacing: -.03em;
+      color: #fff;
+      margin-bottom: 16px;
+      max-width: 620px;
+    }
 
-/* ── TSLIDE NEIGHBOUR DIMMED ── */
-.tslide:not(.active){opacity:.65;transform:scale(.96);}
-.tslide{transition:opacity .35s ease,transform .35s ease;}
+    body[data-lang="ar"] .hero h1 {
+      font-family: 'Cairo', sans-serif;
+      letter-spacing: 0;
+      max-width: 700px;
+    }
 
-/* ── COMPARISON MOBILE SCROLL ── */
-@media(max-width:560px){
-  .comp-table{font-size:.82rem;}
-  .comp-td-label{font-size:.8rem;}
-}
+    .hero h1 .hl {
+      color: var(--lime2);
+    }
 
-/* ── COMPARISON TABLE ── */
-.comp-sec{padding:72px 24px;background:var(--light);}
-.comp-sec .s-tag{margin-bottom:12px;}
-.comp-sec .s-title{margin-bottom:36px;}
-.comp-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:18px;box-shadow:var(--sh2);}
-.comp-table{width:100%;border-collapse:collapse;border-radius:18px;overflow:hidden;font-family:inherit;}
-.comp-thead{background:#d8e8f5;}
-.comp-th{padding:16px 18px;font-size:.8rem;font-weight:700;color:var(--text);}
-.comp-th.th-coin{text-align:center;color:var(--b2);font-size:.92rem;font-weight:800;}
-.comp-th.th-trad{text-align:center;color:var(--muted);font-size:.78rem;font-weight:600;}
-.comp-th.th-label{color:var(--muted);font-size:.72rem;letter-spacing:.04em;text-transform:uppercase;}
-.comp-diamond{color:var(--b1);font-size:.9rem;margin-right:5px;}
-.comp-tr{border-bottom:1.5px solid #e0ecf8;background:#fff;}
-.comp-tr:last-child{border-bottom:none;}
-.comp-tr-alt{background:var(--light);}
-.comp-td{padding:15px 18px;font-size:.88rem;color:var(--text);vertical-align:middle;}
-.comp-td.td-label{font-weight:600;color:var(--b3);}
-.comp-td.td-coin,.comp-td.td-trad{text-align:center;}
-.v-yes{color:#16a34a;font-size:1.15rem;font-weight:800;line-height:1;}
-.v-no{color:#dc2626;font-size:1rem;font-weight:700;line-height:1;}
-.v-yes-bold{color:#16a34a;font-size:.86rem;font-weight:800;}
-.v-no-bold{color:#dc2626;font-size:.86rem;font-weight:700;}
-@media(max-width:480px){
-  .comp-td,.comp-th{padding:12px 10px;font-size:.8rem;}
-  .comp-th.th-coin{font-size:.82rem;}
-}
-</style>
+    .hero h1 .sm {
+      display: block;
+      font-size: .44em;
+      color: rgba(255, 255, 255, .55);
+      font-weight: 600;
+      margin-top: 10px;
+      letter-spacing: 0;
+    }
+
+    .hero-sub {
+      font-size: clamp(.92rem, 2vw, 1.08rem);
+      color: rgba(255, 255, 255, .72);
+      line-height: 1.65;
+      margin-bottom: 28px;
+      max-width: 540px;
+    }
+
+    .hero-cta-row {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 28px;
+    }
+
+    .hero-trust {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .ht {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      background: rgba(255, 255, 255, .08);
+      border: 1px solid rgba(255, 255, 255, .14);
+      padding: 5px 11px;
+      border-radius: 20px;
+      font-size: .72rem;
+      color: rgba(255, 255, 255, .7);
+      font-weight: 500;
+    }
+
+    .hero-proof {
+      margin-top: 14px;
+      font-size: .82rem;
+      color: rgba(255, 255, 255, .5);
+    }
+
+    .hero-proof strong {
+      color: var(--lime2);
+    }
+
+    /* ── TESTI STRIP (Depuis leurs hôtels) ── */
+    .testi-strip {
+      background: var(--dark2);
+      padding: 56px 24px;
+      text-align: center;
+    }
+
+    .strip-tag {
+      display: inline-block;
+      background: rgba(180, 220, 2, .15);
+      border: 1px solid rgba(180, 220, 2, .3);
+      color: var(--lime2);
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: .71rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .strip-title {
+      font-size: clamp(1.3rem, 3vw, 1.9rem);
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -.025em;
+      margin-bottom: 32px;
+    }
+
+    .testi-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 16px;
+      max-width: 900px;
+      margin: 0 auto 32px;
+    }
+
+    .tc {
+      background: rgba(255, 255, 255, .05);
+      border: 1px solid rgba(255, 255, 255, .1);
+      border-radius: var(--r2);
+      padding: 22px;
+      text-align: left;
+      transition: border-color .2s, transform .2s;
+    }
+
+    .tc:hover {
+      border-color: rgba(180, 220, 2, .3);
+      transform: translateY(-3px);
+    }
+
+    .tc-av {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--b1), var(--b2));
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      font-size: .88rem;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .tc-stars {
+      color: #f59e0b;
+      font-size: .82rem;
+      letter-spacing: 2px;
+      margin-bottom: 8px;
+    }
+
+    .tc-q {
+      font-size: .84rem;
+      color: rgba(255, 255, 255, .75);
+      line-height: 1.6;
+      font-style: italic;
+      margin-bottom: 12px;
+    }
+
+    .tc-name {
+      font-size: .78rem;
+      font-weight: 700;
+      color: rgba(255, 255, 255, .9);
+    }
+
+    .tc-role {
+      font-size: .7rem;
+      color: rgba(255, 255, 255, .4);
+      margin-top: 2px;
+    }
+
+    /* PROOF STATS STRIP */
+    .pstats {
+      display: flex;
+      gap: 0;
+      justify-content: center;
+      max-width: 820px;
+      margin: 0 auto;
+      border-top: 1px solid rgba(255, 255, 255, .08);
+      padding-top: 28px;
+      flex-wrap: wrap;
+    }
+
+    .ps {
+      flex: 1;
+      min-width: 160px;
+      text-align: center;
+      padding: 0 20px;
+      border-right: 1px solid rgba(255, 255, 255, .08);
+    }
+
+    .ps:last-child {
+      border-right: none;
+    }
+
+    .ps-num {
+      font-size: 2rem;
+      font-weight: 900;
+      letter-spacing: -.04em;
+      color: var(--lime2);
+    }
+
+    .ps-lbl {
+      font-size: .75rem;
+      color: rgba(255, 255, 255, .45);
+      margin-top: 4px;
+    }
+
+    /* ── BEFORE / AFTER ── */
+    .ba-sec {
+      padding: 72px 24px;
+      background: var(--white);
+    }
+
+    .ba-head {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .s-tag {
+      display: inline-block;
+      background: rgba(0, 148, 217, .1);
+      border: 1px solid rgba(0, 148, 217, .22);
+      color: var(--b1);
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: .71rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .s-title {
+      font-size: clamp(1.35rem, 3.5vw, 2rem);
+      font-weight: 800;
+      letter-spacing: -.025em;
+      color: var(--b3);
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+
+    .s-title .hl {
+      color: var(--b1);
+    }
+
+    .s-sub {
+      font-size: .94rem;
+      color: var(--muted);
+      max-width: 480px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .ba-grid {
+      display: grid;
+      grid-template-columns: 1fr 48px 1fr;
+      gap: 0;
+      align-items: stretch;
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    .ba-card {
+      border-radius: var(--r2);
+      padding: 28px 24px;
+    }
+
+    .ba-before {
+      background: #fff5f5;
+      border: 2px solid #fca5a5;
+    }
+
+    .ba-after {
+      background: #f0fdf4;
+      border: 2px solid #86efac;
+    }
+
+    .ba-sep-col {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      font-weight: 900;
+      color: var(--b1);
+    }
+
+    .ba-lbl {
+      font-size: .72rem;
+      font-weight: 800;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .ba-before .ba-lbl {
+      color: #dc2626;
+    }
+
+    .ba-after .ba-lbl {
+      color: #16a34a;
+    }
+
+    .ba-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .ba-list li {
+      font-size: .85rem;
+      color: var(--text);
+      line-height: 1.5;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    /* ── PROCESS ── */
+    .proc-sec {
+      background: var(--dark2);
+      padding: 72px 24px;
+      text-align: center;
+    }
+
+    .proc-sec .s-tag {
+      background: rgba(180, 220, 2, .15);
+      border-color: rgba(180, 220, 2, .3);
+      color: var(--lime2);
+    }
+
+    .proc-sec .s-title {
+      color: #fff;
+    }
+
+    .proc-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      margin-top: 48px;
+      position: relative;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .proc-steps::after {
+      content: '';
+      position: absolute;
+      top: 38px;
+      left: calc(12.5%);
+      right: calc(12.5%);
+      height: 2px;
+      background: linear-gradient(90deg, var(--b1), var(--lime), var(--b1));
+      opacity: .35;
+      pointer-events: none;
+    }
+
+    .ps-step {
+      padding: 0 18px;
+      text-align: center;
+    }
+
+    .ps-badge {
+      display: inline-block;
+      background: rgba(180, 220, 2, .15);
+      border: 1px solid rgba(180, 220, 2, .25);
+      color: var(--lime2);
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: .67rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .ps-num {
+      width: 54px;
+      height: 54px;
+      background: linear-gradient(135deg, var(--b1), var(--b2));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 14px;
+      font-size: 1.15rem;
+      font-weight: 900;
+      color: #fff;
+      box-shadow: 0 6px 20px rgba(0, 148, 217, .3);
+    }
+
+    .ps-step h3 {
+      font-size: .9rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+
+    .ps-step p {
+      font-size: .76rem;
+      color: rgba(255, 255, 255, .45);
+      line-height: 1.5;
+    }
+
+    .proc-cta {
+      margin-top: 40px;
+    }
+
+    /* ── FEATURES (alternées) ── */
+    .feat-sec {
+      padding: 72px 24px;
+      background: var(--white);
+    }
+
+    .feat-head {
+      text-align: center;
+      margin-bottom: 52px;
+    }
+
+    .feat-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+      margin-bottom: 56px;
+      max-width: 960px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .feat-row:last-child {
+      margin-bottom: 0;
+    }
+
+    .feat-row.reverse {
+      direction: rtl;
+    }
+
+    .feat-row.reverse>* {
+      direction: ltr;
+    }
+
+    body[data-lang="ar"] .feat-row {
+      direction: ltr;
+    }
+
+    body[data-lang="ar"] .feat-row.reverse {
+      direction: rtl;
+    }
+
+    body[data-lang="ar"] .feat-row.reverse>* {
+      direction: rtl;
+    }
+
+    .feat-img {
+      border-radius: var(--r2);
+      overflow: hidden;
+      aspect-ratio: 4/3;
+      background: var(--light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--sh2);
+      position: relative;
+    }
+
+    .feat-mockup {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .feat-mock-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      overflow: hidden;
+    }
+
+    .mock-bar {
+      height: 32px;
+      background: var(--dark3);
+      display: flex;
+      align-items: center;
+      padding: 0 12px;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+
+    .mock-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+
+    .mock-content {
+      flex: 1;
+      padding: 16px;
+      background: var(--dark2);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .mock-row {
+      height: 36px;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, .07);
+    }
+
+    .mock-row.slim {
+      height: 24px;
+    }
+
+    .mock-row.wide {
+      width: 80%;
+    }
+
+    .mock-row.half {
+      width: 50%;
+    }
+
+    .mock-row.third {
+      width: 30%;
+    }
+
+    .mock-row.accent {
+      background: rgba(0, 148, 217, .25);
+    }
+
+    .mock-row.lime {
+      background: rgba(180, 220, 2, .2);
+    }
+
+    .feat-tag {
+      display: inline-block;
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--b1);
+      background: rgba(0, 148, 217, .08);
+      border: 1px solid rgba(0, 148, 217, .18);
+      padding: 4px 10px;
+      border-radius: 20px;
+      margin-bottom: 10px;
+    }
+
+    .feat-title {
+      font-size: clamp(1.1rem, 2.8vw, 1.55rem);
+      font-weight: 800;
+      color: var(--b3);
+      line-height: 1.2;
+      letter-spacing: -.025em;
+      margin-bottom: 10px;
+    }
+
+    .feat-desc {
+      font-size: .88rem;
+      color: var(--muted);
+      line-height: 1.65;
+      margin-bottom: 18px;
+    }
+
+    .feat-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--b1);
+      font-size: .84rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: gap .15s;
+    }
+
+    .feat-link:hover {
+      gap: 10px;
+    }
+
+    /* Specific mockup styles */
+    .pipeline-mock {
+      padding: 14px;
+    }
+
+    .pipe-header {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .pipe-col {
+      background: rgba(255, 255, 255, .04);
+      border: 1px solid rgba(255, 255, 255, .08);
+      border-radius: 6px;
+      padding: 8px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .pipe-col-title {
+      font-size: .6rem;
+      font-weight: 700;
+      color: rgba(255, 255, 255, .4);
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      margin-bottom: 6px;
+    }
+
+    .pipe-card {
+      background: rgba(255, 255, 255, .07);
+      border-radius: 4px;
+      padding: 7px 8px;
+      font-size: .62rem;
+      color: rgba(255, 255, 255, .7);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .pipe-av {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--b1), var(--b2));
+      flex-shrink: 0;
+    }
+
+    .pipe-av.g {
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+    }
+
+    .pipe-av.y {
+      background: linear-gradient(135deg, #f59e0b, #d97706);
+    }
+
+    .pipe-badge {
+      margin-left: auto;
+      background: rgba(180, 220, 2, .2);
+      color: var(--lime2);
+      padding: 1px 6px;
+      border-radius: 10px;
+      font-size: .55rem;
+      font-weight: 700;
+    }
+
+    .team-mock {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      padding: 14px;
+      background: var(--dark2);
+    }
+
+    .team-card {
+      background: rgba(255, 255, 255, .05);
+      border: 1px solid rgba(255, 255, 255, .08);
+      border-radius: 8px;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .team-av {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      margin: 0 auto 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: .75rem;
+      color: #fff;
+    }
+
+    .team-name {
+      font-size: .62rem;
+      color: rgba(255, 255, 255, .7);
+      font-weight: 600;
+    }
+
+    .team-role {
+      font-size: .55rem;
+      color: rgba(255, 255, 255, .35);
+    }
+
+    .team-badge {
+      display: inline-block;
+      margin-top: 5px;
+      padding: 2px 6px;
+      border-radius: 10px;
+      font-size: .55rem;
+      font-weight: 700;
+    }
+
+    .cal-mock {
+      padding: 12px;
+      background: var(--dark2);
+    }
+
+    .cal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .cal-title {
+      font-size: .72rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .cal-nav {
+      display: flex;
+      gap: 4px;
+    }
+
+    .cal-btn {
+      width: 20px;
+      height: 20px;
+      border-radius: 4px;
+      background: rgba(255, 255, 255, .07);
+      border: none;
+      color: rgba(255, 255, 255, .5);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .65rem;
+    }
+
+    .cal-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 3px;
+    }
+
+    .cal-day {
+      height: 28px;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .62rem;
+      color: rgba(255, 255, 255, .4);
+    }
+
+    .cal-day.has {
+      background: rgba(0, 148, 217, .2);
+      color: var(--b1);
+      font-weight: 700;
+    }
+
+    .cal-day.today {
+      background: var(--lime);
+      color: var(--b3);
+      font-weight: 800;
+    }
+
+    .cal-day.busy {
+      background: rgba(180, 220, 2, .15);
+      color: var(--lime2);
+      font-weight: 600;
+    }
+
+    .page-mock {
+      padding: 14px;
+      background: var(--dark2);
+    }
+
+    .page-header-m {
+      background: var(--b2);
+      border-radius: 6px;
+      padding: 12px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .page-logo-m {
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
+      background: var(--b1);
+      display: grid;
+      place-items: center;
+      font-size: .65rem;
+      font-weight: 900;
+      color: #fff;
+    }
+
+    .page-title-m {
+      font-size: .65rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .page-subtitle-m {
+      font-size: .55rem;
+      color: rgba(255, 255, 255, .5);
+    }
+
+    .page-jobs {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .pj {
+      background: rgba(255, 255, 255, .05);
+      border: 1px solid rgba(255, 255, 255, .08);
+      border-radius: 6px;
+      padding: 8px 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .pj-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--lime2);
+      flex-shrink: 0;
+    }
+
+    .pj-text {
+      font-size: .62rem;
+      color: rgba(255, 255, 255, .7);
+      flex: 1;
+    }
+
+    .pj-tag {
+      font-size: .55rem;
+      background: rgba(0, 148, 217, .2);
+      color: var(--b1);
+      padding: 2px 6px;
+      border-radius: 8px;
+      font-weight: 600;
+    }
+
+    .analytics-mock {
+      padding: 14px;
+      background: var(--dark2);
+    }
+
+    .an-kpis {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    .an-kpi {
+      background: rgba(255, 255, 255, .05);
+      border-radius: 6px;
+      padding: 8px;
+    }
+
+    .an-val {
+      font-size: 1.2rem;
+      font-weight: 900;
+      color: var(--lime2);
+    }
+
+    .an-lbl {
+      font-size: .58rem;
+      color: rgba(255, 255, 255, .4);
+      margin-top: 2px;
+    }
+
+    .an-chart {
+      background: rgba(255, 255, 255, .03);
+      border-radius: 6px;
+      padding: 8px;
+      height: 56px;
+      display: flex;
+      align-items: flex-end;
+      gap: 4px;
+    }
+
+    .an-bar {
+      flex: 1;
+      border-radius: 3px 3px 0 0;
+      background: rgba(0, 148, 217, .4);
+      min-height: 8px;
+    }
+
+    .an-bar.hl {
+      background: var(--lime);
+    }
+
+    .accomp-mock {
+      padding: 14px;
+      background: var(--dark2);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .acc-msg {
+      background: rgba(255, 255, 255, .05);
+      border: 1px solid rgba(255, 255, 255, .08);
+      border-radius: 10px;
+      padding: 10px 12px;
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+    }
+
+    .acc-av {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      font-size: .65rem;
+      color: #fff;
+    }
+
+    .acc-bubble {
+      font-size: .65rem;
+      color: rgba(255, 255, 255, .75);
+      line-height: 1.5;
+    }
+
+    .acc-msg.right {
+      flex-direction: row-reverse;
+    }
+
+    .acc-msg.right .acc-bubble {
+      text-align: right;
+    }
+
+    /* ── VIDEO ── */
+    .vid-sec {
+      padding: 72px 24px;
+      background: var(--light);
+      text-align: center;
+    }
+
+    .vid-title {
+      font-size: clamp(1.2rem, 3vw, 1.75rem);
+      font-weight: 800;
+      color: var(--b3);
+      margin-bottom: 32px;
+    }
+
+    .vid-wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      aspect-ratio: 16/9;
+      border-radius: var(--r2);
+      overflow: hidden;
+      box-shadow: var(--sh2);
+      border: 2px solid var(--border);
+    }
+
+    .vid-wrap iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    /* ── FAQ ── */
+    .faq-sec {
+      padding: 72px 24px;
+      background: var(--white);
+    }
+
+    .faq-inner {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      border-bottom: 1.5px solid var(--border);
+      overflow: hidden;
+    }
+
+    .faq-q {
+      width: 100%;
+      background: none;
+      border: none;
+      text-align: left;
+      padding: 18px 4px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      font-family: inherit;
+      transition: color .15s;
+    }
+
+    body[data-lang="ar"] .faq-q {
+      text-align: right;
+    }
+
+    .faq-q-text {
+      font-size: .96rem;
+      font-weight: 600;
+      color: var(--b3);
+      text-align: left;
+    }
+
+    body[data-lang="ar"] .faq-q-text {
+      text-align: right;
+    }
+
+    .faq-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--light);
+      border: 1.5px solid var(--border);
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      transition: all .2s;
+      font-size: .85rem;
+      color: var(--b1);
+    }
+
+    .faq-item.open .faq-icon {
+      background: var(--b1);
+      color: #fff;
+      transform: rotate(45deg);
+      border-color: var(--b1);
+    }
+
+    .faq-a {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .35s ease, padding .2s;
+    }
+
+    .faq-item.open .faq-a {
+      max-height: 400px;
+      padding-bottom: 16px;
+    }
+
+    .faq-a-text {
+      font-size: .88rem;
+      color: var(--muted);
+      line-height: 1.7;
+      padding: 0 4px;
+    }
+
+    /* ── FINAL CTA ── */
+    .final {
+      position: relative;
+      overflow: hidden;
+      padding: 100px 24px;
+      text-align: center;
+      background-color: #0b3f597c;
+    }
+
+    .final h2 {
+      font-size: clamp(1.7rem, 4.5vw, 2.9rem);
+      font-weight: 900;
+      color: #fff;
+      letter-spacing: -.035em;
+      margin-bottom: 12px;
+      position: relative;
+    }
+
+    body[data-lang="ar"] .final h2 {
+      font-family: 'Cairo', sans-serif;
+      letter-spacing: 0;
+    }
+
+    .final h2 .hl {
+      color: var(--lime2);
+    }
+
+    .final-sub {
+      font-size: 1rem;
+      color: rgba(255, 255, 255, .65);
+      margin-bottom: 36px;
+      max-width: 440px;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+    }
+
+    .final-trust {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 24px;
+      position: relative;
+    }
+
+    .fti {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: .75rem;
+      color: rgba(255, 255, 255, .45);
+    }
+
+    /* ── STICKY ── */
+    .sticky {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 150;
+      padding: 12px 16px;
+      background: rgba(255, 255, 255, .97);
+      backdrop-filter: blur(12px);
+      border-top: 2px solid var(--border);
+      box-shadow: 0 -4px 20px rgba(0, 80, 160, .1);
+    }
+
+    .sticky a {
+      display: block;
+      text-align: center;
+      background: var(--lime);
+      color: var(--b3);
+      padding: 13px;
+      border-radius: 10px;
+      font-weight: 800;
+      font-size: .9rem;
+      text-decoration: none;
+    }
+
+    .sticky-note {
+      text-align: center;
+      font-size: .69rem;
+      color: var(--muted);
+      margin-top: 5px;
+    }
+
+    footer {
+      padding: 28px 24px;
+      border-top: 1.5px solid var(--border);
+      background: var(--white);
+      text-align: center;
+      color: var(--muted);
+      font-size: .74rem;
+    }
+
+    footer a {
+      color: var(--b1);
+      text-decoration: none;
+    }
+
+    /* ── TICKER ── */
+    .ticker {
+      background: var(--b3);
+      padding: 9px 0;
+      overflow: hidden;
+    }
+
+    .t-track {
+      display: flex;
+      width: max-content;
+      animation: tick 38s linear infinite;
+    }
+
+    @keyframes tick {
+      from {
+        transform: translateX(0)
+      }
+
+      to {
+        transform: translateX(-50%)
+      }
+    }
+
+    .t-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 0 36px;
+      font-size: .75rem;
+      color: rgba(255, 255, 255, .45);
+      white-space: nowrap;
+    }
+
+    .t-item strong {
+      color: rgba(255, 255, 255, .82);
+    }
+
+    .t-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--lime2);
+      animation: blink 1.5s infinite;
+      flex-shrink: 0;
+    }
+
+    /* ── RESP ── */
+    @media(max-width:840px) {
+      .feat-row {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .feat-row.reverse {
+        direction: ltr;
+      }
+
+      .proc-steps {
+        grid-template-columns: 1fr 1fr;
+        gap: 28px;
+      }
+
+      .proc-steps::after {
+        display: none;
+      }
+
+      .ba-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .ba-sep-col {
+        display: none;
+      }
+
+      .sticky {
+        display: block;
+      }
+
+      .pstats {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .ps {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, .08);
+        padding-bottom: 16px;
+        width: 100%;
+      }
+
+      .ps:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+
+      .testi-cards {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media(max-width:480px) {
+      .proc-steps {
+        grid-template-columns: 1fr;
+      }
+
+      .n-badge {
+        display: none;
+      }
+
+      nav {
+        padding: 8px 14px;
+      }
+    }
+
+    /* ── COMPARISON TABLE ── */
+    .comp-wrap {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .comp-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--sh2);
+    }
+
+    .comp-table thead tr {
+      background: var(--b2);
+    }
+
+    .comp-th-criteria {
+      padding: 18px 20px;
+      text-align: left;
+      font-size: .78rem;
+      font-weight: 700;
+      color: rgba(255, 255, 255, .7);
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      width: 40%;
+      border-bottom: none;
+    }
+
+    body[data-lang="ar"] .comp-th-criteria {
+      text-align: right;
+    }
+
+    .comp-th-coin {
+      padding: 18px 20px;
+      text-align: center;
+      font-size: .9rem;
+      font-weight: 800;
+      color: #fff;
+      width: 30%;
+      background: var(--b2);
+    }
+
+    .comp-th-trad {
+      padding: 18px 20px;
+      text-align: center;
+      font-size: .8rem;
+      font-weight: 600;
+      color: rgba(255, 255, 255, .65);
+      width: 30%;
+      background: var(--b3);
+    }
+
+    .comp-logo-cell {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+    }
+
+    .comp-diamond {
+      color: var(--lime2);
+      font-size: 1rem;
+    }
+
+    .comp-td-label {
+      padding: 15px 20px;
+      font-size: .88rem;
+      font-weight: 600;
+      color: var(--text);
+      background: #fff;
+      border-bottom: 1.5px solid var(--border);
+    }
+
+    body[data-lang="ar"] .comp-td-label {
+      text-align: right;
+    }
+
+    .comp-td-coin {
+      padding: 15px 20px;
+      text-align: center;
+      background: #fff;
+      border-bottom: 1.5px solid var(--border);
+    }
+
+    .comp-td-trad {
+      padding: 15px 20px;
+      text-align: center;
+      background: #fff;
+      border-bottom: 1.5px solid var(--border);
+    }
+
+    .comp-row-alt .comp-td-label,
+    .comp-row-alt .comp-td-coin,
+    .comp-row-alt .comp-td-trad {
+      background: var(--light);
+    }
+
+    .comp-yes {
+      font-size: 1.1rem;
+      color: #16a34a;
+      font-weight: 800;
+    }
+
+    .comp-yes-bold {
+      font-size: .88rem;
+      font-weight: 800;
+      color: #16a34a;
+    }
+
+    .comp-no {
+      font-size: .88rem;
+      font-weight: 700;
+      color: #dc2626;
+    }
+
+    .comp-table tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    @media(max-width:560px) {
+
+      .comp-th-criteria,
+      .comp-td-label {
+        font-size: .78rem;
+        padding: 12px 12px;
+      }
+
+      .comp-th-coin,
+      .comp-th-trad,
+      .comp-td-coin,
+      .comp-td-trad {
+        padding: 12px 10px;
+        font-size: .78rem;
+      }
+    }
+
+    /* ── TESTIMONIAL CAROUSEL ── */
+    .tcarousel-sec {
+      background: var(--dark2);
+      padding: 72px 0 60px;
+      overflow: hidden;
+    }
+
+    .tcarousel-head {
+      text-align: center;
+      padding: 0 24px;
+      margin-bottom: 40px;
+    }
+
+    .tcar-tag {
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--b1);
+      margin-bottom: 12px;
+    }
+
+    .tcar-title {
+      font-size: clamp(1.5rem, 4vw, 2.2rem);
+      font-weight: 900;
+      color: #fff;
+      letter-spacing: -.025em;
+      line-height: 1.2;
+    }
+
+    body[data-lang="ar"] .tcar-title {
+      font-family: "Cairo", sans-serif;
+      letter-spacing: 0;
+    }
+
+    /* Viewport — shows 1 card centered + peek of neighbours */
+    .tcar-viewport {
+      overflow: hidden;
+      position: relative;
+      padding: 0 12%;
+    }
+
+    .tcar-track {
+      display: flex;
+      gap: 20px;
+      transition: transform .45s cubic-bezier(.4, 0, .2, 1);
+      will-change: transform;
+    }
+
+    /* Each slide */
+    .tslide {
+      flex: 0 0 76%;
+      max-width: 340px;
+      transition: transform .35s ease, opacity .35s ease;
+      cursor: pointer;
+    }
+
+    .tslide-inner {
+      position: relative;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 2.5px solid transparent;
+      aspect-ratio: 3/4;
+      background: #111;
+      transition: border-color .3s;
+    }
+
+    .tslide.active .tslide-inner {
+      border-color: var(--b1);
+      box-shadow: 0 0 0 3px rgba(0, 148, 217, .25), 0 16px 48px rgba(0, 0, 0, .5);
+    }
+
+    .tslide-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      filter: brightness(.85);
+    }
+
+    .tslide-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(5, 15, 35, .95) 0%, rgba(5, 15, 35, .3) 50%, transparent 70%);
+    }
+
+    /* Speech bubble */
+    .tslide-bubble {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      right: 14px;
+      background: #fff;
+      border-radius: 14px 14px 14px 4px;
+      padding: 13px 15px;
+      font-size: .84rem;
+      color: #111;
+      font-weight: 600;
+      line-height: 1.5;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, .25);
+      z-index: 3;
+    }
+
+    .tslide-bubble::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 20px;
+      border: 10px solid transparent;
+      border-top-color: #fff;
+      border-bottom: 0;
+      border-left: 0;
+      filter: drop-shadow(0 3px 3px rgba(0, 0, 0, .15));
+    }
+
+    body[data-lang="ar"] .tslide-bubble {
+      border-radius: 14px 14px 4px 14px;
+    }
+
+    body[data-lang="ar"] .tslide-bubble::after {
+      left: auto;
+      right: 20px;
+    }
+
+    /* Badge */
+    .tslide-badge {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      font-size: .75rem;
+      font-weight: 800;
+      padding: 7px 14px;
+      border-radius: 8px;
+      white-space: nowrap;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, .4);
+      text-align: center;
+      z-index: 3;
+      border: 2px solid rgba(255, 255, 255, .3);
+      max-width: 90%;
+    }
+
+    /* Bottom info */
+    .tslide-info {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 18px 16px 16px;
+      z-index: 3;
+    }
+
+    .tslide-stars {
+      color: #f59e0b;
+      font-size: .88rem;
+      letter-spacing: 2px;
+      margin-bottom: 6px;
+    }
+
+    .tslide-name {
+      font-size: 1rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 2px;
+    }
+
+    .tslide-role {
+      font-size: .78rem;
+      color: rgba(255, 255, 255, .65);
+      margin-bottom: 4px;
+    }
+
+    .tslide-hotel {
+      font-size: .78rem;
+      font-weight: 700;
+      color: var(--lime2);
+    }
+
+    /* Controls */
+    .tcar-controls {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 32px;
+      padding: 0 24px;
+    }
+
+    .tcar-btn {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, .1);
+      border: 2px solid rgba(255, 255, 255, .2);
+      color: #fff;
+      font-size: 1.5rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background .2s, border-color .2s;
+      flex-shrink: 0;
+      line-height: 1;
+    }
+
+    .tcar-btn:hover {
+      background: var(--b1);
+      border-color: var(--b1);
+    }
+
+    .tcar-dots {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .tcar-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, .3);
+      cursor: pointer;
+      transition: all .25s;
+    }
+
+    .tcar-dot-on {
+      width: 28px;
+      height: 8px;
+      border-radius: 4px;
+      background: var(--b1);
+    }
+
+    @media(max-width:640px) {
+      .tcar-viewport {
+        padding: 0 8%;
+      }
+
+      .tslide {
+        flex: 0 0 82%;
+      }
+
+      .tslide-bubble {
+        font-size: .78rem;
+        padding: 11px 12px;
+      }
+
+      .tslide-badge {
+        font-size: .68rem;
+        max-width: 85%;
+      }
+    }
+
+    /* ── SCROLL REVEAL ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity .55s ease, transform .55s ease;
+    }
+
+    .reveal.on {
+      opacity: 1;
+      transform: none;
+    }
+
+    .d1 {
+      transition-delay: .08s;
+    }
+
+    .d2 {
+      transition-delay: .16s;
+    }
+
+    .d3 {
+      transition-delay: .24s;
+    }
+
+    .d4 {
+      transition-delay: .32s;
+    }
+
+    /* ── NAV SCROLLED ── */
+    nav.scrolled {
+      box-shadow: 0 4px 24px rgba(0, 60, 140, .16);
+    }
+
+    /* ── CTA PULSE ── */
+    .pulse {
+      animation: pulse-anim 2.5s ease infinite;
+    }
+
+    @keyframes pulse-anim {
+
+      0%,
+      100% {
+        box-shadow: 0 4px 16px rgba(180, 220, 2, .3);
+      }
+
+      60% {
+        box-shadow: 0 6px 32px rgba(180, 220, 2, .65);
+      }
+    }
+
+    /* ── HERO MOBILE ── */
+    @media(max-width:768px) {
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-inner {
+        padding: 52px 0 44px;
+      }
+
+      .hero h1 {
+        font-size: clamp(1.75rem, 7vw, 2.8rem);
+      }
+
+      .hero-cta-row {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .hero-cta-row a {
+        text-align: center;
+        justify-content: center;
+      }
+    }
+
+    /* ── TICKER PAUSE HOVER ── */
+    .ticker:hover .t-track {
+      animation-play-state: paused;
+    }
+
+    /* ── FEAT IMG HOVER ── */
+    .feat-img {
+      transition: box-shadow .3s;
+    }
+
+    .feat-row:hover .feat-img {
+      box-shadow: 0 20px 60px rgba(0, 100, 200, .18);
+    }
+
+    /* ── FAQ HOVER ── */
+    .faq-q:hover .faq-q-text {
+      color: var(--b1);
+    }
+
+    /* ── BETTER FOCUS ── */
+    :focus-visible {
+      outline: 2.5px solid var(--b1);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    /* ── MOBILE BODY PADDING (sticky) ── */
+    @media(max-width:840px) {
+      body {
+        padding-bottom: 76px;
+      }
+    }
+
+    /* ── FINAL CTA BG FIX ── */
+    .final {
+      padding: 96px 24px;
+    }
+
+    /* ── COUNTER ANIM ── */
+    .count-anim {
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* ── TSLIDE NEIGHBOUR DIMMED ── */
+    .tslide:not(.active) {
+      opacity: .65;
+      transform: scale(.96);
+    }
+
+    .tslide {
+      transition: opacity .35s ease, transform .35s ease;
+    }
+
+    /* ── COMPARISON MOBILE SCROLL ── */
+    @media(max-width:560px) {
+      .comp-table {
+        font-size: .82rem;
+      }
+
+      .comp-td-label {
+        font-size: .8rem;
+      }
+    }
+
+    /* ── COMPARISON TABLE ── */
+    .comp-sec {
+      padding: 72px 24px;
+      background: var(--light);
+    }
+
+    .comp-sec .s-tag {
+      margin-bottom: 12px;
+    }
+
+    .comp-sec .s-title {
+      margin-bottom: 36px;
+    }
+
+    .comp-wrap {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      border-radius: 18px;
+      box-shadow: var(--sh2);
+    }
+
+    .comp-table {
+      width: 100%;
+      border-collapse: collapse;
+      border-radius: 18px;
+      overflow: hidden;
+      font-family: inherit;
+    }
+
+    .comp-thead {
+      background: #d8e8f5;
+    }
+
+    .comp-th {
+      padding: 16px 18px;
+      font-size: .8rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .comp-th.th-coin {
+      text-align: center;
+      color: var(--b2);
+      font-size: .92rem;
+      font-weight: 800;
+    }
+
+    .comp-th.th-trad {
+      text-align: center;
+      color: var(--muted);
+      font-size: .78rem;
+      font-weight: 600;
+    }
+
+    .comp-th.th-label {
+      color: var(--muted);
+      font-size: .72rem;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    .comp-diamond {
+      color: var(--b1);
+      font-size: .9rem;
+      margin-right: 5px;
+    }
+
+    .comp-tr {
+      border-bottom: 1.5px solid #e0ecf8;
+      background: #fff;
+    }
+
+    .comp-tr:last-child {
+      border-bottom: none;
+    }
+
+    .comp-tr-alt {
+      background: var(--light);
+    }
+
+    .comp-td {
+      padding: 15px 18px;
+      font-size: .88rem;
+      color: var(--text);
+      vertical-align: middle;
+    }
+
+    .comp-td.td-label {
+      font-weight: 600;
+      color: var(--b3);
+    }
+
+    .comp-td.td-coin,
+    .comp-td.td-trad {
+      text-align: center;
+    }
+
+    .v-yes {
+      color: #16a34a;
+      font-size: 1.15rem;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .v-no {
+      color: #dc2626;
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .v-yes-bold {
+      color: #16a34a;
+      font-size: .86rem;
+      font-weight: 800;
+    }
+
+    .v-no-bold {
+      color: #dc2626;
+      font-size: .86rem;
+      font-weight: 700;
+    }
+
+    @media(max-width:480px) {
+
+      .comp-td,
+      .comp-th {
+        padding: 12px 10px;
+        font-size: .8rem;
+      }
+
+      .comp-th.th-coin {
+        font-size: .82rem;
+      }
+    }
+  </style>
 </head>
+
 <body data-lang="fr">
 
-<!-- TOP BAR -->
-<div class="top-bar">
-  <span data-l="fr">Saison haute : <strong>+128 recruteurs actifs</strong> cette semaine — Publiez avant les autres</span>
-  <span data-l="ar">الموسم العالي: <strong>+128 مجنّدًا نشطًا</strong> هذا الأسبوع — انشر عرضك الآن</span>
-  <span data-l="en">Peak season: <strong>+128 active recruiters</strong> this week — Post first</span>
-</div>
-
-<!-- NAV -->
-<nav>
-  <div class="n-logo"><img src="https://i.postimg.cc/hP92qWGT/Logo-Officiel.png" alt="CoinCarrière"></div>
-  <div class="n-mid">
-    <button class="lb on" onclick="setLang('fr')">FR</button>
-    <button class="lb" onclick="setLang('ar')">Ar</button>
-    <button class="lb" onclick="setLang('en')">EN</button>
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <span data-l="fr">Saison haute : <strong>+128 recruteurs actifs</strong> cette semaine — Publiez avant les
+      autres</span>
+    <span data-l="ar">الموسم العالي: <strong>+128 مجنّدًا نشطًا</strong> هذا الأسبوع — انشر عرضك الآن</span>
+    <span data-l="en">Peak season: <strong>+128 active recruiters</strong> this week — Post first</span>
   </div>
-  <div class="n-right">
-    <div class="n-badge"><span data-l="fr">GRATUIT</span><span data-l="ar">مجاني</span><span data-l="en">FREE</span></div>
-    <a href="https://coincarriere.com/register?type=company" target="_blank" class="btn-lime pulse" onclick="fbq('track','Lead')">
-      <span data-l="fr">Recruter maintenant →</span><span data-l="ar">← وظّف الآن</span><span data-l="en">Hire now →</span>
-    </a>
+
+  <!-- NAV -->
+  <nav>
+    <div class="n-logo"><img src="https://i.postimg.cc/hP92qWGT/Logo-Officiel.png" alt="CoinCarrière"></div>
+    <div class="n-mid">
+      <button class="lb on" onclick="setLang('fr')">FR</button>
+      <button class="lb" onclick="setLang('ar')">Ar</button>
+      <button class="lb" onclick="setLang('en')">EN</button>
+    </div>
+    <div class="n-right">
+      <div class="n-badge"><span data-l="fr">GRATUIT</span><span data-l="ar">مجاني</span><span data-l="en">FREE</span>
+      </div>
+      <a href="https://coincarriere.com/register?type=company" target="_blank" class="btn-lime pulse"
+        onclick="fbq('track','Lead')">
+        <span data-l="fr">Recruter maintenant →</span><span data-l="ar">← وظّف الآن</span><span data-l="en">Hire now
+          →</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg" style="background-image:url('https://i.postimg.cc/vB1RfYbW/hlp.jpg'); opacity: 0.6;"></div>
+    <div class="hero-overlay"
+      style="background: linear-gradient(135deg, rgba(11, 63, 89, 0.6) 0%, rgba(22, 73, 140, 0.3) 100%);"></div>
+    <div class="hero-grid-pattern"></div>
+    <div class="ctr hero-inner">
+
+      <div data-l="fr">
+        <div class="hero-eyebrow">
+          <div class="dot"></div>Hôtellerie &amp; Restauration — Maroc
+        </div>
+        <h1>Chaque poste non pourvu<br><span class="hl">vous coûte de l'argent</span><span class="sm">(+ clients
+            insatisfaits, + équipe sous pression)</span></h1>
+        <p class="hero-sub">Recevez des candidats qualifiés en 48h, sans trier des dizaines de CV inutiles. Pour hôtels
+          &amp; restaurants au Maroc.</p>
+        <div class="hero-cta-row">
+          <a href="https://coincarriere.com/register?type=company" target="_blank" class="btn-lime btn-lime-lg"
+            onclick="fbq('track','Lead')"> Publier mon offre — Gratuit</a>
+          <a href="#comment" class="btn-outline-dark">Voir comment ça marche</a>
+        </div>
+        <div class="hero-trust">
+          <div class="ht">Sans engagement</div>
+          <div class="ht">Résultats en 48h</div>
+          <div class="ht">458+ entreprises</div>
+          <div class="ht">Gratuit pour commencer</div>
+        </div>
+        <p class="hero-proof"><strong>+458 hôtels &amp; restaurants</strong> au Maroc recrutent déjà avec CoinCarrière
+        </p>
+      </div>
+
+      <div data-l="ar">
+        <div class="hero-eyebrow">
+          <div class="dot"></div>الفندقة والمطاعم — المغرب
+        </div>
+        <h1>كل منصب شاغر<br><span class="hl">يُكلّفك أموالاً</span><span class="sm">(+ زبائن غير راضين، + فريق تحت
+            ضغط)</span></h1>
+        <p class="hero-sub">استقبل مرشحين مؤهلين في 48 ساعة، دون فرز عشرات السير الذاتية غير المفيدة.</p>
+        <div class="hero-cta-row">
+          <a href="https://coincarriere.com/register?type=company" target="_blank" class="btn-lime btn-lime-lg"
+            onclick="fbq('track','Lead')"> انشر عرضك — مجانًا</a>
+          <a href="#comment" class="btn-outline-dark">كيف يعمل النظام</a>
+        </div>
+        <div class="hero-trust">
+          <div class="ht">بدون التزام</div>
+          <div class="ht">نتائج 48 ساعة</div>
+          <div class="ht">+458 شركة</div>
+          <div class="ht">مجاني للبدء</div>
+        </div>
+        <p class="hero-proof"><strong>+458 فندقًا ومطعمًا</strong> يوظّفون مع CoinCarrière</p>
+      </div>
+
+      <div data-l="en">
+        <div class="hero-eyebrow">
+          <div class="dot"></div>Hospitality &amp; F&amp;B — Morocco
+        </div>
+        <h1>Every unfilled position<br><span class="hl">costs you money</span><span class="sm">(+ unhappy guests, +
+            stressed team)</span></h1>
+        <p class="hero-sub">Receive qualified candidates in 48h, without sorting dozens of useless CVs.</p>
+        <div class="hero-cta-row">
+          <a href="https://coincarriere.com/register?type=company" target="_blank" class="btn-lime btn-lime-lg"
+            onclick="fbq('track','Lead')"> Post my job — Free</a>
+          <a href="#comment" class="btn-outline-dark">See how it works</a>
+        </div>
+        <div class="hero-trust">
+          <div class="ht">No commitment</div>
+          <div class="ht">Results 48h</div>
+          <div class="ht">458+ companies</div>
+          <div class="ht">Free to start</div>
+        </div>
+        <p class="hero-proof"><strong>+458 hotels &amp; restaurants</strong> already hire with CoinCarrière</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TICKER -->
+  <div class="ticker">
+    <div class="t-track">
+      <div class="t-item">
+        <div class="t-dot"></div><strong>Hôtel Atlas, Marrakech</strong> — Serveur 5★ embauché il y a 23 min
+      </div>
+      <div class="t-item">
+        <div class="t-dot"></div><strong>Riad Le Jardin, Fès</strong> — 3 candidats reçus en 6h
+      </div>
+      <div class="t-item">
+        <div class="t-dot"></div><strong>Resort Agadir Plage</strong> — 12 postes pourvus cette semaine
+      </div>
+      <div class="t-item">
+        <div class="t-dot"></div><strong>Sofitel Casablanca</strong> — Réceptionniste bilingue en 2 jours
+      </div>
+      <div class="t-item">
+        <div class="t-dot"></div><strong>Brasserie Majorelle</strong> — Chef de rang recruté en 31h
+      </div>
+      <div class="t-item">
+        <div class="t-dot"></div><strong>Kenzi Tower, Casa</strong> — Barman trouvé en 18h
+      </div>
+      <div class="t-item">
+        <div class="t-dot"></div><strong>Hôtel Atlas, Marrakech</strong> — Serveur 5★ embauché il y a 23 min
+      </div>
+      <div class="t-item">
+        <div class="t-dot"></div><strong>Riad Le Jardin, Fès</strong> — 3 candidats reçus en 6h
+      </div>
+      <div class="t-item">
+        <div class="t-dot"></div><strong>Resort Agadir Plage</strong> — 12 postes pourvus cette semaine
+      </div>
+      <div class="t-item">
+        <div class="t-dot"></div><strong>Sofitel Casablanca</strong> — Réceptionniste bilingue en 2 jours
+      </div>
+      <div class="t-item">
+        <div class="t-dot"></div><strong>Brasserie Majorelle</strong> — Chef de rang recruté en 31h
+      </div>
+      <div class="t-item">
+        <div class="t-dot"></div><strong>Kenzi Tower, Casa</strong> — Barman trouvé en 18h
+      </div>
+    </div>
   </div>
-</nav>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-bg" style="background-image:url('https://i.postimg.cc/vB1RfYbW/hlp.jpg'); opacity: 0.6;"></div>
-<div class="hero-overlay" style="background: linear-gradient(135deg, rgba(11, 63, 89, 0.6) 0%, rgba(22, 73, 140, 0.3) 100%);"></div>
-<div class="hero-grid-pattern"></div>
-  <div class="ctr hero-inner">
-
-    <div data-l="fr">
-      <div class="hero-eyebrow"><div class="dot"></div>Hôtellerie &amp; Restauration — Maroc</div>
-      <h1>Chaque poste non pourvu<br><span class="hl">vous coûte de l'argent</span><span class="sm">(+ clients insatisfaits, + équipe sous pression)</span></h1>
-      <p class="hero-sub">Recevez des candidats qualifiés en 48h, sans trier des dizaines de CV inutiles. Pour hôtels &amp; restaurants au Maroc.</p>
-      <div class="hero-cta-row">
-        <a href="https://coincarriere.com/register?type=company" target="_blank" class="btn-lime btn-lime-lg" onclick="fbq('track','Lead')"> Publier mon offre — Gratuit</a>
-        <a href="#comment" class="btn-outline-dark">Voir comment ça marche</a>
+  <!-- BEFORE / AFTER -->
+  <section class="ba-sec">
+    <div class="ctr">
+      <div class="ba-head reveal">
+        <div data-l="fr">
+          <div class="s-tag">La réalité du terrain</div>
+          <h2 class="s-title">Pourquoi vos recrutements sont-ils <span class="hl">si difficiles</span> aujourd'hui
+            ?<br><span style="font-size:.7em;color:var(--muted);font-weight:600">CoinCarrière est la solution</span>
+          </h2>
+        </div>
+        <div data-l="ar">
+          <div class="s-tag">واقع الميدان</div>
+          <h2 class="s-title">لماذا التوظيف <span class="hl">صعب جدًا</span> اليوم؟<br><span
+              style="font-size:.7em;color:var(--muted);font-weight:600">CoinCarrière هو الحل</span></h2>
+        </div>
+        <div data-l="en">
+          <div class="s-tag">Field reality</div>
+          <h2 class="s-title">Why is your recruitment <span class="hl">so difficult</span> today?<br><span
+              style="font-size:.7em;color:var(--muted);font-weight:600">CoinCarrière is the solution</span></h2>
+        </div>
       </div>
-      <div class="hero-trust">
-        <div class="ht">Sans engagement</div>
-        <div class="ht">Résultats en 48h</div>
-        <div class="ht">458+ entreprises</div>
-        <div class="ht">Gratuit pour commencer</div>
-      </div>
-      <p class="hero-proof"><strong>+458 hôtels &amp; restaurants</strong> au Maroc recrutent déjà avec CoinCarrière</p>
-    </div>
-
-    <div data-l="ar">
-      <div class="hero-eyebrow"><div class="dot"></div>الفندقة والمطاعم — المغرب</div>
-      <h1>كل منصب شاغر<br><span class="hl">يُكلّفك أموالاً</span><span class="sm">(+ زبائن غير راضين، + فريق تحت ضغط)</span></h1>
-      <p class="hero-sub">استقبل مرشحين مؤهلين في 48 ساعة، دون فرز عشرات السير الذاتية غير المفيدة.</p>
-      <div class="hero-cta-row">
-        <a href="https://coincarriere.com/register?type=company" target="_blank" class="btn-lime btn-lime-lg" onclick="fbq('track','Lead')"> انشر Arضي — مجانًا</a>
-        <a href="#comment" class="btn-outline-dark">كيف يعمل النظام</a>
-      </div>
-      <div class="hero-trust">
-        <div class="ht">بدون التزام</div><div class="ht">نتائج 48 ساعة</div>
-        <div class="ht">+458 شركة</div><div class="ht">مجاني للبدء</div>
-      </div>
-      <p class="hero-proof"><strong>+458 فندقًا ومطعمًا</strong> يوظّفون مع CoinCarrière</p>
-    </div>
-
-    <div data-l="en">
-      <div class="hero-eyebrow"><div class="dot"></div>Hospitality &amp; F&amp;B — Morocco</div>
-      <h1>Every unfilled position<br><span class="hl">costs you money</span><span class="sm">(+ unhappy guests, + stressed team)</span></h1>
-      <p class="hero-sub">Receive qualified candidates in 48h, without sorting dozens of useless CVs.</p>
-      <div class="hero-cta-row">
-        <a href="https://coincarriere.com/register?type=company" target="_blank" class="btn-lime btn-lime-lg" onclick="fbq('track','Lead')"> Post my job — Free</a>
-        <a href="#comment" class="btn-outline-dark">See how it works</a>
-      </div>
-      <div class="hero-trust">
-        <div class="ht">No commitment</div><div class="ht">Results 48h</div>
-        <div class="ht">458+ companies</div><div class="ht">Free to start</div>
-      </div>
-      <p class="hero-proof"><strong>+458 hotels &amp; restaurants</strong> already hire with CoinCarrière</p>
-    </div>
-
-  </div>
-</section>
-
-<!-- TICKER -->
-<div class="ticker">
-  <div class="t-track">
-    <div class="t-item"><div class="t-dot"></div><strong>Hôtel Atlas, Marrakech</strong> — Serveur 5★ embauché il y a 23 min</div>
-    <div class="t-item"><div class="t-dot"></div><strong>Riad Le Jardin, Fès</strong> — 3 candidats reçus en 6h</div>
-    <div class="t-item"><div class="t-dot"></div><strong>Resort Agadir Plage</strong> — 12 postes pourvus cette semaine</div>
-    <div class="t-item"><div class="t-dot"></div><strong>Sofitel Casablanca</strong> — Réceptionniste bilingue en 2 jours</div>
-    <div class="t-item"><div class="t-dot"></div><strong>Brasserie Majorelle</strong> — Chef de rang recruté en 31h</div>
-    <div class="t-item"><div class="t-dot"></div><strong>Kenzi Tower, Casa</strong> — Barman trouvé en 18h</div>
-    <div class="t-item"><div class="t-dot"></div><strong>Hôtel Atlas, Marrakech</strong> — Serveur 5★ embauché il y a 23 min</div>
-    <div class="t-item"><div class="t-dot"></div><strong>Riad Le Jardin, Fès</strong> — 3 candidats reçus en 6h</div>
-    <div class="t-item"><div class="t-dot"></div><strong>Resort Agadir Plage</strong> — 12 postes pourvus cette semaine</div>
-    <div class="t-item"><div class="t-dot"></div><strong>Sofitel Casablanca</strong> — Réceptionniste bilingue en 2 jours</div>
-    <div class="t-item"><div class="t-dot"></div><strong>Brasserie Majorelle</strong> — Chef de rang recruté en 31h</div>
-    <div class="t-item"><div class="t-dot"></div><strong>Kenzi Tower, Casa</strong> — Barman trouvé en 18h</div>
-  </div>
-</div>
-
-<!-- BEFORE / AFTER -->
-<section class="ba-sec">
-  <div class="ctr">
-    <div class="ba-head reveal">
-      <div data-l="fr"><div class="s-tag">La réalité du terrain</div><h2 class="s-title">Pourquoi vos recrutements sont-ils <span class="hl">si difficiles</span> aujourd'hui ?<br><span style="font-size:.7em;color:var(--muted);font-weight:600">CoinCarrière est la solution</span></h2></div>
-      <div data-l="ar"><div class="s-tag">واقع الميدان</div><h2 class="s-title">لماذا التوظيف <span class="hl">صعب جدًا</span> اليوم؟<br><span style="font-size:.7em;color:var(--muted);font-weight:600">CoinCarrière هو الحل</span></h2></div>
-      <div data-l="en"><div class="s-tag">Field reality</div><h2 class="s-title">Why is your recruitment <span class="hl">so difficult</span> today?<br><span style="font-size:.7em;color:var(--muted);font-weight:600">CoinCarrière is the solution</span></h2></div>
-    </div>
-    <div class="ba-grid">
-      <div class="ba-card ba-before">
-        <div class="ba-lbl"><span data-l="fr">Avant CoinCarrière</span><span data-l="ar">قبل CoinCarrière</span><span data-l="en">Before CoinCarrière</span></div>
-        <ul class="ba-list">
-          <li><span data-l="fr">80% de CV non pertinents à trier chaque jour</span><span data-l="ar">80% سير ذاتية غير ملائمة يوميًا</span><span data-l="en">80% irrelevant CVs to sort every day</span></li>
-          <li><span data-l="fr">3 à 6 semaines d'attente minimum</span><span data-l="ar">3 إلى 6 أسابيع انتظار كحد أدنى</span><span data-l="en">3 to 6 weeks minimum wait</span></li>
-          <li><span data-l="fr">Commissions agence = 1 à 3 mois de salaire</span><span data-l="ar">عمولات وكالة = 1-3 أشهر راتب</span><span data-l="en">Agency fees = 1–3 months salary</span></li>
-          <li><span data-l="fr">Équipe en sous-effectif, service dégradé</span><span data-l="ar">فريق ناقص العدد، خدمة متدهورة</span><span data-l="en">Understaffed team, degraded service</span></li>
-          <li><span data-l="fr">Mauvaises reviews, chiffre d'affaires en baisse</span><span data-l="ar">تقييمات سيئة، إيرادات منخفضة</span><span data-l="en">Bad reviews, revenue declining</span></li>
-        </ul>
-      </div>
-      <div class="ba-sep-col">→</div>
-      <div class="ba-card ba-after">
-        <div class="ba-lbl"><span data-l="fr">Avec CoinCarrière</span><span data-l="ar">مع CoinCarrière</span><span data-l="en">With CoinCarrière</span></div>
-        <ul class="ba-list">
-          <li><span data-l="fr">Candidats pré-filtrés, disponibles immédiatement</span><span data-l="ar">مرشحون مصفّون ومتاحون فورًا</span><span data-l="en">Pre-filtered candidates, immediately available</span></li>
-          <li><span data-l="fr">Profils qualifiés reçus en moins de 48h</span><span data-l="ar">ملفات مؤهلة في أقل من 48 ساعة</span><span data-l="en">Qualified profiles received in under 48h</span></li>
-          <li><span data-l="fr">Zéro commission sur chaque embauche</span><span data-l="ar">صفر عمولة على كل توظيف</span><span data-l="en">Zero commission per hire</span></li>
-          <li><span data-l="fr">Process simple, équipe stable et sereine</span><span data-l="ar">عملية بسيطة، فريق مستقر</span><span data-l="en">Simple process, stable calm team</span></li>
-          <li><span data-l="fr">Service 5★ = meilleures reviews &amp; CA</span><span data-l="ar">خدمة 5★ = تقييمات أفضل وإيرادات أعلى</span><span data-l="en">5★ service = better reviews &amp; revenue</span></li>
-        </ul>
+      <div class="ba-grid">
+        <div class="ba-card ba-before">
+          <div class="ba-lbl"><span data-l="fr">Avant CoinCarrière</span><span data-l="ar">قبل CoinCarrière</span><span
+              data-l="en">Before CoinCarrière</span></div>
+          <ul class="ba-list">
+            <li><span data-l="fr">80% de CV non pertinents à trier chaque jour</span><span data-l="ar">80% سير ذاتية غير
+                ملائمة يوميًا</span><span data-l="en">80% irrelevant CVs to sort every day</span></li>
+            <li><span data-l="fr">3 à 6 semaines d'attente minimum</span><span data-l="ar">3 إلى 6 أسابيع انتظار كحد
+                أدنى</span><span data-l="en">3 to 6 weeks minimum wait</span></li>
+            <li><span data-l="fr">Commissions agence = 1 à 3 mois de salaire</span><span data-l="ar">عمولات وكالة = 1-3
+                أشهر راتب</span><span data-l="en">Agency fees = 1–3 months salary</span></li>
+            <li><span data-l="fr">Équipe en sous-effectif, service dégradé</span><span data-l="ar">فريق ناقص العدد، خدمة
+                متدهورة</span><span data-l="en">Understaffed team, degraded service</span></li>
+            <li><span data-l="fr">Mauvaises reviews, chiffre d'affaires en baisse</span><span data-l="ar">تقييمات سيئة،
+                إيرادات منخفضة</span><span data-l="en">Bad reviews, revenue declining</span></li>
+          </ul>
+        </div>
+        <div class="ba-sep-col">→</div>
+        <div class="ba-card ba-after">
+          <div class="ba-lbl"><span data-l="fr">Avec CoinCarrière</span><span data-l="ar">مع CoinCarrière</span><span
+              data-l="en">With CoinCarrière</span></div>
+          <ul class="ba-list">
+            <li><span data-l="fr">Candidats pré-filtrés, disponibles immédiatement</span><span data-l="ar">مرشحون مصفّون
+                ومتاحون فورًا</span><span data-l="en">Pre-filtered candidates, immediately available</span></li>
+            <li><span data-l="fr">Profils qualifiés reçus en moins de 48h</span><span data-l="ar">ملفات مؤهلة في أقل من
+                48 ساعة</span><span data-l="en">Qualified profiles received in under 48h</span></li>
+            <li><span data-l="fr">Zéro commission sur chaque embauche</span><span data-l="ar">صفر عمولة على كل
+                توظيف</span><span data-l="en">Zero commission per hire</span></li>
+            <li><span data-l="fr">Process simple, équipe stable et sereine</span><span data-l="ar">عملية بسيطة، فريق
+                مستقر</span><span data-l="en">Simple process, stable calm team</span></li>
+            <li><span data-l="fr">Service 5★ = meilleures reviews &amp; CA</span><span data-l="ar">خدمة 5★ = تقييمات
+                أفضل وإيرادات أعلى</span><span data-l="en">5★ service = better reviews &amp; revenue</span></li>
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- PROCESS -->
-<section class="proc-sec" id="comment">
-  <div class="ctr">
-    <div class="s-tag"><span data-l="fr">Comment ça marche</span><span data-l="ar">كيف يعمل</span><span data-l="en">How it works</span></div>
-    <h2 class="s-title" style="color:#fff">
-      <span data-l="fr">Recrutez en <span style="color:var(--lime2)">4 étapes simples</span></span>
-      <span data-l="ar">وظّف في <span style="color:var(--lime2)">4 خطوات بسيطة</span></span>
-      <span data-l="en">Hire in <span style="color:var(--lime2)">4 simple steps</span></span>
-    </h2>
-    <div class="proc-steps">
-      <div class="ps-step reveal">
-        <div class="ps-badge"><span data-l="fr">2 minutes</span><span data-l="ar">دقيقتان</span><span data-l="en">2 minutes</span></div>
-        <div class="ps-num">1</div>
-        <div data-l="fr"><h3>Publiez</h3><p>Décrivez le poste en FR, darija ou EN. L'IA optimise votre offre saisonnière.</p></div>
-        <div data-l="ar"><h3>انشر</h3><p>صف المنصب. الذكاء الاصطناعي يحسّن إعلانك الموسمي تلقائيًا.</p></div>
-        <div data-l="en"><h3>Post</h3><p>Describe the position in FR, Darija or EN. AI auto-optimizes your listing.</p></div>
+  <!-- PROCESS -->
+  <section class="proc-sec" id="comment">
+    <div class="ctr">
+      <div class="s-tag"><span data-l="fr">Comment ça marche</span><span data-l="ar">كيف يعمل</span><span
+          data-l="en">How it works</span></div>
+      <h2 class="s-title" style="color:#fff">
+        <span data-l="fr">Recrutez en <span style="color:var(--lime2)">4 étapes simples</span></span>
+        <span data-l="ar">وظّف في <span style="color:var(--lime2)">4 خطوات بسيطة</span></span>
+        <span data-l="en">Hire in <span style="color:var(--lime2)">4 simple steps</span></span>
+      </h2>
+      <div class="proc-steps">
+        <div class="ps-step reveal">
+          <div class="ps-badge"><span data-l="fr">2 minutes</span><span data-l="ar">دقيقتان</span><span data-l="en">2
+              minutes</span></div>
+          <div class="ps-num">1</div>
+          <div data-l="fr">
+            <h3>Publiez</h3>
+            <p>Décrivez le poste en FR, darija ou EN. L'IA optimise votre offre saisonnière.</p>
+          </div>
+          <div data-l="ar">
+            <h3>انشر</h3>
+            <p>صف المنصب. الذكاء الاصطناعي يحسّن إعلانك الموسمي تلقائيًا.</p>
+          </div>
+          <div data-l="en">
+            <h3>Post</h3>
+            <p>Describe the position in FR, Darija or EN. AI auto-optimizes your listing.</p>
+          </div>
+        </div>
+        <div class="ps-step">
+          <div class="ps-badge"><span data-l="fr">Automatique</span><span data-l="ar">تلقائي</span><span
+              data-l="en">Automatic</span></div>
+          <div class="ps-num">2</div>
+          <div data-l="fr">
+            <h3>Recevez</h3>
+            <p>Les profils qualifiés et disponibles postulent. Notre IA filtre les candidats inadaptés.</p>
+          </div>
+          <div data-l="ar">
+            <h3>استقبل</h3>
+            <p>الملفات المؤهلة تتقدم مباشرة. الذكاء الاصطناعي يُصفّي الملفات غير الملائمة.</p>
+          </div>
+          <div data-l="en">
+            <h3>Receive</h3>
+            <p>Qualified candidates apply directly. AI filters out unfit profiles.</p>
+          </div>
+        </div>
+        <div class="ps-step">
+          <div class="ps-badge"><span data-l="fr">Pipeline</span><span data-l="ar">لوحة</span><span
+              data-l="en">Pipeline</span></div>
+          <div class="ps-num">3</div>
+          <div data-l="fr">
+            <h3>Évaluez</h3>
+            <p>Pipeline visuel, notes d'équipe, planification d'entretiens depuis la plateforme.</p>
+          </div>
+          <div data-l="ar">
+            <h3>قيّم</h3>
+            <p>لوحة بصرية، ملاحظات الفريق، جدولة المقابلات من المنصة.</p>
+          </div>
+          <div data-l="en">
+            <h3>Evaluate</h3>
+            <p>Visual pipeline, team notes, interview scheduling from the platform.</p>
+          </div>
+        </div>
+        <div class="ps-step">
+          <div class="ps-badge"><span data-l="fr">Sous 48h</span><span data-l="ar">في 48 ساعة</span><span
+              data-l="en">Within 48h</span></div>
+          <div class="ps-num">4</div>
+          <div data-l="fr">
+            <h3>Embauchez</h3>
+            <p>Envoyez l'offre depuis la plateforme. Suivi en temps réel. Staff opérationnel.</p>
+          </div>
+          <div data-l="ar">
+            <h3>وظّف</h3>
+            <p>أرسل الArض من المنصة. تتبع في الوقت الفعلي. موظفوك جاهزون.</p>
+          </div>
+          <div data-l="en">
+            <h3>Hire</h3>
+            <p>Send the offer from the platform. Track in real time. Staff operational.</p>
+          </div>
+        </div>
       </div>
-      <div class="ps-step">
-        <div class="ps-badge"><span data-l="fr">Automatique</span><span data-l="ar">تلقائي</span><span data-l="en">Automatic</span></div>
-        <div class="ps-num">2</div>
-        <div data-l="fr"><h3>Recevez</h3><p>Les profils qualifiés et disponibles postulent. Notre IA filtre les candidats inadaptés.</p></div>
-        <div data-l="ar"><h3>استقبل</h3><p>الملفات المؤهلة تتقدم مباشرة. الذكاء الاصطناعي يُصفّي الملفات غير الملائمة.</p></div>
-        <div data-l="en"><h3>Receive</h3><p>Qualified candidates apply directly. AI filters out unfit profiles.</p></div>
-      </div>
-      <div class="ps-step">
-        <div class="ps-badge"><span data-l="fr">Pipeline</span><span data-l="ar">لوحة</span><span data-l="en">Pipeline</span></div>
-        <div class="ps-num">3</div>
-        <div data-l="fr"><h3>Évaluez</h3><p>Pipeline visuel, notes d'équipe, planification d'entretiens depuis la plateforme.</p></div>
-        <div data-l="ar"><h3>قيّم</h3><p>لوحة بصرية، ملاحظات الفريق، جدولة المقابلات من المنصة.</p></div>
-        <div data-l="en"><h3>Evaluate</h3><p>Visual pipeline, team notes, interview scheduling from the platform.</p></div>
-      </div>
-      <div class="ps-step">
-        <div class="ps-badge"><span data-l="fr">Sous 48h</span><span data-l="ar">في 48 ساعة</span><span data-l="en">Within 48h</span></div>
-        <div class="ps-num">4</div>
-        <div data-l="fr"><h3>Embauchez</h3><p>Envoyez l'offre depuis la plateforme. Suivi en temps réel. Staff opérationnel.</p></div>
-        <div data-l="ar"><h3>وظّف</h3><p>أرسل الArض من المنصة. تتبع في الوقت الفعلي. موظفوك جاهزون.</p></div>
-        <div data-l="en"><h3>Hire</h3><p>Send the offer from the platform. Track in real time. Staff operational.</p></div>
+      <div class="proc-cta">
+        <a href="https://coincarriere.com/register?type=company" target="_blank" class="btn-lime btn-lime-lg"
+          onclick="fbq('track','Lead')">
+          <span data-l="fr">Publier votre annonce maintenant</span>
+          <span data-l="ar">انشر إعلانك الآن</span>
+          <span data-l="en">Post your job now</span>
+        </a>
       </div>
     </div>
-    <div class="proc-cta">
-      <a href="https://coincarriere.com/register?type=company" target="_blank" class="btn-lime btn-lime-lg" onclick="fbq('track','Lead')">
+  </section>
+
+  <!-- TESTIMONIAL CAROUSEL -->
+  <section class="tcarousel-sec">
+    <div class="ctr">
+      <div class="tcarousel-head reveal">
+        <div class="tcar-tag"><span data-l="fr">ILS NOUS FONT CONFIANCE</span><span data-l="ar">يثقون بنا</span><span
+            data-l="en">THEY TRUST US</span></div>
+        <h2 class="tcar-title"><span data-l="fr">Depuis leurs hôtels, ils témoignent</span><span data-l="ar">من فنادقهم،
+            يشهدون</span><span data-l="en">From their hotels, they testify</span></h2>
+      </div>
+      <div class="tcar-viewport">
+        <div class="tcar-track" id="tcarTrack">
+          <div class="tslide" data-index="0">
+            <div class="tslide-inner">
+              <img class="tslide-img"
+                src="https://media.base44.com/images/public/69efcd57ef02aa2945279fb0/f20a1e555_generated_image.png "
+                alt="Mohammed Bennani">
+              <div class="tslide-overlay"></div>
+              <div class="tslide-bubble">
+                <span data-l="fr">"CoinCarrière m'a sauvé ! 12 saisonniers recrutés en 4 jours."</span>
+                <span data-l="ar">"CoinCarrière أنقذني! 12 موظفًا موسميًا في 4 أيام."</span>
+                <span data-l="en">"CoinCarrière saved me! 12 seasonal staff hired in 4 days."</span>
+              </div>
+              <div class="tslide-badge" style="background:#1A6BCC">
+                <span data-l="fr">CoinCarrière m'a sauvé !</span><span data-l="ar">CoinCarrière أنقذني!</span><span
+                  data-l="en">CoinCarrière saved me!</span>
+              </div>
+              <div class="tslide-info">
+                <div class="tslide-stars">★★★★★</div>
+                <div class="tslide-name">Mohammed Bennani</div>
+                <div class="tslide-role"><span data-l="fr">Directeur Général</span><span data-l="ar">مدير
+                    عام</span><span data-l="en">General Manager</span></div>
+                <div class="tslide-hotel"><span data-l="fr">Riad Dar Zitoun · Marrakech</span><span data-l="ar">رياض دار
+                    الزيتون · مراكش</span><span data-l="en">Riad Dar Zitoun · Marrakech</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="tslide" data-index="1">
+            <div class="tslide-inner">
+              <img class="tslide-img"
+                src="https://media.base44.com/images/public/69efcd57ef02aa2945279fb0/eaaa880e9_generated_image.png"
+                alt="Fatima Zahra Idrissi">
+              <div class="tslide-overlay"></div>
+              <div class="tslide-bubble">
+                <span data-l="fr">"3x plus de candidats qualifiés depuis CoinCarrière. Incroyable."</span>
+                <span data-l="ar">"3 أضعاف المرشحين المؤهلين منذ CoinCarrière."</span>
+                <span data-l="en">"3x more qualified candidates since CoinCarrière. Incredible."</span>
+              </div>
+              <div class="tslide-badge" style="background:#dc2626">
+                <span data-l="fr">3x plus de candidats qualifiés !</span><span data-l="ar">3 أضعاف المرشحين!</span><span
+                  data-l="en">3x more qualified!</span>
+              </div>
+              <div class="tslide-info">
+                <div class="tslide-stars">★★★★★</div>
+                <div class="tslide-name">Fatima Zahra Idrissi</div>
+                <div class="tslide-role"><span data-l="fr">Responsable RH</span><span data-l="ar">مسؤولة الموارد
+                    البشرية</span><span data-l="en">HR Manager</span></div>
+                <div class="tslide-hotel"><span data-l="fr">Palais Salam · Fès</span><span data-l="ar">قصر السلام ·
+                    فاس</span><span data-l="en">Palais Salam · Fès</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="tslide" data-index="2">
+            <div class="tslide-inner">
+              <img class="tslide-img"
+                src="https://media.base44.com/images/public/69efcd57ef02aa2945279fb0/9e410c3ac_generated_image.png"
+                alt="Youssef Cherkaoui">
+              <div class="tslide-overlay"></div>
+              <div class="tslide-bubble">
+                <span data-l="fr">"Recrutement bouclé en 4 jours. Avant il nous fallait 3 semaines."</span>
+                <span data-l="ar">"توظيف مكتمل في 4 أيام. كنا نحتاج 3 أسابيع قبل ذلك."</span>
+                <span data-l="en">"Recruitment done in 4 days. Before it took us 3 weeks."</span>
+              </div>
+              <div class="tslide-badge" style="background:#1a2535">
+                <span data-l="fr">RECRUTEMENT EN 4 JOURS !</span><span data-l="ar">توظيف في 4 أيام!</span><span
+                  data-l="en">HIRED IN 4 DAYS!</span>
+              </div>
+              <div class="tslide-info">
+                <div class="tslide-stars">★★★★★</div>
+                <div class="tslide-name">Youssef Cherkaoui</div>
+                <div class="tslide-role"><span data-l="fr">Chef d'Exploitation</span><span data-l="ar">مدير
+                    الاستغلال</span><span data-l="en">Operations Manager</span></div>
+                <div class="tslide-hotel"><span data-l="fr">Hôtel Atlas Asni · Asni</span><span data-l="ar">فندق أطلس
+                    أسني · أسني</span><span data-l="en">Hôtel Atlas Asni · Asni</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="tslide" data-index="3">
+            <div class="tslide-inner">
+              <img class="tslide-img"
+                src="https://media.base44.com/images/public/69efcd57ef02aa2945279fb0/b1b7a39c6_generated_image.png"" alt="
+                Nadia El Fassi">
+              <div class="tslide-overlay"></div>
+              <div class="tslide-bubble">
+                <span data-l="fr">"50% moins de temps pour recruter. CoinCarrière a tout changé."</span>
+                <span data-l="ar">"50% أقل وقتًا في التوظيف. CoinCarrière غيّر كل شيء."</span>
+                <span data-l="en">"50% less time to recruit. CoinCarrière changed everything."</span>
+              </div>
+              <div class="tslide-badge" style="background:#16498c">
+                <span data-l="fr">50% moins de temps !</span><span data-l="ar">50% أقل وقتًا!</span><span
+                  data-l="en">50% less time!</span>
+              </div>
+              <div class="tslide-info">
+                <div class="tslide-stars">★★★★★</div>
+                <div class="tslide-name">Nadia El Fassi</div>
+                <div class="tslide-role"><span data-l="fr">Directrice de Résidence</span><span data-l="ar">مديرة
+                    الإقامة</span><span data-l="en">Residence Director</span></div>
+                <div class="tslide-hotel"><span data-l="fr">Resort Jardins de l'Agdal · Essaouira</span><span
+                    data-l="ar">منتجع جناين أكدال · الصويرة</span><span data-l="en">Resort Jardins de l'Agdal ·
+                    Essaouira</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="tslide" data-index="4">
+            <div class="tslide-inner">
+              <img class="tslide-img"
+                src="https://media.base44.com/images/public/69efcd57ef02aa2945279fb0/1c5bb63e3_generated_image.png"
+                alt="Hamid Tahiri">
+              <div class="tslide-overlay"></div>
+              <div class="tslide-bubble">
+                <span data-l="fr">"Simple, rapide, efficace. Exactement ce qu'il fallait à notre équipe."</span>
+                <span data-l="ar">"بسيط، سريع، فعّال. بالضبط ما كان فريقنا يحتاجه."</span>
+                <span data-l="en">"Simple, fast, effective. Exactly what our team needed."</span>
+              </div>
+              <div class="tslide-badge" style="background:#0094d9">
+                <span data-l="fr">Simple et efficace !</span><span data-l="ar">بسيط وفعّال!</span><span
+                  data-l="en">Simple and effective!</span>
+              </div>
+              <div class="tslide-info">
+                <div class="tslide-stars">★★★★★</div>
+                <div class="tslide-name">Hamid Tahiri</div>
+                <div class="tslide-role"><span data-l="fr">Manager F&B</span><span data-l="ar">مدير المأكولات
+                    والمشروبات</span><span data-l="en">F&B Manager</span></div>
+                <div class="tslide-hotel"><span data-l="fr">Hôtel Menara Palace · Agadir</span><span data-l="ar">فندق
+                    منارة بالاس · أكادير</span><span data-l="en">Hôtel Menara Palace · Agadir</span></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="tcar-controls">
+        <button class="tcar-btn" id="tPrev" aria-label="Précédent">&#8249;</button>
+        <div class="tcar-dots">
+          <div class="tcar-dot tcar-dot-on" data-index="0"></div>
+          <div class="tcar-dot" data-index="1"></div>
+          <div class="tcar-dot" data-index="2"></div>
+          <div class="tcar-dot" data-index="3"></div>
+          <div class="tcar-dot" data-index="4"></div>
+        </div>
+        <button class="tcar-btn" id="tNext" aria-label="Suivant">&#8250;</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO -->
+  <section class="vid-sec">
+    <div class="ctr">
+      <div class="s-tag" style="margin-bottom:12px;"><span data-l="fr">Démo</span><span data-l="ar">Arض
+          توضيحي</span><span data-l="en">Demo</span></div>
+      <h2 class="vid-title">
+        <span data-l="fr">Voir comment les hôtels recrutent plus vite</span>
+        <span data-l="ar">شاهد كيف تُوظّف الفنادق بشكل أسرع</span>
+        <span data-l="en">See how hotels recruit faster</span>
+      </h2>
+      <div class="vid-wrap">
+        <iframe src="https://www.youtube.com/embed/vDpzgTg-g30?si=cJRoNYhwHJjZBVPn" title="CoinCarrière Demo"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPARISON TABLE -->
+  <section class="comp-sec">
+    <div class="ctr">
+      <div style="text-align:center;margin-bottom:36px;" class="reveal">
+        <div class="s-tag">
+          <span data-l="fr">Comparaison</span>
+          <span data-l="ar">المقارنة</span>
+          <span data-l="en">Comparison</span>
+        </div>
+        <h2 class="s-title">
+          <span data-l="fr">CoinCarrière vs <span class="hl">les méthodes traditionnelles</span></span>
+          <span data-l="ar">مقارنة CoinCarrière مع <span class="hl">الطرق التقليدية</span></span>
+          <span data-l="en">CoinCarrière vs <span class="hl">traditional methods</span></span>
+        </h2>
+      </div>
+
+      <div class="comp-wrap reveal">
+        <table class="comp-table">
+          <thead class="comp-thead">
+            <tr>
+              <th class="comp-th th-label">
+                <span data-l="fr">Critère</span>
+                <span data-l="ar">المعيار</span>
+                <span data-l="en">Criterion</span>
+              </th>
+              <th class="comp-th th-coin">
+                <span class="comp-diamond">◆</span>CoinCarrière
+              </th>
+              <th class="comp-th th-trad">
+                <span data-l="fr">Méthodes<br>traditionnelles</span>
+                <span data-l="ar">الطرق<br>التقليدية</span>
+                <span data-l="en">Traditional<br>methods</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="comp-tr">
+              <td class="comp-td td-label">
+                <span data-l="fr">Temps de recrutement</span>
+                <span data-l="ar">زمن التوظيف</span>
+                <span data-l="en">Time to hire</span>
+              </td>
+              <td class="comp-td td-coin">
+                <span class="v-yes-bold" data-l="fr">✓ 48 heures</span>
+                <span class="v-yes-bold" data-l="ar">✓ 48 ساعة</span>
+                <span class="v-yes-bold" data-l="en">✓ 48 hours</span>
+              </td>
+              <td class="comp-td td-trad">
+                <span class="v-no-bold" data-l="fr">✗ Semaines</span>
+                <span class="v-no-bold" data-l="ar">✗ أسابيع</span>
+                <span class="v-no-bold" data-l="en">✗ Weeks</span>
+              </td>
+            </tr>
+            <tr class="comp-tr comp-tr-alt">
+              <td class="comp-td td-label">
+                <span data-l="fr">Spécialisation hôtellerie</span>
+                <span data-l="ar">تخصص فندقي</span>
+                <span data-l="en">Hospitality specialization</span>
+              </td>
+              <td class="comp-td td-coin"><span class="v-yes">✓</span></td>
+              <td class="comp-td td-trad"><span class="v-no">✗</span></td>
+            </tr>
+            <tr class="comp-tr">
+              <td class="comp-td td-label">
+                <span data-l="fr">Inscription gratuite</span>
+                <span data-l="ar">التسجيل مجاني</span>
+                <span data-l="en">Free registration</span>
+              </td>
+              <td class="comp-td td-coin"><span class="v-yes">✓</span></td>
+              <td class="comp-td td-trad"><span class="v-no">✗</span></td>
+            </tr>
+            <tr class="comp-tr comp-tr-alt">
+              <td class="comp-td td-label">
+                <span data-l="fr">Candidats pré-qualifiés</span>
+                <span data-l="ar">مرشحون مدققون</span>
+                <span data-l="en">Pre-qualified candidates</span>
+              </td>
+              <td class="comp-td td-coin"><span class="v-yes">✓</span></td>
+              <td class="comp-td td-trad"><span class="v-no">✗</span></td>
+            </tr>
+            <tr class="comp-tr">
+              <td class="comp-td td-label">
+                <span data-l="fr">Gestion numérique complète</span>
+                <span data-l="ar">إدارة رقمية كاملة</span>
+                <span data-l="en">Full digital management</span>
+              </td>
+              <td class="comp-td td-coin"><span class="v-yes">✓</span></td>
+              <td class="comp-td td-trad"><span class="v-no">✗</span></td>
+            </tr>
+            <tr class="comp-tr comp-tr-alt">
+              <td class="comp-td td-label">
+                <span data-l="fr">Support dédié</span>
+                <span data-l="ar">دعم متخصص</span>
+                <span data-l="en">Dedicated support</span>
+              </td>
+              <td class="comp-td td-coin"><span class="v-yes">✓</span></td>
+              <td class="comp-td td-trad"><span class="v-no">✗</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="text-align:center;margin-top:36px;" class="reveal">
+        <a href="https://coincarriere.com/register?type=company" target="_blank" class="btn-lime btn-lime-lg"
+          onclick="fbq('track','Lead')">
+          <span data-l="fr"> Commencer gratuitement</span>
+          <span data-l="ar"> ابدأ مجانًا</span>
+          <span data-l="en"> Start for free</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-sec">
+    <div class="ctr">
+      <div class="faq-inner">
+        <div style="text-align:center;margin-bottom:36px;">
+          <div class="s-tag"><span data-l="fr">FAQ</span><span data-l="ar">أسئلة شائعة</span><span
+              data-l="en">FAQ</span></div>
+          <h2 class="s-title">
+            <span data-l="fr">Questions fréquentes</span>
+            <span data-l="ar">الأسئلة الأكثر شيوعًا</span>
+            <span data-l="en">Frequently asked questions</span>
+          </h2>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFAQ(this)">
+            <span class="faq-q-text"><span data-l="fr">Est-ce vraiment gratuit pour commencer ?</span><span
+                data-l="ar">هل هو مجاني فعلاً للبدء؟</span><span data-l="en">Is it really free to start?</span></span>
+            <div class="faq-icon">+</div>
+          </button>
+          <div class="faq-a">
+            <p class="faq-a-text"><span data-l="fr">Oui, totalement. Vous pouvez publier votre première offre d'emploi
+                gratuitement, sans carte de crédit et sans engagement. Vous accédez immédiatement aux candidats
+                qualifiés de notre base. Aucune commission sur vos embauches, jamais.</span><span data-l="ar">نعم،
+                تمامًا. يمكنك نشر أول Arض عمل مجانًا، بدون بطاقة ائتمانية وبدون التزام. تصل فورًا إلى المرشحين المؤهلين
+                في قاعدتنا. لا عمولة على توظيفاتك، أبدًا.</span><span data-l="en">Yes, completely. You can post your
+                first job listing for free, without a credit card and without commitment. You immediately access
+                qualified candidates in our database. No commission on your hires, ever.</span></p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFAQ(this)">
+            <span class="faq-q-text"><span data-l="fr">Comment CoinCarrière filtre-t-il les candidats ?</span><span
+                data-l="ar">كيف يُصفّي CoinCarrière المرشحين؟</span><span data-l="en">How does CoinCarrière filter
+                candidates?</span></span>
+            <div class="faq-icon">+</div>
+          </button>
+          <div class="faq-a">
+            <p class="faq-a-text"><span data-l="fr">Notre IA analyse chaque profil selon vos critères : poste,
+                expérience, disponibilité, localisation et compétences sectorielles. Seuls les candidats qui
+                correspondent à au moins 80% de vos critères vous sont présentés. Vous ne recevez que des profils
+                pertinents.</span><span data-l="ar">يحلل ذكاؤنا الاصطناعي كل ملف وفق معاييرك: المنصب، الخبرة، التوفر،
+                الموقع والمهارات القطاعية. فقط المرشحون الذين يستوفون 80% من معاييرك يُArضون عليك.</span><span
+                data-l="en">Our AI analyzes each profile according to your criteria: position, experience, availability,
+                location and sector skills. Only candidates matching at least 80% of your criteria are presented to
+                you.</span></p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFAQ(this)">
+            <span class="faq-q-text"><span data-l="fr">Combien de temps pour recevoir mes premiers candidats
+                ?</span><span data-l="ar">كم من الوقت لاستقبال أول مرشحين؟</span><span data-l="en">How long to receive
+                my first candidates?</span></span>
+            <div class="faq-icon">+</div>
+          </button>
+          <div class="faq-a">
+            <p class="faq-a-text"><span data-l="fr">En moyenne, nos recruteurs reçoivent leurs premiers candidats
+                qualifiés dans les 6 à 24 heures suivant la publication. Le délai dépend du poste et de la zone
+                géographique. Dans tous les cas, nous nous engageons à vous fournir des résultats en moins de
+                48h.</span><span data-l="ar">في المتوسط، يستقبل مجنّدونا أول مرشحين مؤهلين خلال 6 إلى 24 ساعة من النشر.
+                تعتمد المدة على المنصب والمنطقة الجغرافية. في جميع الأحوال، نلتزم بتزويدك بنتائج في أقل من 48
+                ساعة.</span><span data-l="en">On average, our recruiters receive their first qualified candidates within
+                6 to 24 hours of posting. The delay depends on the position and geographic area. In all cases, we commit
+                to providing results in under 48h.</span></p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFAQ(this)">
+            <span class="faq-q-text"><span data-l="fr">Est-ce que ça fonctionne pour les offres saisonnières
+                ?</span><span data-l="ar">هل يعمل للArوض الموسمية؟</span><span data-l="en">Does it work for seasonal
+                positions?</span></span>
+            <div class="faq-icon">+</div>
+          </button>
+          <div class="faq-a">
+            <p class="faq-a-text"><span data-l="fr">Absolument. CoinCarrière est spécialement conçu pour l'hôtellerie et
+                la restauration au Maroc, incluant les recrutements saisonniers. Vous pouvez préciser la durée du
+                contrat (CDD, saisonnier, temps plein, temps partiel) et nous vous trouverons des candidats disponibles
+                et adaptés.</span><span data-l="ar">بالتأكيد. CoinCarrière مصمم خصيصًا للفندقة والمطاعم بالمغرب، بما
+                فيها التوظيف الموسمي. يمكنك تحديد مدة العقد وسنجد لك مرشحين متاحين ومناسبين.</span><span
+                data-l="en">Absolutely. CoinCarrière is specially designed for hospitality and restaurants in Morocco,
+                including seasonal recruitment. You can specify the contract duration and we will find you available and
+                suitable candidates.</span></p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFAQ(this)">
+            <span class="faq-q-text"><span data-l="fr">Puis-je utiliser CoinCarrière avec mon équipe RH ?</span><span
+                data-l="ar">هل يمكنني استخدام CoinCarrière مع فريق الموارد البشرية؟</span><span data-l="en">Can I use
+                CoinCarrière with my HR team?</span></span>
+            <div class="faq-icon">+</div>
+          </button>
+          <div class="faq-a">
+            <p class="faq-a-text"><span data-l="fr">Oui. Vous pouvez inviter autant de membres d'équipe que vous
+                souhaitez : managers, RH, directeurs. Chaque membre peut consulter les profils, laisser des notes et
+                participer à la décision d'embauche. La collaboration RH est incluse dans tous les plans.</span><span
+                data-l="ar">نعم. يمكنك دعوة أي عدد من أعضاء الفريق: مديرين، موارد بشرية، مدراء. يمكن لكل عضو الاطلاع على
+                الملفات وترك ملاحظات والمشاركة في قرار التوظيف.</span><span data-l="en">Yes. You can invite as many team
+                members as you want: managers, HR, directors. Each member can view profiles, leave notes and participate
+                in the hiring decision. HR collaboration is included in all plans.</span></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final">
+    <!-- هادو هما العناصر لي كيزيدو الصورة والضلال والنقط بحال الهيرو -->
+    <div class="hero-bg" style="background-image:url('https://i.postimg.cc/rwkbhGNL/LP.jpg'); opacity: 0.9;"></div>
+    <div class="hero-overlay"
+      style="background: linear-gradient(135deg, rgba(11, 63, 89, 0.9) 0%, rgba(22, 73, 140, 0.8) 100%);"></div>
+    <div class="hero-grid-pattern"></div>
+
+    <div class="ctr" style="position:relative;z-index:2;">
+      <div data-l="fr">
+        <h2>Ne perdez plus de temps<br>à <span class="hl">chercher du personnel</span></h2>
+        <p class="final-sub">Votre prochain employé est déjà sur CoinCarrière. Publiez votre première offre en moins de
+          5 minutes.</p>
+      </div>
+      <div data-l="ar">
+        <h2>لا تُضيّع وقتًا أكثر<br>في <span class="hl">البحث عن موظفين</span></h2>
+        <p class="final-sub">موظفك القادم موجود على CoinCarrière. انشر أول Arض في أقل من 5 دقائق.</p>
+      </div>
+      <div data-l="en">
+        <h2>Stop wasting time<br><span class="hl">looking for staff</span></h2>
+        <p class="final-sub">Your next employee is already on CoinCarrière. Post your first job in under 5 minutes.</p>
+      </div>
+      <a href="https://coincarriere.com/register?type=company" target="_blank" class="btn-lime btn-lime-lg"
+        onclick="fbq('track','Lead')">
         <span data-l="fr">Publier votre annonce maintenant</span>
         <span data-l="ar">انشر إعلانك الآن</span>
         <span data-l="en">Post your job now</span>
       </a>
-    </div>
-  </div>
-</section>
-
-<!-- TESTIMONIAL CAROUSEL -->
-<section class="tcarousel-sec">
-  <div class="ctr">
-    <div class="tcarousel-head reveal">
-      <div class="tcar-tag"><span data-l="fr">ILS NOUS FONT CONFIANCE</span><span data-l="ar">يثقون بنا</span><span data-l="en">THEY TRUST US</span></div>
-      <h2 class="tcar-title"><span data-l="fr">Depuis leurs hôtels, ils témoignent</span><span data-l="ar">من فنادقهم، يشهدون</span><span data-l="en">From their hotels, they testify</span></h2>
-    </div>
-    <div class="tcar-viewport">
-      <div class="tcar-track" id="tcarTrack">
-        <div class="tslide" data-index="0">
-          <div class="tslide-inner">
-            <img class="tslide-img" src="https://media.base44.com/images/public/69efcd57ef02aa2945279fb0/f20a1e555_generated_image.png " alt="Mohammed Bennani">
-            <div class="tslide-overlay"></div>
-            <div class="tslide-bubble">
-              <span data-l="fr">"CoinCarrière m'a sauvé ! 12 saisonniers recrutés en 4 jours."</span>
-              <span data-l="ar">"CoinCarrière أنقذني! 12 موظفًا موسميًا في 4 أيام."</span>
-              <span data-l="en">"CoinCarrière saved me! 12 seasonal staff hired in 4 days."</span>
-            </div>
-            <div class="tslide-badge" style="background:#1A6BCC">
-              <span data-l="fr">CoinCarrière m'a sauvé !</span><span data-l="ar">CoinCarrière أنقذني!</span><span data-l="en">CoinCarrière saved me!</span>
-            </div>
-            <div class="tslide-info">
-              <div class="tslide-stars">★★★★★</div>
-              <div class="tslide-name">Mohammed Bennani</div>
-              <div class="tslide-role"><span data-l="fr">Directeur Général</span><span data-l="ar">مدير عام</span><span data-l="en">General Manager</span></div>
-              <div class="tslide-hotel"><span data-l="fr">Riad Dar Zitoun · Marrakech</span><span data-l="ar">رياض دار الزيتون · مراكش</span><span data-l="en">Riad Dar Zitoun · Marrakech</span></div>
-            </div>
-          </div>
-        </div>
-<div class="tslide" data-index="1">
-          <div class="tslide-inner">
-            <img class="tslide-img" src="https://media.base44.com/images/public/69efcd57ef02aa2945279fb0/eaaa880e9_generated_image.png" alt="Fatima Zahra Idrissi">
-            <div class="tslide-overlay"></div>
-            <div class="tslide-bubble">
-              <span data-l="fr">"3x plus de candidats qualifiés depuis CoinCarrière. Incroyable."</span>
-              <span data-l="ar">"3 أضعاف المرشحين المؤهلين منذ CoinCarrière."</span>
-              <span data-l="en">"3x more qualified candidates since CoinCarrière. Incredible."</span>
-            </div>
-            <div class="tslide-badge" style="background:#dc2626">
-              <span data-l="fr">3x plus de candidats qualifiés !</span><span data-l="ar">3 أضعاف المرشحين!</span><span data-l="en">3x more qualified!</span>
-            </div>
-            <div class="tslide-info">
-              <div class="tslide-stars">★★★★★</div>
-              <div class="tslide-name">Fatima Zahra Idrissi</div>
-              <div class="tslide-role"><span data-l="fr">Responsable RH</span><span data-l="ar">مسؤولة الموارد البشرية</span><span data-l="en">HR Manager</span></div>
-              <div class="tslide-hotel"><span data-l="fr">Palais Salam · Fès</span><span data-l="ar">قصر السلام · فاس</span><span data-l="en">Palais Salam · Fès</span></div>
-            </div>
-          </div>
-        </div>
-<div class="tslide" data-index="2">
-          <div class="tslide-inner">
-            <img class="tslide-img" src="https://media.base44.com/images/public/69efcd57ef02aa2945279fb0/9e410c3ac_generated_image.png" alt="Youssef Cherkaoui">
-            <div class="tslide-overlay"></div>
-            <div class="tslide-bubble">
-              <span data-l="fr">"Recrutement bouclé en 4 jours. Avant il nous fallait 3 semaines."</span>
-              <span data-l="ar">"توظيف مكتمل في 4 أيام. كنا نحتاج 3 أسابيع قبل ذلك."</span>
-              <span data-l="en">"Recruitment done in 4 days. Before it took us 3 weeks."</span>
-            </div>
-            <div class="tslide-badge" style="background:#1a2535">
-              <span data-l="fr">RECRUTEMENT EN 4 JOURS !</span><span data-l="ar">توظيف في 4 أيام!</span><span data-l="en">HIRED IN 4 DAYS!</span>
-            </div>
-            <div class="tslide-info">
-              <div class="tslide-stars">★★★★★</div>
-              <div class="tslide-name">Youssef Cherkaoui</div>
-              <div class="tslide-role"><span data-l="fr">Chef d'Exploitation</span><span data-l="ar">مدير الاستغلال</span><span data-l="en">Operations Manager</span></div>
-              <div class="tslide-hotel"><span data-l="fr">Hôtel Atlas Asni · Asni</span><span data-l="ar">فندق أطلس أسني · أسني</span><span data-l="en">Hôtel Atlas Asni · Asni</span></div>
-            </div>
-          </div>
-        </div>
-<div class="tslide" data-index="3">
-          <div class="tslide-inner">
-            <img class="tslide-img" src="https://media.base44.com/images/public/69efcd57ef02aa2945279fb0/b1b7a39c6_generated_image.png"" alt="Nadia El Fassi">
-            <div class="tslide-overlay"></div>
-            <div class="tslide-bubble">
-              <span data-l="fr">"50% moins de temps pour recruter. CoinCarrière a tout changé."</span>
-              <span data-l="ar">"50% أقل وقتًا في التوظيف. CoinCarrière غيّر كل شيء."</span>
-              <span data-l="en">"50% less time to recruit. CoinCarrière changed everything."</span>
-            </div>
-            <div class="tslide-badge" style="background:#16498c">
-              <span data-l="fr">50% moins de temps !</span><span data-l="ar">50% أقل وقتًا!</span><span data-l="en">50% less time!</span>
-            </div>
-            <div class="tslide-info">
-              <div class="tslide-stars">★★★★★</div>
-              <div class="tslide-name">Nadia El Fassi</div>
-              <div class="tslide-role"><span data-l="fr">Directrice de Résidence</span><span data-l="ar">مديرة الإقامة</span><span data-l="en">Residence Director</span></div>
-              <div class="tslide-hotel"><span data-l="fr">Resort Jardins de l'Agdal · Essaouira</span><span data-l="ar">منتجع جناين أكدال · الصويرة</span><span data-l="en">Resort Jardins de l'Agdal · Essaouira</span></div>
-            </div>
-          </div>
-        </div>
-<div class="tslide" data-index="4">
-          <div class="tslide-inner">
-            <img class="tslide-img" src="https://media.base44.com/images/public/69efcd57ef02aa2945279fb0/1c5bb63e3_generated_image.png" alt="Hamid Tahiri">
-            <div class="tslide-overlay"></div>
-            <div class="tslide-bubble">
-              <span data-l="fr">"Simple, rapide, efficace. Exactement ce qu'il fallait à notre équipe."</span>
-              <span data-l="ar">"بسيط، سريع، فعّال. بالضبط ما كان فريقنا يحتاجه."</span>
-              <span data-l="en">"Simple, fast, effective. Exactly what our team needed."</span>
-            </div>
-            <div class="tslide-badge" style="background:#0094d9">
-              <span data-l="fr">Simple et efficace !</span><span data-l="ar">بسيط وفعّال!</span><span data-l="en">Simple and effective!</span>
-            </div>
-            <div class="tslide-info">
-              <div class="tslide-stars">★★★★★</div>
-              <div class="tslide-name">Hamid Tahiri</div>
-              <div class="tslide-role"><span data-l="fr">Manager F&B</span><span data-l="ar">مدير المأكولات والمشروبات</span><span data-l="en">F&B Manager</span></div>
-              <div class="tslide-hotel"><span data-l="fr">Hôtel Menara Palace · Agadir</span><span data-l="ar">فندق منارة بالاس · أكادير</span><span data-l="en">Hôtel Menara Palace · Agadir</span></div>
-            </div>
-          </div>
-        </div>
-
+      <div class="final-trust">
+        <div class="fti"><span data-l="fr">Sans engagement</span><span data-l="ar">بدون التزام</span><span
+            data-l="en">No commitment</span></div>
+        <div class="fti">0 MAD <span data-l="fr">pour commencer</span><span data-l="ar">للبدء</span><span data-l="en">to
+            start</span></div>
+        <div class="fti"><span data-l="fr">Résultats en 48h</span><span data-l="ar">نتائج في 48 ساعة</span><span
+            data-l="en">Results in 48h</span></div>
+        <div class="fti">0 <span data-l="fr">commission</span><span data-l="ar">عمولة</span><span
+            data-l="en">commission</span></div>
+        <div class="fti"><span data-l="fr">Support local Maroc</span><span data-l="ar">دعم محلي</span><span
+            data-l="en">Local Morocco support</span></div>
       </div>
     </div>
-    <div class="tcar-controls">
-      <button class="tcar-btn" id="tPrev" aria-label="Précédent">&#8249;</button>
-      <div class="tcar-dots">
-        <div class="tcar-dot tcar-dot-on" data-index="0"></div>
-        <div class="tcar-dot" data-index="1"></div>
-        <div class="tcar-dot" data-index="2"></div>
-        <div class="tcar-dot" data-index="3"></div>
-        <div class="tcar-dot" data-index="4"></div>
-      </div>
-      <button class="tcar-btn" id="tNext" aria-label="Suivant">&#8250;</button>
+  </section>
+
+  <footer>
+    <div class="ctr" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+      <img src="https://i.postimg.cc/hP92qWGT/Logo-Officiel.png" alt="CoinCarrière" style="height:32px;width:auto;">
+      <p>© 2025 CoinCarrière · <span data-l="fr">Recrutement hôtellerie &amp; restauration — Maroc</span><span
+          data-l="ar">توظيف في الفندقة والمطاعم — المغرب</span><span data-l="en">Hospitality &amp; F&amp;B recruitment —
+          Morocco</span></p>
+      <p>contact@coincarriere.ma · <a href="https://coincarriere.com" target="_blank">coincarriere.com</a></p>
     </div>
-  </div>
-</section>
+  </footer>
 
-<!-- VIDEO -->
-<section class="vid-sec">
-  <div class="ctr">
-    <div class="s-tag" style="margin-bottom:12px;"><span data-l="fr">Démo</span><span data-l="ar">Arض توضيحي</span><span data-l="en">Demo</span></div>
-    <h2 class="vid-title">
-      <span data-l="fr">Voir comment les hôtels recrutent plus vite</span>
-      <span data-l="ar">شاهد كيف تُوظّف الفنادق بشكل أسرع</span>
-      <span data-l="en">See how hotels recruit faster</span>
-    </h2>
-    <div class="vid-wrap">
-      <iframe src="https://www.youtube.com/embed/vDpzgTg-g30?si=cJRoNYhwHJjZBVPn" title="CoinCarrière Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-  </div>
-</section>
-
-<!-- COMPARISON TABLE -->
-<section class="comp-sec">
-  <div class="ctr">
-    <div style="text-align:center;margin-bottom:36px;" class="reveal">
-      <div class="s-tag">
-        <span data-l="fr">Comparaison</span>
-        <span data-l="ar">المقارنة</span>
-        <span data-l="en">Comparison</span>
-      </div>
-      <h2 class="s-title">
-        <span data-l="fr">CoinCarrière vs <span class="hl">les méthodes traditionnelles</span></span>
-        <span data-l="ar">مقارنة CoinCarrière مع <span class="hl">الطرق التقليدية</span></span>
-        <span data-l="en">CoinCarrière vs <span class="hl">traditional methods</span></span>
-      </h2>
-    </div>
-
-    <div class="comp-wrap reveal">
-      <table class="comp-table">
-        <thead class="comp-thead">
-          <tr>
-            <th class="comp-th th-label">
-              <span data-l="fr">Critère</span>
-              <span data-l="ar">المعيار</span>
-              <span data-l="en">Criterion</span>
-            </th>
-            <th class="comp-th th-coin">
-              <span class="comp-diamond">◆</span>CoinCarrière
-            </th>
-            <th class="comp-th th-trad">
-              <span data-l="fr">Méthodes<br>traditionnelles</span>
-              <span data-l="ar">الطرق<br>التقليدية</span>
-              <span data-l="en">Traditional<br>methods</span>
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="comp-tr">
-            <td class="comp-td td-label">
-              <span data-l="fr">Temps de recrutement</span>
-              <span data-l="ar">زمن التوظيف</span>
-              <span data-l="en">Time to hire</span>
-            </td>
-            <td class="comp-td td-coin">
-              <span class="v-yes-bold" data-l="fr">✓ 48 heures</span>
-              <span class="v-yes-bold" data-l="ar">✓ 48 ساعة</span>
-              <span class="v-yes-bold" data-l="en">✓ 48 hours</span>
-            </td>
-            <td class="comp-td td-trad">
-              <span class="v-no-bold" data-l="fr">✗ Semaines</span>
-              <span class="v-no-bold" data-l="ar">✗ أسابيع</span>
-              <span class="v-no-bold" data-l="en">✗ Weeks</span>
-            </td>
-          </tr>
-          <tr class="comp-tr comp-tr-alt">
-            <td class="comp-td td-label">
-              <span data-l="fr">Spécialisation hôtellerie</span>
-              <span data-l="ar">تخصص فندقي</span>
-              <span data-l="en">Hospitality specialization</span>
-            </td>
-            <td class="comp-td td-coin"><span class="v-yes">✓</span></td>
-            <td class="comp-td td-trad"><span class="v-no">✗</span></td>
-          </tr>
-          <tr class="comp-tr">
-            <td class="comp-td td-label">
-              <span data-l="fr">Inscription gratuite</span>
-              <span data-l="ar">التسجيل مجاني</span>
-              <span data-l="en">Free registration</span>
-            </td>
-            <td class="comp-td td-coin"><span class="v-yes">✓</span></td>
-            <td class="comp-td td-trad"><span class="v-no">✗</span></td>
-          </tr>
-          <tr class="comp-tr comp-tr-alt">
-            <td class="comp-td td-label">
-              <span data-l="fr">Candidats pré-qualifiés</span>
-              <span data-l="ar">مرشحون مدققون</span>
-              <span data-l="en">Pre-qualified candidates</span>
-            </td>
-            <td class="comp-td td-coin"><span class="v-yes">✓</span></td>
-            <td class="comp-td td-trad"><span class="v-no">✗</span></td>
-          </tr>
-          <tr class="comp-tr">
-            <td class="comp-td td-label">
-              <span data-l="fr">Gestion numérique complète</span>
-              <span data-l="ar">إدارة رقمية كاملة</span>
-              <span data-l="en">Full digital management</span>
-            </td>
-            <td class="comp-td td-coin"><span class="v-yes">✓</span></td>
-            <td class="comp-td td-trad"><span class="v-no">✗</span></td>
-          </tr>
-          <tr class="comp-tr comp-tr-alt">
-            <td class="comp-td td-label">
-              <span data-l="fr">Support dédié</span>
-              <span data-l="ar">دعم متخصص</span>
-              <span data-l="en">Dedicated support</span>
-            </td>
-            <td class="comp-td td-coin"><span class="v-yes">✓</span></td>
-            <td class="comp-td td-trad"><span class="v-no">✗</span></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div style="text-align:center;margin-top:36px;" class="reveal">
-      <a href="https://coincarriere.com/register?type=company" target="_blank" class="btn-lime btn-lime-lg" onclick="fbq('track','Lead')">
-        <span data-l="fr"> Commencer gratuitement</span>
-        <span data-l="ar"> ابدأ مجانًا</span>
-        <span data-l="en"> Start for free</span>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section class="faq-sec">
-  <div class="ctr">
-    <div class="faq-inner">
-      <div style="text-align:center;margin-bottom:36px;">
-        <div class="s-tag"><span data-l="fr">FAQ</span><span data-l="ar">أسئلة شائعة</span><span data-l="en">FAQ</span></div>
-        <h2 class="s-title">
-          <span data-l="fr">Questions fréquentes</span>
-          <span data-l="ar">الأسئلة الأكثر شيوعًا</span>
-          <span data-l="en">Frequently asked questions</span>
-        </h2>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFAQ(this)">
-          <span class="faq-q-text"><span data-l="fr">Est-ce vraiment gratuit pour commencer ?</span><span data-l="ar">هل هو مجاني فعلاً للبدء؟</span><span data-l="en">Is it really free to start?</span></span>
-          <div class="faq-icon">+</div>
-        </button>
-        <div class="faq-a"><p class="faq-a-text"><span data-l="fr">Oui, totalement. Vous pouvez publier votre première offre d'emploi gratuitement, sans carte de crédit et sans engagement. Vous accédez immédiatement aux candidats qualifiés de notre base. Aucune commission sur vos embauches, jamais.</span><span data-l="ar">نعم، تمامًا. يمكنك نشر أول Arض عمل مجانًا، بدون بطاقة ائتمانية وبدون التزام. تصل فورًا إلى المرشحين المؤهلين في قاعدتنا. لا عمولة على توظيفاتك، أبدًا.</span><span data-l="en">Yes, completely. You can post your first job listing for free, without a credit card and without commitment. You immediately access qualified candidates in our database. No commission on your hires, ever.</span></p></div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFAQ(this)">
-          <span class="faq-q-text"><span data-l="fr">Comment CoinCarrière filtre-t-il les candidats ?</span><span data-l="ar">كيف يُصفّي CoinCarrière المرشحين؟</span><span data-l="en">How does CoinCarrière filter candidates?</span></span>
-          <div class="faq-icon">+</div>
-        </button>
-        <div class="faq-a"><p class="faq-a-text"><span data-l="fr">Notre IA analyse chaque profil selon vos critères : poste, expérience, disponibilité, localisation et compétences sectorielles. Seuls les candidats qui correspondent à au moins 80% de vos critères vous sont présentés. Vous ne recevez que des profils pertinents.</span><span data-l="ar">يحلل ذكاؤنا الاصطناعي كل ملف وفق معاييرك: المنصب، الخبرة، التوفر، الموقع والمهارات القطاعية. فقط المرشحون الذين يستوفون 80% من معاييرك يُArضون عليك.</span><span data-l="en">Our AI analyzes each profile according to your criteria: position, experience, availability, location and sector skills. Only candidates matching at least 80% of your criteria are presented to you.</span></p></div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFAQ(this)">
-          <span class="faq-q-text"><span data-l="fr">Combien de temps pour recevoir mes premiers candidats ?</span><span data-l="ar">كم من الوقت لاستقبال أول مرشحين؟</span><span data-l="en">How long to receive my first candidates?</span></span>
-          <div class="faq-icon">+</div>
-        </button>
-        <div class="faq-a"><p class="faq-a-text"><span data-l="fr">En moyenne, nos recruteurs reçoivent leurs premiers candidats qualifiés dans les 6 à 24 heures suivant la publication. Le délai dépend du poste et de la zone géographique. Dans tous les cas, nous nous engageons à vous fournir des résultats en moins de 48h.</span><span data-l="ar">في المتوسط، يستقبل مجنّدونا أول مرشحين مؤهلين خلال 6 إلى 24 ساعة من النشر. تعتمد المدة على المنصب والمنطقة الجغرافية. في جميع الأحوال، نلتزم بتزويدك بنتائج في أقل من 48 ساعة.</span><span data-l="en">On average, our recruiters receive their first qualified candidates within 6 to 24 hours of posting. The delay depends on the position and geographic area. In all cases, we commit to providing results in under 48h.</span></p></div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFAQ(this)">
-          <span class="faq-q-text"><span data-l="fr">Est-ce que ça fonctionne pour les offres saisonnières ?</span><span data-l="ar">هل يعمل للArوض الموسمية؟</span><span data-l="en">Does it work for seasonal positions?</span></span>
-          <div class="faq-icon">+</div>
-        </button>
-        <div class="faq-a"><p class="faq-a-text"><span data-l="fr">Absolument. CoinCarrière est spécialement conçu pour l'hôtellerie et la restauration au Maroc, incluant les recrutements saisonniers. Vous pouvez préciser la durée du contrat (CDD, saisonnier, temps plein, temps partiel) et nous vous trouverons des candidats disponibles et adaptés.</span><span data-l="ar">بالتأكيد. CoinCarrière مصمم خصيصًا للفندقة والمطاعم بالمغرب، بما فيها التوظيف الموسمي. يمكنك تحديد مدة العقد وسنجد لك مرشحين متاحين ومناسبين.</span><span data-l="en">Absolutely. CoinCarrière is specially designed for hospitality and restaurants in Morocco, including seasonal recruitment. You can specify the contract duration and we will find you available and suitable candidates.</span></p></div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFAQ(this)">
-          <span class="faq-q-text"><span data-l="fr">Puis-je utiliser CoinCarrière avec mon équipe RH ?</span><span data-l="ar">هل يمكنني استخدام CoinCarrière مع فريق الموارد البشرية؟</span><span data-l="en">Can I use CoinCarrière with my HR team?</span></span>
-          <div class="faq-icon">+</div>
-        </button>
-        <div class="faq-a"><p class="faq-a-text"><span data-l="fr">Oui. Vous pouvez inviter autant de membres d'équipe que vous souhaitez : managers, RH, directeurs. Chaque membre peut consulter les profils, laisser des notes et participer à la décision d'embauche. La collaboration RH est incluse dans tous les plans.</span><span data-l="ar">نعم. يمكنك دعوة أي عدد من أعضاء الفريق: مديرين، موارد بشرية، مدراء. يمكن لكل عضو الاطلاع على الملفات وترك ملاحظات والمشاركة في قرار التوظيف.</span><span data-l="en">Yes. You can invite as many team members as you want: managers, HR, directors. Each member can view profiles, leave notes and participate in the hiring decision. HR collaboration is included in all plans.</span></p></div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- FINAL CTA -->
-<section class="final">
-  <!-- هادو هما العناصر لي كيزيدو الصورة والضلال والنقط بحال الهيرو -->
-  <div class="hero-bg" style="background-image:url('https://i.postimg.cc/rwkbhGNL/LP.jpg'); opacity: 0.9;"></div>
-  <div class="hero-overlay" style="background: linear-gradient(135deg, rgba(11, 63, 89, 0.9) 0%, rgba(22, 73, 140, 0.8) 100%);"></div>
-  <div class="hero-grid-pattern"></div>
-
-  <div class="ctr" style="position:relative;z-index:2;">
-    <div data-l="fr">
-      <h2>Ne perdez plus de temps<br>à <span class="hl">chercher du personnel</span></h2>
-      <p class="final-sub">Votre prochain employé est déjà sur CoinCarrière. Publiez votre première offre en moins de 5 minutes.</p>
-    </div>
-    <div data-l="ar">
-      <h2>لا تُضيّع وقتًا أكثر<br>في <span class="hl">البحث عن موظفين</span></h2>
-      <p class="final-sub">موظفك القادم موجود على CoinCarrière. انشر أول Arض في أقل من 5 دقائق.</p>
-    </div>
-    <div data-l="en">
-      <h2>Stop wasting time<br><span class="hl">looking for staff</span></h2>
-      <p class="final-sub">Your next employee is already on CoinCarrière. Post your first job in under 5 minutes.</p>
-    </div>
-    <a href="https://coincarriere.com/register?type=company" target="_blank" class="btn-lime btn-lime-lg" onclick="fbq('track','Lead')">
-      <span data-l="fr">Publier votre annonce maintenant</span>
-      <span data-l="ar">انشر إعلانك الآن</span>
-      <span data-l="en">Post your job now</span>
+  <!-- STICKY -->
+  <div class="sticky">
+    <a href="https://coincarriere.com/register?type=company" target="_blank" onclick="fbq('track','Lead')">
+      <span data-l="fr">Publier mon annonce — Gratuit</span>
+      <span data-l="ar">انشر إعلاني — مجانًا</span>
+      <span data-l="en">Post my job — Free</span>
     </a>
-    <div class="final-trust">
-      <div class="fti"><span data-l="fr">Sans engagement</span><span data-l="ar">بدون التزام</span><span data-l="en">No commitment</span></div>
-      <div class="fti">0 MAD <span data-l="fr">pour commencer</span><span data-l="ar">للبدء</span><span data-l="en">to start</span></div>
-      <div class="fti"><span data-l="fr">Résultats en 48h</span><span data-l="ar">نتائج في 48 ساعة</span><span data-l="en">Results in 48h</span></div>
-      <div class="fti">0 <span data-l="fr">commission</span><span data-l="ar">عمولة</span><span data-l="en">commission</span></div>
-      <div class="fti"><span data-l="fr">Support local Maroc</span><span data-l="ar">دعم محلي</span><span data-l="en">Local Morocco support</span></div>
-    </div>
+    <p class="sticky-note"><span data-l="fr">Sans engagement · 458+ entreprises actives</span><span data-l="ar">بدون
+        التزام · +458 شركة نشطة</span><span data-l="en">No commitment · 458+ active companies</span></p>
   </div>
-</section>
 
-<footer>
-  <div class="ctr" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">
-    <img src="https://i.postimg.cc/hP92qWGT/Logo-Officiel.png" alt="CoinCarrière" style="height:32px;width:auto;">
-    <p>© 2025 CoinCarrière · <span data-l="fr">Recrutement hôtellerie &amp; restauration — Maroc</span><span data-l="ar">توظيف في الفندقة والمطاعم — المغرب</span><span data-l="en">Hospitality &amp; F&amp;B recruitment — Morocco</span></p>
-    <p>contact@coincarriere.ma · <a href="https://coincarriere.com" target="_blank">coincarriere.com</a></p>
-  </div>
-</footer>
-
-<!-- STICKY -->
-<div class="sticky">
-  <a href="https://coincarriere.com/register?type=company" target="_blank" onclick="fbq('track','Lead')">
-    <span data-l="fr">Publier mon annonce — Gratuit</span>
-    <span data-l="ar">انشر إعلاني — مجانًا</span>
-    <span data-l="en">Post my job — Free</span>
-  </a>
-  <p class="sticky-note"><span data-l="fr">Sans engagement · 458+ entreprises actives</span><span data-l="ar">بدون التزام · +458 شركة نشطة</span><span data-l="en">No commitment · 458+ active companies</span></p>
-</div>
-
-<script>
-// LANG
-function setLang(l){
-  document.body.setAttribute('data-lang',l);
-  document.body.dir=l==='ar'?'rtl':'ltr';
-  document.querySelectorAll('.lb').forEach(b=>{
-    const m={fr:'FR',ar:'Ar',en:'EN'};
-    b.classList.toggle('on',b.textContent.trim()===m[l]);
-  });
-  document.querySelectorAll('[placeholder-'+l+']').forEach(i=>{i.placeholder=i.getAttribute('placeholder-'+l);});
-  if(window.updateCarouselLayout) setTimeout(window.updateCarouselLayout, 50);
-}
-setLang('fr');
-
-// FAQ
-function toggleFAQ(btn){
-  const item=btn.closest('.faq-item');
-  const wasOpen=item.classList.contains('open');
-  document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
-  if(!wasOpen) item.classList.add('open');
-}
-
-// COUNTERS
-function runC(){
-  document.querySelectorAll('[data-counter]').forEach(el=>{
-    const t=parseInt(el.dataset.counter);
-    let c=0;const s=t/55;
-    const id=setInterval(()=>{c=Math.min(c+s,t);el.textContent=Math.floor(c);if(c>=t)clearInterval(id);},16);
-  });
-}
-const ob=new IntersectionObserver(e=>{if(e[0].isIntersecting){runC();ob.disconnect();}},{threshold:.3});
-const ts=document.querySelector('.testi-strip');if(ts)ob.observe(ts);
-
-// ── SCROLL REVEAL ──
-const revObs=new IntersectionObserver(es=>{
-  es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');revObs.unobserve(e.target);}});
-},{threshold:.1,rootMargin:'0px 0px -32px 0px'});
-
-// ── NAV SCROLL EFFECT ──
-const navEl=document.querySelector('nav');
-window.addEventListener('scroll',()=>{
-  if(navEl)navEl.classList.toggle('scrolled',window.scrollY>60);
-},{passive:true});
-
-// ── COUNTERS (improved) ──
-function runCounters(){
-  document.querySelectorAll('[data-counter]').forEach(el=>{
-    if(el.dataset.counted)return;
-    el.dataset.counted='1';
-    const t=parseInt(el.dataset.counter);
-    let c=0;const s=t/60;
-    const id=setInterval(()=>{c=Math.min(c+s,t);el.textContent=Math.floor(c);if(c>=t)clearInterval(id);},16);
-  });
-}
-
-document.addEventListener('DOMContentLoaded',()=>{
-  document.querySelectorAll('.reveal').forEach(el=>revObs.observe(el));
-  const ctr=document.querySelector('[data-counter]');
-  if(ctr)new IntersectionObserver(e=>{if(e[0].isIntersecting)runCounters();},{threshold:.3}).observe(ctr);
-
-  // ── TESTIMONIAL CAROUSEL ──
-  const track = document.getElementById('tcarTrack');
-  const slides = document.querySelectorAll('.tslide');
-  const dots = document.querySelectorAll('.tcar-dot');
-  const prevBtn = document.getElementById('tPrev');
-  const nextBtn = document.getElementById('tNext');
-  
-  if (track && slides.length > 0) {
-    let currentIndex = 0;
-    const totalSlides = slides.length;
-    let startX = 0;
-    let isDragging = false;
-
-    window.updateCarouselLayout = function() {
-      if(!slides[0]) return;
-      const slideWidth = slides[0].offsetWidth;
-      const style = window.getComputedStyle(track);
-      const gap = parseFloat(style.gap) || 20;
-      
-      let moveAmount = (slideWidth + gap) * currentIndex;
-      const isRTL = document.body.dir === 'rtl' || document.body.getAttribute('data-lang') === 'ar';
-      
-      if (isRTL) {
-        track.style.transform = `translateX(${moveAmount}px)`;
-      } else {
-        track.style.transform = `translateX(-${moveAmount}px)`;
-      }
-      
-      slides.forEach((slide, index) => {
-        slide.classList.toggle('active', index === currentIndex);
+  <script>
+    // LANG
+    function setLang(l) {
+      document.body.setAttribute('data-lang', l);
+      document.body.dir = l === 'ar' ? 'rtl' : 'ltr';
+      document.querySelectorAll('.lb').forEach(b => {
+        const m = { fr: 'FR', ar: 'Ar', en: 'EN' };
+        b.classList.toggle('on', b.textContent.trim() === m[l]);
       });
-      
-      dots.forEach((dot, index) => {
-        dot.classList.toggle('tcar-dot-on', index === currentIndex);
-      });
-    };
+      document.querySelectorAll('[placeholder-' + l + ']').forEach(i => { i.placeholder = i.getAttribute('placeholder-' + l); });
+      if (window.updateCarouselLayout) setTimeout(window.updateCarouselLayout, 50);
+    }
+    setLang('fr');
 
-    function goNext() {
-      currentIndex = (currentIndex < totalSlides - 1) ? currentIndex + 1 : 0;
-      window.updateCarouselLayout();
+    // FAQ
+    function toggleFAQ(btn) {
+      const item = btn.closest('.faq-item');
+      const wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!wasOpen) item.classList.add('open');
     }
 
-    function goPrev() {
-      currentIndex = (currentIndex > 0) ? currentIndex - 1 : totalSlides - 1;
-      window.updateCarouselLayout();
+    // COUNTERS
+    function runC() {
+      document.querySelectorAll('[data-counter]').forEach(el => {
+        const t = parseInt(el.dataset.counter);
+        let c = 0; const s = t / 55;
+        const id = setInterval(() => { c = Math.min(c + s, t); el.textContent = Math.floor(c); if (c >= t) clearInterval(id); }, 16);
+      });
+    }
+    const ob = new IntersectionObserver(e => { if (e[0].isIntersecting) { runC(); ob.disconnect(); } }, { threshold: .3 });
+    const ts = document.querySelector('.testi-strip'); if (ts) ob.observe(ts);
+
+    // ── SCROLL REVEAL ──
+    const revObs = new IntersectionObserver(es => {
+      es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); revObs.unobserve(e.target); } });
+    }, { threshold: .1, rootMargin: '0px 0px -32px 0px' });
+
+    // ── NAV SCROLL EFFECT ──
+    const navEl = document.querySelector('nav');
+    window.addEventListener('scroll', () => {
+      if (navEl) navEl.classList.toggle('scrolled', window.scrollY > 60);
+    }, { passive: true });
+
+    // ── COUNTERS (improved) ──
+    function runCounters() {
+      document.querySelectorAll('[data-counter]').forEach(el => {
+        if (el.dataset.counted) return;
+        el.dataset.counted = '1';
+        const t = parseInt(el.dataset.counter);
+        let c = 0; const s = t / 60;
+        const id = setInterval(() => { c = Math.min(c + s, t); el.textContent = Math.floor(c); if (c >= t) clearInterval(id); }, 16);
+      });
     }
 
-    if (nextBtn) nextBtn.addEventListener('click', goNext);
-    if (prevBtn) prevBtn.addEventListener('click', goPrev);
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.reveal').forEach(el => revObs.observe(el));
+      const ctr = document.querySelector('[data-counter]');
+      if (ctr) new IntersectionObserver(e => { if (e[0].isIntersecting) runCounters(); }, { threshold: .3 }).observe(ctr);
 
-    dots.forEach(dot => {
-      dot.addEventListener('click', (e) => {
-        currentIndex = parseInt(e.target.getAttribute('data-index') || 0);
-        window.updateCarouselLayout();
-      });
-    });
+      // ── TESTIMONIAL CAROUSEL ──
+      const track = document.getElementById('tcarTrack');
+      const slides = document.querySelectorAll('.tslide');
+      const dots = document.querySelectorAll('.tcar-dot');
+      const prevBtn = document.getElementById('tPrev');
+      const nextBtn = document.getElementById('tNext');
 
-    slides.forEach((slide, index) => {
-      slide.addEventListener('click', () => {
-        currentIndex = index;
-        window.updateCarouselLayout();
-      });
-    });
+      if (track && slides.length > 0) {
+        let currentIndex = 0;
+        const totalSlides = slides.length;
+        let startX = 0;
+        let isDragging = false;
 
-    track.addEventListener('touchstart', (e) => {
-      startX = e.touches[0].clientX;
-      isDragging = true;
-    }, {passive: true});
+        window.updateCarouselLayout = function () {
+          if (!slides[0]) return;
+          const slideWidth = slides[0].offsetWidth;
+          const style = window.getComputedStyle(track);
+          const gap = parseFloat(style.gap) || 20;
 
-    track.addEventListener('touchend', (e) => {
-      if (!isDragging) return;
-      isDragging = false;
-      const endX = e.changedTouches[0].clientX;
-      const diffX = startX - endX;
-      const isRTL = document.body.dir === 'rtl' || document.body.getAttribute('data-lang') === 'ar';
-      
-      if (Math.abs(diffX) > 50) {
-        if (diffX > 0) {
-          isRTL ? goPrev() : goNext();
-        } else {
-          isRTL ? goNext() : goPrev();
+          let moveAmount = (slideWidth + gap) * currentIndex;
+          const isRTL = document.body.dir === 'rtl' || document.body.getAttribute('data-lang') === 'ar';
+
+          if (isRTL) {
+            track.style.transform = `translateX(${moveAmount}px)`;
+          } else {
+            track.style.transform = `translateX(-${moveAmount}px)`;
+          }
+
+          slides.forEach((slide, index) => {
+            slide.classList.toggle('active', index === currentIndex);
+          });
+
+          dots.forEach((dot, index) => {
+            dot.classList.toggle('tcar-dot-on', index === currentIndex);
+          });
+        };
+
+        function goNext() {
+          currentIndex = (currentIndex < totalSlides - 1) ? currentIndex + 1 : 0;
+          window.updateCarouselLayout();
         }
+
+        function goPrev() {
+          currentIndex = (currentIndex > 0) ? currentIndex - 1 : totalSlides - 1;
+          window.updateCarouselLayout();
+        }
+
+        if (nextBtn) nextBtn.addEventListener('click', goNext);
+        if (prevBtn) prevBtn.addEventListener('click', goPrev);
+
+        dots.forEach(dot => {
+          dot.addEventListener('click', (e) => {
+            currentIndex = parseInt(e.target.getAttribute('data-index') || 0);
+            window.updateCarouselLayout();
+          });
+        });
+
+        slides.forEach((slide, index) => {
+          slide.addEventListener('click', () => {
+            currentIndex = index;
+            window.updateCarouselLayout();
+          });
+        });
+
+        track.addEventListener('touchstart', (e) => {
+          startX = e.touches[0].clientX;
+          isDragging = true;
+        }, { passive: true });
+
+        track.addEventListener('touchend', (e) => {
+          if (!isDragging) return;
+          isDragging = false;
+          const endX = e.changedTouches[0].clientX;
+          const diffX = startX - endX;
+          const isRTL = document.body.dir === 'rtl' || document.body.getAttribute('data-lang') === 'ar';
+
+          if (Math.abs(diffX) > 50) {
+            if (diffX > 0) {
+              isRTL ? goPrev() : goNext();
+            } else {
+              isRTL ? goNext() : goPrev();
+            }
+          }
+        });
+
+        // Auto-advance
+        let autoPlay = setInterval(goNext, 4000);
+        track.parentElement.addEventListener('mouseenter', () => clearInterval(autoPlay));
+        track.parentElement.addEventListener('mouseleave', () => {
+          autoPlay = setInterval(goNext, 4000);
+        });
+
+        // Initial call
+        setTimeout(window.updateCarouselLayout, 100);
+        window.addEventListener('resize', window.updateCarouselLayout);
       }
     });
-
-    // Auto-advance
-    let autoPlay = setInterval(goNext, 4000);
-    track.parentElement.addEventListener('mouseenter', () => clearInterval(autoPlay));
-    track.parentElement.addEventListener('mouseleave', () => {
-      autoPlay = setInterval(goNext, 4000);
-    });
-
-    // Initial call
-    setTimeout(window.updateCarouselLayout, 100);
-    window.addEventListener('resize', window.updateCarouselLayout);
-  }
-});
-</script>
+  </script>
 </body>
+
 </html>
