@@ -1528,6 +1528,12 @@
 
     /* ── RESP ── */
     @media(max-width:840px) {
+      .n-right {
+        display: none;
+      }
+      .n-logo img {
+        height: 32px;
+      }
       .feat-row {
         grid-template-columns: 1fr;
         gap: 28px;
@@ -1583,12 +1589,13 @@
     }
 
     @media(max-width:480px) {
-      .proc-steps {
-        grid-template-columns: 1fr;
+      .top-bar {
+        padding: 8px 12px;
+        font-size: 0.72rem;
       }
 
-      .n-badge {
-        display: none;
+      .proc-steps {
+        grid-template-columns: 1fr;
       }
 
       nav {
@@ -2164,25 +2171,25 @@
       padding: 16px 18px;
       font-size: .8rem;
       font-weight: 700;
-      color: var(--text);
+      color: #fff;
     }
 
     .comp-th.th-coin {
       text-align: center;
-      color: var(--b2);
+      color: #fff;
       font-size: .92rem;
       font-weight: 800;
     }
 
     .comp-th.th-trad {
       text-align: center;
-      color: var(--muted);
+      color: rgba(255, 255, 255, 0.85);
       font-size: .78rem;
       font-weight: 600;
     }
 
     .comp-th.th-label {
-      color: var(--muted);
+      color: #fff;
       font-size: .72rem;
       letter-spacing: .04em;
       text-transform: uppercase;
